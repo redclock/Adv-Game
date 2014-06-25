@@ -1,7 +1,7 @@
 Adventure Game: Star Village
 =======
 ##Introduction 
-This is an adventure game written in Java. I wrote this project in 2006-2007 when I was at university. This game looks like a platform game: The hero can run, jump and climb ladders in a scrolling scene. However, there are RPG-like stories and dialogues. Scenes are switched by entering doors. You can save your progress at cernain scenes. Three types of weapons: sword, ring and the bombers help you beat the enemies.
+This is an adventure game written in Java. I wrote this project in 2006-2007 when I was at university. This game looks like a platform game: The hero can run, jump and climb ladders in a scrolling scene. However, there are RPG-like stories and dialogues. Scenes are switched by entering doors. You can save your progress at cernain scenes. Three types of weapons: sword, ring and the bombers will help you beat the enemies.
 
 **Note**: The language in this game is Chinese.
 
