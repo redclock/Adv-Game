@@ -1,0 +1,135 @@
+MAP
+  name Ä§·¨ÎÝ
+  size 600 400
+  backgroundSize 600 400
+  background image/bk21.jpg
+  music music/fairy2.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    name fairy
+    position 537 167
+    size 64 64
+    tilesize 64 64
+    damage
+    image image/fairy.png
+    skip 8 20 4 4
+  end
+  Wall
+    position 182 87
+    size 64 64
+    tilesize 64 64
+    image image/star1.png
+    delay 210
+    unblock
+    skip 0 0 0 0
+  end
+  Wall
+    position 344 170
+    size 64 64
+    tilesize 64 64
+    image image/star1.png
+    delay 500
+    unblock
+    skip 0 0 0 0
+  end
+  Wall
+    position 55 239
+    size 64 64
+    tilesize 64 64
+    image image/star1.png
+    delay 143
+    unblock
+    skip 0 0 0 0
+  end
+  Wall
+    position 492 9
+    size 64 64
+    tilesize 64 64
+    image image/star1.png
+    delay 100
+    unblock
+    skip 0 0 0 0
+  end
+  Wall
+    position 237 310
+    size 51 22
+    tilesize 51 22
+    image image/wall21.png
+    skip 3 3 2 5
+  end
+  Wall
+    position 93 181
+    size 51 22
+    tilesize 51 22
+    image image/wall21.png
+    skip 3 3 2 5
+  end
+  Wall
+    position 300 255
+    size 153 22
+    tilesize 51 22
+    image image/wall21.png
+    skip 3 3 2 5
+  end
+  Wall
+    position 458 114
+    size 51 22
+    tilesize 51 22
+    image image/wall21.png
+    skip 3 3 2 5
+  end
+  Wall
+    position 303 78
+    size 100 22
+    tilesize 51 22
+    image image/wall21.png
+    skip 3 3 2 5
+  end
+  Wall
+    position 422 223
+    size 48 48
+    tilesize 48 48
+    image image/ball1.png
+    delay 200
+    skip 6 16 6 20
+    script SaveFairy
+  end
+  Wall
+    position 0 381
+    size 604 39
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 3 0
+  end
+  Wall
+    position 62 38
+    size 64 64
+    tilesize 64 64
+    image image/star1.png
+    delay 131
+    unblock
+    skip 0 0 0 0
+  end
+  Wall
+    position 507 279
+    size 64 64
+    tilesize 64 64
+    image image/star1.png
+    delay 231
+    unblock
+    skip 0 0 0 0
+  end
+  Door
+    name _save_door
+    position 12 328
+    size 40 64
+    image image/door2.png
+    range 0 0
+    id 0
+    destination map/out1.txt 42 210
+    open
+    skip 3 3 10 0
+  end
+end

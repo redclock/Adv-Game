@@ -1,0 +1,446 @@
+MAP
+  name “∞Õ‚
+  size 3000 364
+  backgroundSize 1500 364
+  background image/bk11.jpg
+  music music/95.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    position 1 297
+    size 388 66
+    tilesize 32 32
+    image image/wall15.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 319 137
+    size 58 106
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 442 143
+    size 32 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 28 159
+    size 72 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 128 56
+    size 64 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 530 141
+    size 32 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 608 113
+    size 32 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 679 84
+    size 165 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 662 155
+    size 96 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 885 29
+    size 32 116
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Wall
+    position 971 86
+    size 165 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 755 222
+    size 62 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 552 303
+    size 878 76
+    tilesize 64 32
+    image image/wall7.png
+    bad
+    skip 0 0 8 0
+  end
+  Bonus
+    position 1018 142
+    size 32 64
+    image image/stone1.png
+    range 0 3
+    kind HEAL4
+    skip 3 3 14 2
+  end
+  Wall
+    position 955 226
+    size 72 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 479 131
+    size 157 200
+    tilesize 157 200
+    image image/tree1.png
+    skip 65 67 40 58
+  end
+  Wall
+    position 387 277
+    size 166 87
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 243 154
+    size 157 200
+    tilesize 157 200
+    image image/tree1.png
+    skip 65 67 40 58
+  end
+  Wall
+    position 1428 338
+    size 330 34
+    tilesize 64 32
+    image image/wall7.png
+    bad
+    skip 0 0 8 0
+  end
+  Wall
+    position 1195 87
+    size 17 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 1274 112
+    size 24 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 1354 170
+    size 151 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 1755 279
+    size 166 87
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 1778 80
+    size 151 32
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 1949 331
+    size 1050 32
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Patrol
+    position 1474 307
+    size 32 32
+    image image/rock1.png
+    range 1420 1760
+    HP 10000
+    skip 1 1 1 1
+  end
+  Wall
+    position 1 81
+    size 64 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 144 220
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/stone2.png
+    skip 6 6 2 2
+  end
+  Patrol
+    position 747 40
+    size 32 48
+    image image/char2.png
+    range 680 845
+    skip 4 4 3 2
+  end
+  Spring
+    position 1674 198
+    size 64 24
+    tilesize 64 24
+    image image/spring1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 1919 196
+    size 579 32
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 2174 184
+    size 32 110
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Wall
+    position 1919 226
+    size 32 138
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Key
+    position 1904 36
+    size 34 16
+    image image/key.png
+    range 0 9
+    id 103
+    skip 5 5 5 2
+  end
+  Patrol
+    position 321 91
+    size 32 48
+    image image/char2.png
+    range 315 378
+    ability fs
+    skip 4 4 3 2
+  end
+  Patrol
+    position 973 40
+    size 32 48
+    image image/char2.png
+    range 970 1130
+    ability fs
+    skip 4 4 3 2
+  end
+  Patrol
+    position 957 183
+    size 32 48
+    image image/char2.png
+    range 953 1028
+    ability fs
+    skip 4 4 3 2
+  end
+  Patrol
+    position 2016 285
+    size 32 48
+    image image/char2.png
+    range 1900 2500
+    ability s
+    skip 4 4 3 2
+  end
+  Bonus
+    position 356 69
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 143 192
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 446 101
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Door
+    position 2 238
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/forest.txt 740 265
+    open
+    skip 20 20 1 1
+  end
+  Patrol
+    position 2839 277
+    size 40 56
+    image image/char6.png
+    range 2750 3000
+    skip 4 4 3 2
+  end
+  Wall
+    position 1586 82
+    size 43 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 2359 290
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/stone2.png
+    skip 6 6 2 2
+  end
+  Wall
+    position 2389 256
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/stone2.png
+    skip 6 6 2 2
+  end
+  Wall
+    position 2079 132
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/stone2.png
+    skip 6 6 2 2
+  end
+  Wall
+    position 2337 305
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/stone2.png
+    skip 6 6 2 2
+  end
+  Wall
+    position 2399 280
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/stone2.png
+    skip 6 6 2 2
+  end
+  Wall
+    position 2401 247
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/stone2.png
+    skip 6 6 2 2
+  end
+  Friend
+    name girl
+    position 2929 90
+    size 32 48
+    image image/girl1.png
+    face 0
+    skip 6 6 3 6
+    script TaskGirl
+  end
+  Door
+    position 1 21
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 103
+    destination map/out2.txt 10 440
+    skip 20 20 1 1
+  end
+  Door
+    position 772 171
+    size 40 64
+    image image/door2.png
+    range 0 0
+    id 0
+    destination map/magicroom.txt 20 330
+    open
+    skip 3 3 10 0
+    script ToSaveRoom:map/out1.txt:775:175
+  end
+  Wall
+    position 2497 89
+    size 165 171
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 2751 267
+    size 51 22
+    tilesize 51 22
+    image image/wall21.png
+    skip 3 3 2 5
+  end
+  Wall
+    position 2728 130
+    size 272 28
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 2820 115
+    size 32 121
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Patrol
+    position 2561 277
+    size 40 56
+    image image/char6.png
+    range 2400 2800
+    skip 4 4 3 2
+  end
+end

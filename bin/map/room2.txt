@@ -1,0 +1,49 @@
+MAP
+  name 屋子
+  size 420 200
+  backgroundSize 420 200
+  background image/bk17.jpg
+  music music/欢快的小版.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    position -2 167
+    size 447 33
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Wall
+    position -9 -3
+    size 431 63
+    tilesize 32 32
+    image image/wall6.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 20 126
+    size 32 48
+    tilesize 32 48
+    image image/char14.png
+    skip 3 3 3 3
+    script Music
+  end
+  Door
+    position 355 106
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/village_day.txt 287 423
+    open
+    skip 20 20 1 1
+  end
+  Wall
+    position -3 59
+    size 180 56
+    tilesize 32 32
+    image image/wall6.png
+    skip 0 0 0 0
+  end
+end

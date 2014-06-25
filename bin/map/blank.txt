@@ -1,0 +1,27 @@
+MAP
+  name Blank
+  size 640 480
+  backgroundSize 500 300
+  background <none>
+  music music/mm.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    name grannydown
+    position 269 299
+    size 64 64
+    tilesize 64 64
+    image image/grannydown.png
+    unblock
+    skip 0 0 10 10
+  end
+  Friend
+    name granny
+    position 1290 296
+    size 64 64
+    image image/char7.png
+    face 3
+    skip 23 23 14 4
+  end
+end

@@ -1,0 +1,15 @@
+face=2
+hp=16
+cansword=true
+key0=true
+tag=GameSaveFile
+door0=true
+ring.num=1
+canshoot=true
+name=sdasdsd
+map=map/magicroom.txt
+curitem=sword
+y=218
+playtime=454712
+canbomb=false
+x=398

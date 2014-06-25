@@ -1,0 +1,110 @@
+MAP
+  name ×Ô¼º¼Ò
+  size 500 300
+  backgroundSize 500 300
+  background image/bk12.jpg
+  music music/Town05.mid
+  MaxScore 200
+  OnStart Beginning
+  Introduction
+  end
+  Wall
+    position 330 96
+    size 104 32
+    tilesize 32 32
+    image image/wall5.png
+    skip 0 0 0 0
+  end
+  Wall
+    position -2 268
+    size 502 32
+    tilesize 32 32
+    image image/wall4.png
+    skip 0 0 0 0
+  end
+  Wall
+    position -1 111
+    size 166 32
+    tilesize 32 32
+    image image/wall5.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 285 48
+    size 64 16
+    tilesize 32 32
+    image image/wall5.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 107 100
+    size 32 77
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Ladder
+    position 376 89
+    size 32 66
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Door
+    name door
+    position 444 207
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/village_day.txt 10 45
+    skip 20 20 1 1
+  end
+  Key
+    position 388 46
+    size 34 16
+    image image/key.png
+    range 0 9
+    id 0
+    skip 5 5 5 2
+    script FirstKey
+  end
+  Wall
+    position 415 66
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Static
+    position 12 151
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    skip 5 5 40 5
+  end
+  Wall
+    position -3 199
+    size 161 16
+    tilesize 32 32
+    image image/wall5.png
+    skip 0 0 0 0
+  end
+  Friend
+    name grandma
+    position 8 64
+    size 64 64
+    image image/char7.png
+    skip 23 23 14 4
+    script Grandma
+  end
+  Friend
+    name mf
+    position 17 155
+    size 32 48
+    image image/char12.png
+    face 2
+    skip 4 4 3 2
+    script TellDeath
+  end
+end

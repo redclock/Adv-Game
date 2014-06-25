@@ -1,0 +1,254 @@
+MAP
+  name 训练地图
+  size 1000 700
+  backgroundSize 800 500
+  background image/bk2.jpg
+  music music/house.mid
+  MaxScore 200
+  Introduction
+    这是第一个训练关，在这里，你可以使用最基本的操作：
+    走和跳。用左右方向键可以走动，按Z键跳跃。
+    你需要收集其本关中所有闪光的宝物，集齐后铁门会自
+    动打开，走到门处按空格键过关。
+    
+    按ESC键呼出菜单
+  end
+  Wall
+    position 0 100
+    size 96 200
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 96 148
+    size 48 152
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 144 196
+    size 48 104
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 192 244
+    size 48 56
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 875 97
+    size 42 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Wall
+    position 273 167
+    size 49 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Wall
+    position 338 124
+    size 31 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Bonus
+    position 346 70
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    skip 5 5 40 5
+  end
+  Key
+    position 942 142
+    size 34 16
+    image image/key.png
+    range 0 9
+    id 0
+    skip 5 5 5 2
+  end
+  Door
+    position 0 40
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/mapx.txt 0 0
+    skip 20 20 1 1
+  end
+  Patrol
+    position 16 308
+    size 32 48
+    image image/char2.png
+    range 0 600
+    skip 4 4 3 2
+  end
+  Friend
+    position 308 651
+    size 32 48
+    image image/char1.png
+    skip 4 4 3 2
+    script TestScript
+  end
+  Wall
+    position -1 354
+    size 601 32
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 643 163
+    size 82 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 790 127
+    size 22 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Bonus
+    position 22 460
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    skip 5 5 40 5
+  end
+  Spring
+    position 862 431
+    size 64 24
+    tilesize 64 24
+    image image/spring1.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 387 359
+    size 32 135
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Patrol
+    position 667 116
+    size 32 48
+    image image/char2.png
+    range 640 710
+    skip 4 4 3 2
+  end
+  Wall
+    position 567 228
+    size 38 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Wall
+    position 416 184
+    size 84 113
+    tilesize 32 32
+    image image/wall9.png
+    bad
+    skip 8 8 0 0
+  end
+  Bonus
+    position 62 460
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    skip 5 5 40 5
+  end
+  Bonus
+    position 102 460
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    skip 5 5 40 5
+  end
+  Wall
+    position 19 534
+    size 93 22
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Patrol
+    position 46 492
+    size 32 48
+    image image/char1.png
+    range 17 99
+    skip 4 4 9 2
+  end
+  Wall
+    position 136 595
+    size 53 22
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Wall
+    position 223 629
+    size 41 22
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Ladder
+    position 468 453
+    size 32 116
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Ladder
+    position 570 471
+    size 32 111
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Ladder
+    position 674 511
+    size 32 156
+    tilesize 32 32
+    image image/ladder5.png
+    skip 0 0 9 9
+  end
+  Key
+    position 672 474
+    size 34 16
+    image image/key.png
+    range 0 9
+    id 2
+    skip 5 5 5 2
+  end
+  Door
+    position 835 658
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 2
+    destination map/room.txt 10 10
+    skip 20 20 20 1
+  end
+  Friend
+    position 357 651
+    size 32 48
+    image image/char1.png
+    skip 4 4 3 2
+    script STest
+  end
+end

@@ -1,0 +1,327 @@
+MAP
+  name ÐÇÐÇ´å
+  size 1000 600
+  backgroundSize 800 500
+  background image/bk19.jpg
+  music music/town.mid
+  MaxScore 200
+  OnStart EnterVillage
+  Introduction
+  end
+  Wall
+    position 0 100
+    size 96 200
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 96 148
+    size 48 152
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 144 196
+    size 48 104
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 192 244
+    size 48 56
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 875 97
+    size 42 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Wall
+    position 273 167
+    size 49 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Wall
+    position 338 124
+    size 31 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Bonus
+    position 346 70
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Door
+    position 0 40
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/room.txt 460 220
+    skip 20 20 1 1
+  end
+  Wall
+    position -2 374
+    size 601 32
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 600 163
+    size 125 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 790 127
+    size 22 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Bonus
+    position 627 435
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Ladder
+    position 400 360
+    size 32 84
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Wall
+    position 630 306
+    size 38 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Wall
+    position 277 468
+    size 176 47
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Ladder
+    position 689 151
+    size 32 116
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Ladder
+    position 473 136
+    size 32 111
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Wall
+    position 686 354
+    size 234 32
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Door
+    position 279 429
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 2
+    destination map/room2.txt 359 115
+    open
+    skip 20 20 20 1
+  end
+  Friend
+    position 559 331
+    size 32 48
+    image image/char10.png
+    skip 4 4 3 2
+    script SayOne:ÄãºÃ:sound/voice/nihao.wav
+  end
+  Wall
+    position 374 243
+    size 48 56
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 845 260
+    size 141 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Door
+    position 603 103
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/room3.txt 360 340
+    open
+    skip 20 20 1 1
+  end
+  Wall
+    position -6 560
+    size 1029 43
+    tilesize 32 32
+    image image/wall2.png
+    skip 8 8 0 0
+  end
+  Wall
+    position 242 318
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Bonus
+    position 144 312
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 99 310
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Door
+    position 862 313
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 2
+    destination map/room4.txt 10 755
+    open
+    skip 20 20 20 1
+  end
+  Wall
+    position 755 457
+    size 234 32
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Door
+    position 925 416
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 2
+    destination map/room5.txt 440 190
+    open
+    skip 20 20 20 1
+  end
+  Ladder
+    position 788 344
+    size 32 91
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Ladder
+    position 875 450
+    size 32 78
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Bonus
+    name cordial
+    position 474 97
+    size 48 48
+    image image/b5.png
+    range 0 29
+    delay 40
+    kind CORDIAL
+    skip 10 10 10 10
+  end
+  Wall
+    position 738 328
+    size 40 32
+    tilesize 40 32
+    image image/cat1.png
+    delay 100
+    skip 17 7 5 0
+    script SayOne:ß÷¡«
+  end
+  Door
+    position 25 519
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 2
+    destination map/out_village.txt 20 430
+    open
+    skip 20 20 20 1
+  end
+  Wall
+    position 231 403
+    size 48 113
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Friend
+    name block
+    position 235 516
+    size 32 48
+    image image/char10.png
+    face 2
+    skip 4 4 3 2
+    script BlockOut
+  end
+  Door
+    position 382 190
+    size 40 64
+    image image/door2.png
+    range 0 0
+    id 0
+    destination map/magicroom.txt 20 330
+    open
+    skip 3 3 10 0
+    script ToSaveRoom:map/village_day.txt:380:192
+  end
+  Door
+    position 867 201
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/shop1.txt 285 130
+    open
+    skip 20 20 1 1
+  end
+end

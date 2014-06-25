@@ -1,0 +1,3 @@
+FullScreen=false
+Music=true
+Sound=true

@@ -1,0 +1,257 @@
+MAP
+  name Ê÷ÁÖ
+  size 800 600
+  backgroundSize 680 500
+  background image/bk4.jpg
+  music music/Field.mid
+  MaxScore 200
+  Introduction
+  end
+  Wall
+    position -2 378
+    size 104 237
+    tilesize 32 32
+    image image/wall16.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 163 376
+    size 151 34
+    tilesize 32 32
+    image image/wall16.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 381 378
+    size 33 97
+    tilesize 32 32
+    image image/wall16.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 494 293
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 454 333
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Spring
+    position 508 513
+    size 64 24
+    tilesize 64 24
+    image image/spring1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 218 219
+    size 173 20
+    tilesize 32 32
+    image image/wall14.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 437 171
+    size 201 26
+    tilesize 32 32
+    image image/wall14.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 102 565
+    size 695 66
+    tilesize 32 32
+    image image/wall16.png
+    skip 0 0 0 0
+  end
+  Bonus
+    position 38 133
+    size 48 48
+    image image/b1.png
+    range 0 29
+    delay 40
+    kind HEAL2
+    skip 10 10 10 10
+  end
+  Ladder
+    position 483 147
+    size 32 123
+    tilesize 32 32
+    image image/ladder5.png
+    skip 0 0 9 9
+  end
+  Wall
+    position 111 65
+    size 332 21
+    tilesize 32 32
+    image image/wall16.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 307 59
+    size 32 123
+    tilesize 32 32
+    image image/ladder5.png
+    skip 0 0 9 9
+  end
+  Bonus
+    position 610 409
+    size 48 48
+    image image/b2.png
+    range 0 29
+    kind RING
+    skip 10 10 10 10
+  end
+  Patrol
+    position 289 511
+    size 64 64
+    image image/char8.png
+    range 0 500
+    ability fs
+    HP 2
+    skip 20 20 10 8
+  end
+  Patrol
+    position 384 18
+    size 64 64
+    image image/char8.png
+    range 210 440
+    ability fs
+    HP 3
+    skip 20 20 10 8
+  end
+  Patrol
+    position 531 464
+    size 64 64
+    image image/char8.png
+    range 509 573
+    ability fs
+    HP 1
+    skip 20 20 10 8
+  end
+  Patrol
+    position 214 324
+    size 64 64
+    image image/char9.png
+    range 172 295
+    ability fs
+    HP 6
+    skip 20 20 14 4
+  end
+  Patrol
+    position 342 170
+    size 64 64
+    image image/char8.png
+    range 215 386
+    delay 70
+    ability fs
+    HP 4
+    skip 20 20 10 8
+  end
+  Patrol
+    position 274 16
+    size 64 64
+    image image/char8.png
+    range 210 420
+    delay 50
+    ability fs
+    HP 4
+    skip 20 20 10 8
+  end
+  Spring
+    position 32 198
+    size 64 24
+    tilesize 64 24
+    image image/spring1.png
+    skip 0 0 0 0
+  end
+  Key
+    position 314 25
+    size 34 16
+    image image/key.png
+    range 0 9
+    id 102
+    skip 5 5 5 2
+  end
+  Patrol
+    position 532 122
+    size 64 64
+    image image/char8.png
+    range 440 630
+    ability fs
+    HP 2
+    skip 20 20 10 8
+  end
+  Wall
+    position 716 372
+    size 31 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 711 509
+    size 31 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 750 445
+    size 31 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 733 313
+    size 72 16
+    tilesize 32 32
+    image image/wall2.png
+    skip 0 0 0 0
+  end
+  Door
+    position 738 253
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 102
+    destination map/out1.txt 42 210
+    skip 20 20 1 1
+  end
+  Bonus
+    position 385 309
+    size 48 48
+    image image/b2.png
+    range 0 29
+    kind RING
+    skip 10 10 10 10
+  end
+  Door
+    position 2 318
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/out_village.txt 1234 40
+    open
+    skip 20 20 1 1
+  end
+  Door
+    position 579 119
+    size 40 64
+    image image/door2.png
+    range 0 0
+    id 0
+    destination map/magicroom.txt 20 330
+    open
+    skip 3 3 10 0
+    script ToSaveRoom:map/forest.txt:590:120
+  end
+end

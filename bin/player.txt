@@ -1,0 +1,12 @@
+x =  244
+y = 229
+'x = 714
+'y = 40
+w = 32
+h = 48
+image = image/player.png
+skip.left = 4
+skip.right = 4
+skip.top = 6
+skip.bottom = 5
+

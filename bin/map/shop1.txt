@@ -1,0 +1,73 @@
+MAP
+  name room
+  size 340 300
+  backgroundSize 340 300
+  background image/bk15.jpg
+  music music/dailylife.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    position 202 172
+    size 145 155
+    tilesize 32 32
+    image image/wall13.png
+    skip 0 0 24 0
+  end
+  Wall
+    position 83 148
+    size 145 67
+    tilesize 32 32
+    image image/wall13.png
+    skip 0 0 24 0
+  end
+  Wall
+    position -1 148
+    size 87 47
+    tilesize 32 32
+    image image/wall13.png
+    skip 0 0 24 0
+  end
+  Ladder
+    position 29 139
+    size 32 77
+    tilesize 32 32
+    image image/ladder3.png
+    skip 0 2 0 24
+  end
+  Friend
+    name mf
+    position 153 202
+    size 32 48
+    image image/char12.png
+    face 1
+    skip 4 4 3 2
+    script STest
+  end
+  Wall
+    position 116 220
+    size 48 48
+    tilesize 48 48
+    image image/ball1.png
+    delay 200
+    skip 6 16 6 20
+    script Teach
+  end
+  Door
+    position 296 121
+    size 40 64
+    image image/door2.png
+    range 0 0
+    id 0
+    destination map/village_day.txt 880 200
+    open
+    skip 3 3 10 0
+  end
+  Wall
+    position -2 247
+    size 208 76
+    tilesize 32 32
+    image image/wall13.png
+    skip 0 0 24 0
+  end
+end

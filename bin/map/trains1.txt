@@ -1,0 +1,181 @@
+MAP
+  name ÑµÁ·1
+  size 640 480
+  backgroundSize 640 480
+  background image/bk18.jpg
+  music music/SkyRush.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    position 0 414
+    size 636 64
+    tilesize 32 32
+    image image/wall9.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 1 195
+    size 636 27
+    tilesize 32 32
+    image image/wall9.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 19 87
+    size 76 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 158 106
+    size 76 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 290 91
+    size 76 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 426 103
+    size 76 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 535 69
+    size 16 127
+    tilesize 32 32
+    image image/wall9.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 113 290
+    size 16 127
+    tilesize 32 32
+    image image/wall9.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 155 318
+    size 97 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 294 317
+    size 86 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 424 329
+    size 76 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 34 64
+    size 32 108
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Wall
+    position 547 329
+    size 76 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 575 146
+    size 32 226
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Patrol
+    position 192 63
+    size 32 48
+    image image/char2.png
+    range 155 231
+    HP 1
+    skip 4 4 3 2
+  end
+  Patrol
+    position 456 57
+    size 32 48
+    image image/char2.png
+    range 421 500
+    HP 2
+    skip 4 4 3 2
+  end
+  Patrol
+    position 318 273
+    size 32 48
+    image image/char2.png
+    range 290 370
+    HP 4
+    skip 4 4 3 2
+  end
+  Patrol
+    position 450 286
+    size 32 48
+    image image/char2.png
+    range 420 500
+    HP 3
+    skip 4 4 3 2
+  end
+  Bonus
+    position 312 42
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 576 92
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 219 374
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 547 374
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Friend
+    name teacher
+    position 82 150
+    size 32 48
+    image image/char16.png
+    face 2
+    skip 4 4 3 2
+    script Teach2
+  end
+end

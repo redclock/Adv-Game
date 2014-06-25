@@ -1,0 +1,188 @@
+MAP
+  name ÑµÁ·2
+  size 640 480
+  backgroundSize 640 480
+  background image/bk9.jpg
+  music music/SkyRush.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    position 0 414
+    size 636 64
+    tilesize 32 32
+    image image/wall9.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 9 203
+    size 237 66
+    tilesize 32 32
+    image image/wall13.png
+    skip 0 0 24 0
+  end
+  Wall
+    position 163 93
+    size 179 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 43 131
+    size 93 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 392 103
+    size 110 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 310 231
+    size 32 108
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Wall
+    position 174 351
+    size 166 16
+    tilesize 16 16
+    image image/walls1.png
+    skip 0 0 0 0
+  end
+  Patrol
+    name e1
+    position 237 49
+    size 32 48
+    image image/char2.png
+    range 165 340
+    ability fs
+    HP 1
+    skip 4 4 3 2
+  end
+  Patrol
+    name e3
+    position 456 57
+    size 32 48
+    image image/char2.png
+    range 394 500
+    ability s
+    HP 2
+    skip 4 4 3 2
+  end
+  Patrol
+    name e5
+    position 394 220
+    size 32 48
+    image image/char2.png
+    range 350 590
+    ability s
+    HP 1
+    skip 4 4 3 2
+  end
+  Patrol
+    name e4
+    position 195 307
+    size 32 48
+    image image/char2.png
+    range 175 340
+    HP 1
+    skip 4 4 3 2
+  end
+  Bonus
+    position 52 91
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 501 226
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Friend
+    name teacher
+    position 600 370
+    size 32 48
+    image image/char16.png
+    face 1
+    skip 4 4 3 2
+    script TeachRing
+  end
+  Wall
+    position 351 266
+    size 237 66
+    tilesize 32 32
+    image image/wall13.png
+    skip 0 0 24 0
+  end
+  Bonus
+    position 411 50
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 243 304
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Patrol
+    name e2
+    position 30 159
+    size 32 48
+    image image/char2.png
+    range 10 245
+    HP 3
+    skip 4 4 3 2
+  end
+  Bonus
+    position 340 153
+    size 48 48
+    image image/b1.png
+    range 0 29
+    delay 40
+    kind HEAL2
+    skip 10 10 10 10
+  end
+  Bonus
+    position 8 338
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 84 337
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 45 337
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+end

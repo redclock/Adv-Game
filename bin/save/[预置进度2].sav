@@ -1,0 +1,15 @@
+canshoot=true
+hp=16
+cansword=true
+door0=true
+face=2
+playtime=614228
+curitem=ring
+ring.num=3
+key0=true
+tag=GameSaveFile
+y=218
+map=map/magicroom.txt
+canbomb=false
+name=п║аж
+x=398

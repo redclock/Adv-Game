@@ -1,0 +1,90 @@
+MAP
+  name “∞Õ‚
+  size 320 500
+  backgroundSize 320 500
+  background image/bk5.jpg
+  music music/end.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    position 0 250
+    size 149 21
+    tilesize 32 32
+    image image/wall16.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 0 101
+    size 123 44
+    tilesize 32 32
+    image image/wall16.png
+    skip 0 0 0 0
+  end
+  Bonus
+    position 279 141
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Patrol
+    position 99 371
+    size 32 48
+    image image/char17.png
+    range 0 386
+    delay 120
+    ability g
+    face 2
+    skip 6 6 9 18
+  end
+  Patrol
+    position 176 430
+    size 32 48
+    image image/char17.png
+    range 0 386
+    delay 150
+    ability g
+    skip 6 6 9 18
+  end
+  Patrol
+    position 181 305
+    size 32 48
+    image image/char17.png
+    range 0 386
+    delay 100
+    ability g
+    skip 6 6 9 18
+  end
+  Wall
+    position 170 186
+    size 149 21
+    tilesize 32 32
+    image image/wall16.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 168 105
+    size 76 21
+    tilesize 32 32
+    image image/wall16.png
+    skip 0 0 0 0
+  end
+  Door
+    position 2 438
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 103
+    destination map/out1.txt 10 20
+    skip 20 20 1 1
+  end
+  Friend
+    position 13 60
+    size 32 48
+    image image/char1.png
+    skip 2 0 9 2
+    script TeachBomb
+  end
+end

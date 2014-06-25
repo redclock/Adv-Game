@@ -1,0 +1,291 @@
+MAP
+  name –«–«¥ÂÕ‚
+  size 1300 480
+  backgroundSize 750 480
+  background image/bk1.jpg
+  music music/bar.mid
+  MaxScore 0
+  OnStart EnterOutVillage
+  Introduction
+  end
+  Wall
+    position 219 386
+    size 303 98
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 4 0
+  end
+  Wall
+    position 325 275
+    size 128 46
+    tilesize 32 32
+    image image/wall19.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 106 437
+    size 116 47
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 4 0
+  end
+  Wall
+    position 260 272
+    size 32 64
+    tilesize 32 64
+    image image/fire2.png
+    bad
+    skip 5 5 25 14
+  end
+  Wall
+    position 612 215
+    size 77 28
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 4 0
+  end
+  Patrol
+    position 320 338
+    size 64 64
+    image image/char8.png
+    range 215 386
+    delay 70
+    ability fsm
+    HP 1
+    skip 20 20 10 8
+  end
+  Wall
+    position 464 238
+    size 112 26
+    tilesize 32 32
+    image image/wall19.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 520 436
+    size 367 47
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 4 0
+  end
+  Wall
+    position 147 265
+    size 32 64
+    tilesize 32 64
+    image image/fire2.png
+    bad
+    skip 5 5 25 14
+  end
+  Wall
+    position 412 233
+    size 32 64
+    tilesize 32 64
+    image image/fire2.png
+    bad
+    skip 5 5 25 14
+  end
+  Wall
+    position 705 278
+    size 77 28
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 4 0
+  end
+  Wall
+    position 194 213
+    size 42 28
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 4 0
+  end
+  Wall
+    position 783 330
+    size 70 26
+    tilesize 32 32
+    image image/wall19.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 798 327
+    size 32 84
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Wall
+    position 171 90
+    size 305 26
+    tilesize 32 32
+    image image/wall19.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 197 77
+    size 32 114
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Patrol
+    position 501 92
+    size 32 48
+    image image/char17.png
+    range 490 700
+    delay 150
+    ability g
+    HP 3
+    skip 6 6 15 18
+  end
+  Patrol
+    position 773 92
+    size 32 48
+    image image/char17.png
+    range 760 960
+    delay 120
+    ability g
+    HP 3
+    skip 6 6 15 18
+  end
+  Wall
+    position 877 277
+    size 210 28
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 4 0
+  end
+  Wall
+    position 979 94
+    size 319 28
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 886 452
+    size 413 41
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 4 0
+  end
+  Wall
+    position 711 94
+    size 34 26
+    tilesize 32 32
+    image image/wall19.png
+    skip 0 0 0 0
+  end
+  Bonus
+    position 133 319
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 716 44
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 1103 377
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 1157 376
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 983 215
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Bonus
+    position 991 36
+    size 32 64
+    image image/fire1.png
+    range 0 3
+    kind HEAL
+    skip 5 5 40 5
+  end
+  Patrol
+    position 526 406
+    size 64 64
+    image image/char5.png
+    range 510 880
+    HP 3
+    skip 12 8 32 6
+  end
+  Patrol
+    position 904 229
+    size 64 64
+    image image/char8.png
+    range 878 1090
+    delay 120
+    ability fs
+    HP 2
+    skip 20 20 10 8
+  end
+  Patrol
+    position 272 42
+    size 64 64
+    image image/char8.png
+    range 167 475
+    delay 100
+    ability fs
+    HP 1
+    skip 20 20 10 8
+  end
+  Door
+    position 10 436
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 10
+    destination map/village_day.txt 30 500
+    open
+    skip 20 20 20 1
+  end
+  Door
+    position 1226 51
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 10
+    destination map/forest.txt 10 325
+    open
+    skip 20 20 20 1
+  end
+  Wall
+    position 1109 -41
+    size 189 62
+    tilesize 32 32
+    image image/wall17.png
+    skip 0 0 4 0
+  end
+  Door
+    position 635 162
+    size 40 64
+    image image/door2.png
+    range 0 0
+    id 0
+    destination map/magicroom.txt 20 330
+    open
+    skip 3 3 10 0
+    script ToSaveRoom:map/out_village.txt:645:165
+  end
+end

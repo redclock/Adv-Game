@@ -1,0 +1,71 @@
+MAP
+  name ½£Ê¦¼Ò
+  size 420 400
+  backgroundSize 420 400
+  background image/bk16.jpg
+  music music/windmill.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    position 121 218
+    size 54 16
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Door
+    position 362 337
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/village_day.txt 600 110
+    open
+    skip 20 20 1 1
+  end
+  Wall
+    position 280 331
+    size 40 16
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 120 287
+    size 132 16
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 195 153
+    size 54 16
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Wall
+    position -5 154
+    size 128 247
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 276 104
+    size 45 16
+    tilesize 32 32
+    image image/wall3.png
+    skip 0 0 0 0
+  end
+  Friend
+    name teacher
+    position 1 111
+    size 32 48
+    image image/char16.png
+    face 2
+    skip 4 4 3 2
+    script Teach2
+  end
+end

@@ -1,0 +1,15 @@
+canshoot=true
+hp=14
+cansword=true
+door0=true
+face=2
+playtime=616254
+curitem=sword
+ring.num=3
+key0=true
+tag=GameSaveFile
+y=218
+map=map/magicroom.txt
+canbomb=false
+name=AAA
+x=398

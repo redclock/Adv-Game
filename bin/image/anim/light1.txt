@@ -1,0 +1,24 @@
+loop 2
+count 5
+style MIDDLE
+
+pic image/anim/light1_00.png
+  delay 150
+  alpha 0.5
+end
+pic image/anim/light1_01.png
+  delay 200
+  alpha 0.7
+end
+pic image/anim/light1_02.png
+  delay 150
+  alpha 0.5
+end
+pic image/anim/light1_03.png
+  delay 100
+  alpha 0.5
+end
+pic image/anim/light1_04.png
+  delay 100
+  alpha 0.5
+end

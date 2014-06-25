@@ -1,0 +1,14 @@
+canshoot=true
+hp=9
+cansword=true
+door0=true
+face=2
+playtime=1464343
+curitem=sword
+tag=GameSaveFile
+key0=true
+y=218
+map=map/magicroom.txt
+canbomb=false
+name=yao
+x=398

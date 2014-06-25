@@ -1,0 +1,59 @@
+MAP
+  name map1
+  size 320 200
+  background image/bk15.jpg
+  music music/dailylife.mid
+  MaxScore 0
+  Introduction
+  end
+  Wall
+    position -1 94
+    size 173 57
+    tilesize 32 32
+    image image/wall13.png
+    skip 0 0 24 0
+  end
+  Wall
+    position 174 126
+    size 50 41
+    tilesize 32 32
+    image image/wall13.png
+    skip 0 0 24 0
+  end
+  Friend
+    name mf
+    position 12 150
+    size 32 48
+    image image/char12.png
+    face 2
+    skip 4 4 3 2
+    script STest
+  end
+  Wall
+    position -9 0
+    size 327 57
+    tilesize 32 32
+    image image/wall13.png
+    skip 0 0 24 0
+  end
+  Wall
+    position 48 162
+    size 48 48
+    tilesize 48 48
+    image image/ball1.png
+    delay 200
+    skip 6 16 6 20
+    script SaveService
+  end
+  Door
+    name _save_door
+    position 282 145
+    size 40 64
+    image image/door2.png
+    range 0 0
+    id 0
+    destination map/out1.txt 42 210
+    open
+    skip 3 3 10 0
+  end
+end

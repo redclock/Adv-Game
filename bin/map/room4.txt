@@ -1,0 +1,302 @@
+MAP
+  name map1
+  size 1300 800
+  backgroundSize 1000 600
+  background image/bk2.jpg
+  music music/0005.mid
+  MaxScore 0
+  Introduction
+  end
+  Door
+    position 3 737
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/village_day.txt 860 305
+    open
+    skip 20 20 1 1
+  end
+  Wall
+    position 53 687
+    size 288 32
+    tilesize 32 32
+    image image/wall18.png
+    skip 0 0 0 0
+  end
+  Friend
+    name teacher
+    position 842 17
+    size 32 48
+    image image/char16.png
+    skip 4 4 3 2
+    script TeachRing
+  end
+  Wall
+    position 53 0
+    size 32 688
+    tilesize 32 32
+    image image/wall18.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 309 64
+    size 32 624
+    tilesize 32 32
+    image image/wall18.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 260 674
+    size 32 98
+    tilesize 32 32
+    image image/ladder3.png
+    skip 1 3 2 20
+  end
+  Spring
+    position 243 565
+    size 64 24
+    tilesize 64 24
+    image image/spring1.png
+    skip 0 0 0 0
+  end
+  Spring
+    position 84 390
+    size 64 24
+    tilesize 64 24
+    image image/spring1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 625 267
+    size 137 32
+    tilesize 32 32
+    image image/wall9.png
+    skip 8 8 0 0
+  end
+  Spring
+    position 169 202
+    size 64 24
+    tilesize 64 24
+    image image/spring1.png
+    skip 0 0 0 0
+  end
+  Spring
+    position 399 323
+    size 64 24
+    tilesize 64 24
+    image image/spring1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 534 67
+    size 44 674
+    tilesize 32 32
+    image image/wall9.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 84 616
+    size 109 32
+    tilesize 32 32
+    image image/wall1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 571 418
+    size 72 25
+    tilesize 32 32
+    image image/wall9.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 466 371
+    size 70 25
+    tilesize 32 32
+    image image/wall9.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 807 61
+    size 117 30
+    tilesize 32 32
+    image image/wall9.png
+    skip 8 8 0 0
+  end
+  Spring
+    position 1105 697
+    size 64 24
+    tilesize 64 24
+    image image/spring1.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 822 460
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 883 559
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 772 355
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 965 560
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1043 560
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1183 490
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1229 414
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1267 336
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1241 265
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1136 157
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 831 165
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1064 126
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1005 95
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1194 202
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1084 373
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1113 445
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 1028 312
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 965 244
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 899 208
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 773 541
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 771 163
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 717 91
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 940 413
+    size 32 32
+    tilesize 32 32
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Friend
+    position 98 570
+    size 32 48
+    image image/char10.png
+    face 2
+    skip 4 4 3 2
+    script TeachSpring
+  end
+end

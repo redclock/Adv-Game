@@ -1,0 +1,79 @@
+loop 1
+
+style MIDDLE
+
+pic image/anim/c.png
+  delay 20
+  alpha 0.5
+  scale 0.1 0.1
+end
+pic image/anim/c.png
+  delay 20
+  alpha 0.5
+  scale 0.2 0.2
+end
+pic image/anim/c.png
+  delay 20
+  alpha 0.5
+  scale 0.3 0.3
+end
+pic image/anim/c.png
+  delay 40
+  alpha 0.5
+  scale 0.4 0.4
+end
+pic image/anim/c.png
+  delay 40
+  alpha 0.5
+  scale 0.5 0.5
+end
+pic image/anim/c.png
+  delay 40
+  alpha 0.6
+  scale 0.6 0.6
+end
+pic image/anim/c.png
+  delay 40
+  alpha 0.7
+  scale 0.7 0.7
+end
+pic image/anim/c.png
+  delay 60
+  alpha 0.8
+  scale 0.8 0.8
+end
+pic image/anim/c.png
+  delay 60
+  alpha 0.9
+  scale 0.9 0.9
+end
+pic image/anim/c.png
+  delay 60
+  alpha 1
+  scale 1 1
+end
+pic image/anim/c.png
+  delay 60
+  alpha 0.7
+  scale 2 1
+end
+pic image/anim/c.png
+  delay 60
+  alpha 0.6
+  scale 3 1
+end
+pic image/anim/c.png
+  delay 60
+  alpha 0.5
+  scale 4 1
+end
+pic image/anim/c.png
+  delay 60
+  alpha 0.4
+  scale 5 1
+end
+pic image/anim/c.png
+  delay 60
+  alpha 0.3
+  scale 6 1
+end

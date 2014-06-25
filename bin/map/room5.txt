@@ -1,0 +1,113 @@
+MAP
+  name °¢³ÎµÄ¼Ò
+  size 500 300
+  backgroundSize 500 300
+  background image/bk14.jpg
+  music music/town3.mid
+  MaxScore 200
+  OnStart EnterRoom5
+  Introduction
+  end
+  Wall
+    position 311 106
+    size 188 60
+    tilesize 32 32
+    image image/wall5.png
+    skip 0 0 0 0
+  end
+  Wall
+    position -3 235
+    size 502 64
+    tilesize 32 32
+    image image/wall4.png
+    skip 0 0 0 0
+  end
+  Wall
+    position -4 107
+    size 166 53
+    tilesize 32 32
+    image image/wall5.png
+    skip 0 0 0 0
+  end
+  Wall
+    position 285 48
+    size 64 16
+    tilesize 32 32
+    image image/wall5.png
+    skip 0 0 0 0
+  end
+  Ladder
+    position 82 100
+    size 32 98
+    tilesize 32 32
+    image image/ladder2.png
+    skip 0 0 9 9
+  end
+  Door
+    position 440 175
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 0
+    destination map/village_day.txt 940 415
+    open
+    skip 20 20 1 1
+  end
+  Wall
+    position -2 220
+    size 164 16
+    tilesize 32 32
+    image image/wall5.png
+    skip 0 0 0 0
+  end
+  Friend
+    position 11 63
+    size 32 48
+    image image/char19.png
+    face 2
+    skip 4 4 3 2
+    script GiveTask
+  end
+  Wall
+    position 210 69
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 179 125
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Wall
+    position 240 125
+    size 32 32
+    tilesize 32 32
+    damage
+    image image/barrel1.png
+    skip 7 8 1 2
+  end
+  Door
+    name door
+    position 442 49
+    size 96 64
+    image image/door1.png
+    range 0 0
+    id 10
+    destination map/village_day.txt 10 45
+    skip 20 20 1 1
+  end
+  Friend
+    name girl
+    position 452 63
+    size 32 48
+    image image/girl1.png
+    face 1
+    skip 6 6 3 6
+  end
+end
