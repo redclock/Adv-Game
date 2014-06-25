@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * MenuStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * MenuStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.event.*;
@@ -9,39 +9,39 @@ import redgame.util.*;
 import redgame.ui.*;
 
 /**
- * MenuStatusÀàÊÇÓÎÏ·ÖĞÏÔÊ¾²Ëµ¥µÄÓÎÏ·×´Ì¬.
- * ÔÚÕâÊ±»áÏÔÊ¾Ò»¸ö²Ëµ¥,¹©Íæ¼ÒÑ¡Ôñ
+ * MenuStatusç±»æ˜¯æ¸¸æˆä¸­æ˜¾ç¤ºèœå•çš„æ¸¸æˆçŠ¶æ€.
+ * åœ¨è¿™æ—¶ä¼šæ˜¾ç¤ºä¸€ä¸ªèœå•,ä¾›ç©å®¶é€‰æ‹©
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class MenuStatus extends AbstractStatus{
-    //Ñ¡ÏîÁĞ±í
+    //é€‰é¡¹åˆ—è¡¨
     private String[] m_items = 
-        {"¼ÌĞøÓÎÏ·", 
-         "Íæ¼Ò×´Ì¬",
-         "Ñ¡ÔñÎäÆ÷", 
-         "ÔØÈë½ø¶È", 
-         "»Øµ½Ö÷²Ëµ¥"
+        {"ç»§ç»­æ¸¸æˆ", 
+         "ç©å®¶çŠ¶æ€",
+         "é€‰æ‹©æ­¦å™¨", 
+         "è½½å…¥è¿›åº¦", 
+         "å›åˆ°ä¸»èœå•"
          };
     
-    //²Ëµ¥´óĞ¡
+    //èœå•å¤§å°
     private int mw = 200, mh = 200;
     
-    //²Ëµ¥¶ÔÏó
+    //èœå•å¯¹è±¡
     private TextMenuEx m_menu;
     /**
-     * ´´½¨Ò»¸öMenuStatus
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªMenuStatus
+     * @param game æ¸¸æˆå¼•ç”¨
      */
     public MenuStatus(GameWorld game) {
         super(game);
-        m_menu = new TextMenuEx(game, "²Ëµ¥", m_items, mw, mh);
+        m_menu = new TextMenuEx(game, "èœå•", m_items, mw, mh);
     }
     
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         Graphics2D g2d = (Graphics2D)g;
@@ -56,8 +56,8 @@ public class MenuStatus extends AbstractStatus{
     }
 
     /**
-     * ¸üĞÂ×´Ì¬, ÊäÈëÉÏÏÂ¼üÑ¡Ôñ,¿Õ¸ñ¼üÈ·¶¨
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°çŠ¶æ€, è¾“å…¥ä¸Šä¸‹é”®é€‰æ‹©,ç©ºæ ¼é”®ç¡®å®š
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
      public int update(long passedTime){
         Rectangle sc = m_game.getScreenArea();
@@ -69,22 +69,22 @@ public class MenuStatus extends AbstractStatus{
         m_menu.update(passedTime);
         if ( m_menu.done() ){
             switch(m_menu.getIndex()){
-                case 0: return -1;                   //"¼ÌĞøÓÎÏ·"
-//                case 1: m_game.reset(); break;       // "ÖØĞÂ¿ªÊ¼±¾¹Ø"
+                case 0: return -1;                   //"ç»§ç»­æ¸¸æˆ"
+//                case 1: m_game.reset(); break;       // "é‡æ–°å¼€å§‹æœ¬å…³"
                 case 1: 
                     m_game.popStatus(); 
-                    m_game.pushStatus(new ShowStateStatus(m_game));//"Íæ¼Ò×´Ì¬"
+                    m_game.pushStatus(new ShowStateStatus(m_game));//"ç©å®¶çŠ¶æ€"
                     return 0;
                 case 2:  
                     m_game.popStatus(); 
-                    m_game.pushStatus(new SelectWeaponStatus(m_game));//"Ñ¡ÔñÎäÆ÷"
+                    m_game.pushStatus(new SelectWeaponStatus(m_game));//"é€‰æ‹©æ­¦å™¨"
                     return 0;       
-//                case 2: m_game.goNextLevel();break;  //"ÌøÖÁÏÂÒ»¹Ø"
+//                case 2: m_game.goNextLevel();break;  //"è·³è‡³ä¸‹ä¸€å…³"
                 case 3:
                     m_game.popStatus(); 
-                    m_game.pushStatus(new LoadGameStatus(m_game));//"ÔØÈë½ø¶È"
+                    m_game.pushStatus(new LoadGameStatus(m_game));//"è½½å…¥è¿›åº¦"
                     return 0;                      
-                case 4: m_game.backToTitle();break;  //"»Øµ½Ö÷²Ëµ¥"
+                case 4: m_game.backToTitle();break;  //"å›åˆ°ä¸»èœå•"
             }
             
             

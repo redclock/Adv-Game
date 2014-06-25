@@ -1,5 +1,5 @@
 MAP
-  name Ä§·¨ÎÝ
+  name é­”æ³•å±‹
   size 600 400
   backgroundSize 600 400
   background image/bk21.jpg

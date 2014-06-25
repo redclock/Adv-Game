@@ -9,7 +9,7 @@ public class TextMenuEx extends AbstractMenu {
     private BufferedImage bi;
     private int mw, mh;
     private long m_counter = 0;
-    private Font m_font = new Font("ËÎÌå", Font.PLAIN, 18);
+    private Font m_font = new Font("å®‹ä½“", Font.PLAIN, 18);
     private String m_title;
     
     private void createBack() {
@@ -20,7 +20,7 @@ public class TextMenuEx extends AbstractMenu {
         g.setPaint(new GradientPaint(0, 0, new Color(0,0,0,255), 0, mh, 
                         new Color(255,255,255,100)));
         g.fillRect(0,0,mw,mh);    
-        g.setFont(new Font("ºÚÌå", 0, 18));
+        g.setFont(new Font("é»‘ä½“", 0, 18));
         g.setColor(Color.GREEN);
         g.drawString(m_title, 80, 30);
         g.setColor(Color.GREEN);

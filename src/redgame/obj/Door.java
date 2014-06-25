@@ -1,47 +1,47 @@
 package redgame.obj;
 /*
- * Door.java ×÷Õß£ºÒ¦´ºêÍ
+ * Door.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import redgame.scripts.AbstractScript;
 import redgame.engine.*;
 /**
- * DoorÀàÊÇ¾²Ö¹ÎïÌåÃÅ.
- * @author Ò¦´ºêÍ
+ * Doorç±»æ˜¯é™æ­¢ç‰©ä½“é—¨.
+ * @author å§šæ˜¥æ™–
  */
 public class Door extends StaticObject {
-	//ÊÇ·ñ´ò¿ª
+	//æ˜¯å¦æ‰“å¼€
 	private boolean m_open;
 	public String destMap;
 	public int destX, destY;
 	/**
-	 * ¶ÔÓ¦Ô¿³×µÄid
+	 * å¯¹åº”é’¥åŒ™çš„id
 	 */
 	public int id; 
     /**
-     * ¹¹ÔìDoor
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w ÔªËØ¿í¶È
-     * @param h ÔªËØ¸ß¶È
+     * æ„é€ Door
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å…ƒç´ å®½åº¦
+     * @param h å…ƒç´ é«˜åº¦
      */
     public Door(GameWorld game, Image img, 
 					int x, int y, int w, int h, int id) {
 		super(game, img, x, y, w, h, 0, 0);
-		//¾²Ö¹
+		//é™æ­¢
 		m_anim.setLooped(false);
 		m_open = false;
 		this.id = id;
 		Player p = game.getPlayer();
-		//Èç¹ûÒÔÇ°¾Í¿ª¹ıÃÅ
+		//å¦‚æœä»¥å‰å°±å¼€è¿‡é—¨
 		if (p != null){
 			if (p.openedDoor[id]) open();
 		}
 	}
 	/**
-	 * ¿ªÃÅ
+	 * å¼€é—¨
 	 */
 	public void open(){
 		if (!m_open){
@@ -52,7 +52,7 @@ public class Door extends StaticObject {
 	}
 
     /**
-     * ¹ØÃÅ
+     * å…³é—¨
      */
     public void close(){
         if (m_open){
@@ -64,13 +64,13 @@ public class Door extends StaticObject {
     }
 
 	/**
-	 * ÊÇ·ñ´ò¿ªÁË
+	 * æ˜¯å¦æ‰“å¼€äº†
 	 */
 	public boolean isOpen(){
 		return m_open;
 	}
 	/**
-	 * ½øÈëÃÅ
+	 * è¿›å…¥é—¨
 	 */
 	public void enter(Player p){
         p.setVisible(false);

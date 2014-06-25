@@ -1,6 +1,6 @@
 package redgame.anim;
 /*
- * AbstractParticleSystem.java ×÷Õß£ºÒ¦´ºêÍ
+ * AbstractParticleSystem.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.util.Vector;
 import java.awt.*;
@@ -9,25 +9,25 @@ import java.awt.*;
 import redgame.engine.*;
 
 /**
- * AbstractParticleSystemÀàÊÇÓÎÏ·ÖĞÁ£×ÓÏµÍ³µÄ¸¸Àà£¬¶¨Òå»ù±¾¹¦ÄÜ¡£
- * ÕâÊÇÒ»¸ö³éÏóÀà£¬ÒªÊ¹ÓÃËüµÄÅÉÉúÀà¡£
- * @author Ò¦´ºêÍ
+ * AbstractParticleSystemç±»æ˜¯æ¸¸æˆä¸­ç²’å­ç³»ç»Ÿçš„çˆ¶ç±»ï¼Œå®šä¹‰åŸºæœ¬åŠŸèƒ½ã€‚
+ * è¿™æ˜¯ä¸€ä¸ªæŠ½è±¡ç±»ï¼Œè¦ä½¿ç”¨å®ƒçš„æ´¾ç”Ÿç±»ã€‚
+ * @author å§šæ˜¥æ™–
  */
 abstract public class AbstractParticleSystem{
-	//Á£×ÓÁĞ±í
+	//ç²’å­åˆ—è¡¨
 	protected Vector<Particle> m_p;
-	//ÓÎÏ·ÒıÓÃ
+	//æ¸¸æˆå¼•ç”¨
 	protected GameWorld m_game;
     /**
-     * ¹¹ÔìÁ£×ÓÏµÍ³
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param image ÎïÌåÍ¼Ïñ
-     * @param count Á£×Ó¸öÊı
-     * @param pw Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param ph Í¼ÏñÒ»¸ñµÄ¸ß¶È
-     * @param begin Í¼Æ¬·Ö¸ô¿ªÊ¼µÄË÷Òı
-     * @param end   Í¼Æ¬·Ö¸ô½áÊøµÄË÷Òı
-     * @param delay Ã¿Ò»Ö¡µÄÑÓ³Ù
+     * æ„é€ ç²’å­ç³»ç»Ÿ
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param image ç‰©ä½“å›¾åƒ
+     * @param count ç²’å­ä¸ªæ•°
+     * @param pw å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param ph å›¾åƒä¸€æ ¼çš„é«˜åº¦
+     * @param begin å›¾ç‰‡åˆ†éš”å¼€å§‹çš„ç´¢å¼•
+     * @param end   å›¾ç‰‡åˆ†éš”ç»“æŸçš„ç´¢å¼•
+     * @param delay æ¯ä¸€å¸§çš„å»¶è¿Ÿ
      */
 
 	public AbstractParticleSystem(GameWorld game, Image image, 
@@ -42,7 +42,7 @@ abstract public class AbstractParticleSystem{
 		m_game = game;
 	}
 	/**
-	 * ÖØÖÃËùÓĞÁ£×Ó
+	 * é‡ç½®æ‰€æœ‰ç²’å­
 	 */
 	public void resetall(){
 		for (int i = 0; i < m_p.size(); i++){
@@ -50,11 +50,11 @@ abstract public class AbstractParticleSystem{
 		}
 	}
 	/**
-	 * ÖØÖÃµÚiºÅÁ£×Ó
+	 * é‡ç½®ç¬¬iå·ç²’å­
 	 */
 	abstract protected void reset(int i);
 	/**
-	 * »­Á£×Ó
+	 * ç”»ç²’å­
 	 */
 	public void paint(Graphics g){
 		
@@ -63,7 +63,7 @@ abstract public class AbstractParticleSystem{
 		}
 	}
 	/**
-	 * ¸üĞÂÁ£×Ó
+	 * æ›´æ–°ç²’å­
 	 */
 	public void move(long passedTime){
 		for (int i = 0; i < m_p.size(); i++){

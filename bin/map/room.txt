@@ -1,5 +1,5 @@
 MAP
-  name ×Ô¼º¼Ò
+  name è‡ªå·±å®¶
   size 500 300
   backgroundSize 500 300
   background image/bk12.jpg

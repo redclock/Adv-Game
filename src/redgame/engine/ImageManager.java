@@ -1,6 +1,6 @@
 package redgame.engine;
 /*
- * ImageManager.java ×÷Õß£ºÒ¦´ºêÍ
+ * ImageManager.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.util.*;
@@ -9,9 +9,9 @@ import java.io.*;
 import javax.imageio.*;
 
 /**
- * ImageManagerÀàÊÇÍ¼Ïñ¹ÜÀíÆ÷
- * Ëü¶ÁÈëÍ¼ÏñÎÄ¼ş, ²¢¿ÉÒÔ·ÀÖ¹ÖØ¸´¶ÁÈë
- * @author Ò¦´ºêÍ
+ * ImageManagerç±»æ˜¯å›¾åƒç®¡ç†å™¨
+ * å®ƒè¯»å…¥å›¾åƒæ–‡ä»¶, å¹¶å¯ä»¥é˜²æ­¢é‡å¤è¯»å…¥
+ * @author å§šæ˜¥æ™–
  */
 
 public class ImageManager{
@@ -26,7 +26,7 @@ public class ImageManager{
 		return null;	
 	}
 	/**
-	 * ´ÓÄÚ´æÖĞÉ¾³ıÍ¼Ïñ
+	 * ä»å†…å­˜ä¸­åˆ é™¤å›¾åƒ
 	 */
 	public void delete(Image img){
         for(int i = 0; i < m_images.size(); i++)
@@ -41,14 +41,14 @@ public class ImageManager{
 	}
 	
 	/**
-	 * ×°ÔØÍ¼Ïñ, Èç¹ûÒÑ¾­×°ÔØ¹ı, Ö»½«ÒıÓÃ´«»Ø
-     * Ê¹ÓÃToolkit.getImage()
-	 * @param filename ÎÄ¼şÃû
-	 * @return ¶Áµ½µÄÍ¼Ïñ
+	 * è£…è½½å›¾åƒ, å¦‚æœå·²ç»è£…è½½è¿‡, åªå°†å¼•ç”¨ä¼ å›
+     * ä½¿ç”¨Toolkit.getImage()
+	 * @param filename æ–‡ä»¶å
+	 * @return è¯»åˆ°çš„å›¾åƒ
 	 */
 	public Image loadImage(String filename){
 		Image img = find(filename);
-		//Èç¹ûÒÑ¾­×°ÔØ¹ı
+		//å¦‚æœå·²ç»è£…è½½è¿‡
 		if (img != null) return img;
 		img = m_game.getIO().loadImage(filename);
 		MediaTracker tracker= new MediaTracker(m_game.getPanel());
@@ -65,15 +65,15 @@ public class ImageManager{
 	}
 
     /**
-     * ×°ÔØÍ¼Ïñ, Èç¹ûÒÑ¾­×°ÔØ¹ı, Ö»½«ÒıÓÃ´«»Ø
-     * ·µ»ØBufferedImag
-     * Ê¹ÓÃImageIO
-     * @param filename ÎÄ¼şÃû
-     * @return ¶Áµ½µÄÍ¼Ïñ
+     * è£…è½½å›¾åƒ, å¦‚æœå·²ç»è£…è½½è¿‡, åªå°†å¼•ç”¨ä¼ å›
+     * è¿”å›BufferedImag
+     * ä½¿ç”¨ImageIO
+     * @param filename æ–‡ä»¶å
+     * @return è¯»åˆ°çš„å›¾åƒ
      */
     public BufferedImage loadBufferedImage(String filename){
         Image img = find(filename);
-        //Èç¹ûÒÑ¾­×°ÔØ¹ı
+        //å¦‚æœå·²ç»è£…è½½è¿‡
         if (img != null && img instanceof BufferedImage) 
             return (BufferedImage)img;
         try{
@@ -91,15 +91,15 @@ public class ImageManager{
     }
     
     /**
-     * ×°ÔØÍ¼Ïñ,´´½¨ÓÅ»¯µÄ¼æÈİÍ¼Ïñ
+     * è£…è½½å›¾åƒ,åˆ›å»ºä¼˜åŒ–çš„å…¼å®¹å›¾åƒ
      * 
-     * ·µ»ØBufferedImag
-     * Ê¹ÓÃImageIO
-     * @param filename ÎÄ¼şÃû
-     * @param transparency ÖµÎª
+     * è¿”å›BufferedImag
+     * ä½¿ç”¨ImageIO
+     * @param filename æ–‡ä»¶å
+     * @param transparency å€¼ä¸º
      *        Transparency.OPAQUE, Transparency.BITMASK, Transparency.TRANSLUCENT
-     * @param size Èô²»Îªnull,ÔòÇ¿ÖÆËõ·ÅÎªsize
-     * @return ¶Áµ½µÄÍ¼Ïñ
+     * @param size è‹¥ä¸ä¸ºnull,åˆ™å¼ºåˆ¶ç¼©æ”¾ä¸ºsize
+     * @return è¯»åˆ°çš„å›¾åƒ
      */
     public Image loadAutomaticImage(
         String filename, 
@@ -144,11 +144,11 @@ public class ImageManager{
         return img;
     }
    
-    //Í¼ÏñÁĞ±íµÄµ¥Î»
+    //å›¾åƒåˆ—è¡¨çš„å•ä½
 	private class ImageItem{
-		//Í¼Ïñ
+		//å›¾åƒ
 		private Image m_image;
-		//ÎÄ¼şÃû
+		//æ–‡ä»¶å
 		private String m_name;
 		public ImageItem(String name, Image img){
 			m_image = img;

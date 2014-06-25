@@ -1,69 +1,69 @@
 package redgame.scripts;
 /**
- * Ã¿¸ö½Å±¾ÊÇÒ»¸öÏß³Ì,ËüÔËĞĞÊ±Ö÷Ïß³ÌµÈ´ı,Ö÷Ïß³ÌÔËĞĞÊ±½Å±¾µÈ´ı
+ * æ¯ä¸ªè„šæœ¬æ˜¯ä¸€ä¸ªçº¿ç¨‹,å®ƒè¿è¡Œæ—¶ä¸»çº¿ç¨‹ç­‰å¾…,ä¸»çº¿ç¨‹è¿è¡Œæ—¶è„šæœ¬ç­‰å¾…
  */
 public abstract class ThreadScript extends AbstractScript implements Runnable{
-    //Áî½Å±¾Ç¿ÖÆ½áÊøµÄÒì³£
+    //ä»¤è„šæœ¬å¼ºåˆ¶ç»“æŸçš„å¼‚å¸¸
     protected class ThreadTerminated extends Exception{}
-    //ÊÇ·ñÕıÔÚµÈ´ı
+    //æ˜¯å¦æ­£åœ¨ç­‰å¾…
     private boolean m_suspended = true;
-    //ÊÇ·ñÒÑ¾­Í£Ö¹
+    //æ˜¯å¦å·²ç»åœæ­¢
     private boolean m_stopped = false;
-    //ÊÇ·ñÔÚĞİÃß
+    //æ˜¯å¦åœ¨ä¼‘çœ 
     private boolean m_sleeping = false;
-    //Ïß³Ì
+    //çº¿ç¨‹
     private Thread m_thread;
     
     /**
-     * ÊÇ·ñÕıÔÚµÈ´ı
+     * æ˜¯å¦æ­£åœ¨ç­‰å¾…
      */
     public synchronized boolean isSuspended(){
         return m_suspended;
     }
     
     /**
-     * ÊÇ·ñÕıÔÚĞİÃß
+     * æ˜¯å¦æ­£åœ¨ä¼‘çœ 
      */
     public synchronized boolean isSleeping(){
         return m_sleeping;
     }
 
     /**
-     * ´ÓµÈ´ıÖĞ»Ø¸´
+     * ä»ç­‰å¾…ä¸­å›å¤
      */
     public synchronized void spResume(){
         m_suspended = false;
     }
     /**
-     * ¹ÒÆğµÈ´ı
+     * æŒ‚èµ·ç­‰å¾…
      */
     public synchronized void spSuspend(){
         m_suspended = true;
     }
     /**
-     * ¿ªÊ¼½Å±¾
+     * å¼€å§‹è„šæœ¬
      */
     public void start(){
         m_thread = new Thread(this);
         m_thread.start();
-        //µÈ´ıÏß³Ì¿ªÊ¼
+        //ç­‰å¾…çº¿ç¨‹å¼€å§‹
         while (!m_running && m_thread.isAlive()){
         }
     }
     /**
-     * Í£Ö¹Ïß³Ì
+     * åœæ­¢çº¿ç¨‹
      */
     public synchronized void stop(){
         m_stopped = true;    
     }
     
     /**
-     * Ö´ĞĞ
+     * æ‰§è¡Œ
      */
     public int update(){
        if (! m_sleeping ){
             m_suspended = false;
-            //µÈ´ı
+            //ç­‰å¾…
             while( !m_suspended && m_thread.isAlive()){
             }
         }
@@ -79,7 +79,7 @@ public abstract class ThreadScript extends AbstractScript implements Runnable{
         }
     }
     /**
-     * ¸²¸ÇRunnableµÄrun()
+     * è¦†ç›–Runnableçš„run()
      */
     public void run(){
         m_running = true;
@@ -90,7 +90,7 @@ public abstract class ThreadScript extends AbstractScript implements Runnable{
         m_running = false;
     }
     /**
-     * ½Å±¾ÄÚÈİ
+     * è„šæœ¬å†…å®¹
      */
     protected abstract void runScript() throws ThreadTerminated;
     

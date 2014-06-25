@@ -1,6 +1,6 @@
 package redgame.obj;
 /*
- * Actor.java ×÷Õß£ºÒ¦´ºêÍ
+ * Actor.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
@@ -8,58 +8,58 @@ import redgame.engine.*;
 import redgame.anim.*;
 
 /**
- * ActorÀàÊÇÓÎÏ·ÖĞµÄÈËÎï,°üÀ¨Íæ¼ÒºÍµĞÈË
+ * Actorç±»æ˜¯æ¸¸æˆä¸­çš„äººç‰©,åŒ…æ‹¬ç©å®¶å’Œæ•Œäºº
  * 
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 
 public class Actor extends MovableObject{
     /**
-     * ÊÇ·ñÂé±Ô
+     * æ˜¯å¦éº»ç—¹
      */
     protected  boolean m_lull;    
     /*
-     * ÊÇ·ñÒÑËÀ
+     * æ˜¯å¦å·²æ­»
      */
     protected boolean   m_dead;
     /*
-     * ÊÇ·ñ¿É±»ÉËº¦
+     * æ˜¯å¦å¯è¢«ä¼¤å®³
      */
 
     protected boolean   m_harmable;
     /*
-     * ÊÇ·ñÓĞĞË·Ü¼Á
+     * æ˜¯å¦æœ‰å…´å¥‹å‰‚
      */
     protected boolean   m_cordial;
     /*
-     * ËÀÊ±¶¯»­µÄ¼ÆÊ±Æ÷
+     * æ­»æ—¶åŠ¨ç”»çš„è®¡æ—¶å™¨
      */
     protected long   m_deadCounter;
     /*
-     * ËÀÊ±¶¯»­µÄÁ£×ÓÏµÍ³
+     * æ­»æ—¶åŠ¨ç”»çš„ç²’å­ç³»ç»Ÿ
      */
     protected SparkParticleSystem m_spark1;
     protected SparkParticleSystem m_spark2;
     /*
-     * ÎŞµĞ¶¯»­µÄ¼ÆÊ±Æ÷
+     * æ— æ•ŒåŠ¨ç”»çš„è®¡æ—¶å™¨
      */
     protected long   m_noHarmCounter;
     /*
-     * ĞË·Ü¼ÁµÄ¼ÆÊ±Æ÷
+     * å…´å¥‹å‰‚çš„è®¡æ—¶å™¨
      */
     protected long   m_cordialCounter;
     /**
-     * ³¯Ïò 0~3
+     * æœå‘ 0~3
      * @see AbstractObject#G_UP
      * @see AbstractObject#G_DOWN
      * @see AbstractObject#G_LEFT
      * @see AbstractObject#G_RIGHT
      */
     protected int m_face;        
-    private  long m_lullCounter;  //Âé±Ô¼ÆÊ±Æ÷
-    private  long m_lullTime;     //Âé±ÔÊ±¼ä
+    private  long m_lullCounter;  //éº»ç—¹è®¡æ—¶å™¨
+    private  long m_lullTime;     //éº»ç—¹æ—¶é—´
     /**
-     * Âé±ÔÊ±¶¯»­
+     * éº»ç—¹æ—¶åŠ¨ç”»
      */
     protected  Animation m_lullAnim = null; 
 
@@ -69,13 +69,13 @@ public class Actor extends MovableObject{
     public int HP;
 
     /**
-     * ÓÉÊôĞÔ¸üĞÂ¶¯»­
+     * ç”±å±æ€§æ›´æ–°åŠ¨ç”»
      */
     protected void updateAnimation(){
         m_anim.setRange(m_face * 4, m_face * 4 + 3, m_delay);
     }
     /**
-     * ¶¯×÷,¸üĞÂ¶¯»­
+     * åŠ¨ä½œ,æ›´æ–°åŠ¨ç”»
      */
     public void move(long passedTime){
         m_anim.update(passedTime);
@@ -91,19 +91,19 @@ public class Actor extends MovableObject{
         }
     }
     /**
-     * ¸üĞÂ×´Ì¬
+     * æ›´æ–°çŠ¶æ€
      */
     public void update(long passedTime){
     }
     /**
-     * È¡µÃ³¯Ïò
+     * å–å¾—æœå‘
      * @see #m_face
      */
     public int getFace(){
         return m_face;
     }
     /**
-     * ÉèÖÃ³¯Ïò
+     * è®¾ç½®æœå‘
      * @see #m_face
      */
     public void setFace(int face){
@@ -113,13 +113,13 @@ public class Actor extends MovableObject{
         } 
     }
     /**
-     * ¹¹ÔìÎïÌå
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param h Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ ç‰©ä½“
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param h å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Animation
      * @see GameWorld
      * @see MovableObject
@@ -166,7 +166,7 @@ public class Actor extends MovableObject{
                                 (int)(getY() + getH() - 64)
                             );
         }
-        //ËÀÍöµÄ¶¯»­
+        //æ­»äº¡çš„åŠ¨ç”»
         if (m_dead){
             int yy = (int)( m_deadCounter * 50 / 1000 );
             m_anim.paint_alpha(g, (int)x - m_block.x, (int)y - m_block.y - yy, 
@@ -178,14 +178,14 @@ public class Actor extends MovableObject{
         }
     }
     /**
-     * ·µ»Øtrue: ¿ÉÒÔÅö×²
+     * è¿”å›true: å¯ä»¥ç¢°æ’
      */
     public boolean isBlocked(){
         return m_blocked && (!m_dead);
     }
     /**
-     * ¿ªÊ¼±»Âé±Ô
-     * @param lullTime »èÃÔÊ±¼ä
+     * å¼€å§‹è¢«éº»ç—¹
+     * @param lullTime æ˜è¿·æ—¶é—´
      */
     public void startLull(long lullTime){
         m_game.playSound("sound/hit.wav");
@@ -195,8 +195,8 @@ public class Actor extends MovableObject{
         m_lullAnim.start();
     }
     /**
-     * ¿ªÊ¼·şÓÃĞË·Ü¼Á
-     * @param lullTime ×÷ÓÃÊ±¼ä
+     * å¼€å§‹æœç”¨å…´å¥‹å‰‚
+     * @param lullTime ä½œç”¨æ—¶é—´
      */
     public void startCordial(long time){
         m_cordialCounter = time;
@@ -204,13 +204,13 @@ public class Actor extends MovableObject{
         hurt(1, 100);
     }
     /**
-     * Í£Ö¹Âé±Ô
+     * åœæ­¢éº»ç—¹
      */
     protected void stopLull(){
         m_lull = false;
     }
     /**
-     * µÈ´ı²¢¸üĞÂÂé±Ô¼ÆÊ±Æ÷
+     * ç­‰å¾…å¹¶æ›´æ–°éº»ç—¹è®¡æ—¶å™¨
      */
     protected void waitLull(long passedTime){
         m_lullCounter += passedTime;
@@ -219,7 +219,7 @@ public class Actor extends MovableObject{
         }
     }
     /**
-     * µÈ´ı²¢¸üĞÂĞË·Ü¼Á¼ÆÊ±Æ÷
+     * ç­‰å¾…å¹¶æ›´æ–°å…´å¥‹å‰‚è®¡æ—¶å™¨
      */
     protected void waitCordial(long passedTime){
         m_cordialCounter -= passedTime;
@@ -229,7 +229,7 @@ public class Actor extends MovableObject{
         }
     }
     /**
-     * ÁîÆäËÀÍö
+     * ä»¤å…¶æ­»äº¡
      */    
     public void die(){
         m_game.playSound("sound/si.wav");
@@ -245,7 +245,7 @@ public class Actor extends MovableObject{
                   5, 5, 0.1f);
     }
     /**
-     * ÊÇ·ñÒÑËÀ
+     * æ˜¯å¦å·²æ­»
      */
     public boolean isdead(){
         return m_dead;

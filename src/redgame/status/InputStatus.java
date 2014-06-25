@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * InputStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * InputStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.font.*;
@@ -9,10 +9,10 @@ import redgame.engine.*;
 import redgame.anim.*;
 import redgame.util.*;
 /**
- * InputStatusÀà
- * ÔÚÕâÊ±»áÏÔÊ¾Ò»¸ö¶Ô»°¿ò,ÒªÇóÍæ¼ÒÊäÈëĞÅÏ¢
+ * InputStatusç±»
+ * åœ¨è¿™æ—¶ä¼šæ˜¾ç¤ºä¸€ä¸ªå¯¹è¯æ¡†,è¦æ±‚ç©å®¶è¾“å…¥ä¿¡æ¯
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class InputStatus extends AbstractStatus {
 
@@ -20,16 +20,16 @@ public class InputStatus extends AbstractStatus {
     private int m_w;
     
     private String m_prompt;    
-    private Font m_font = new Font("ËÎÌå", 0, 16);    
+    private Font m_font = new Font("å®‹ä½“", 0, 16);    
     private Animation m_anim;
-    /**½á¹û*/
+    /**ç»“æœ*/
     public static String result;
     /**
-     * ´´½¨Ò»¸öAddHighScoreStatus
-     * @param game ÓÎÏ·ÒıÓÃ
-     * @param x Î»ÖÃX×ø±ê
-     * @param y Î»ÖÃY×ø±ê
-     * @param prompt ÌáÊ¾
+     * åˆ›å»ºä¸€ä¸ªAddHighScoreStatus
+     * @param game æ¸¸æˆå¼•ç”¨
+     * @param x ä½ç½®Xåæ ‡
+     * @param y ä½ç½®Yåæ ‡
+     * @param prompt æç¤º
      */
 
     public InputStatus(GameWorld game, int x, int y, String prompt) {
@@ -45,8 +45,8 @@ public class InputStatus extends AbstractStatus {
     }
 
     /**
-     * ¸üĞÂ×´Ì¬, ÊäÈëÍê±ÏÔòÍ£Ö¹
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°çŠ¶æ€, è¾“å…¥å®Œæ¯•åˆ™åœæ­¢
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
 
     public int update(long passedTime){
@@ -73,9 +73,9 @@ public class InputStatus extends AbstractStatus {
         
     }    
     /**
-     * »­Í¼´úÂë:Ê²Ã´Ò²²»»­
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç :ä»€ä¹ˆä¹Ÿä¸ç”»
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     
     public int draw(long passedTime, Graphics g){

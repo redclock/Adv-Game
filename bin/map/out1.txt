@@ -1,5 +1,5 @@
 MAP
-  name Ò°Íâ
+  name é‡Žå¤–
   size 3000 364
   backgroundSize 1500 364
   background image/bk11.jpg

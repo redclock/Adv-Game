@@ -1,5 +1,5 @@
 MAP
-  name Ê÷ÁÖ
+  name æ ‘æž—
   size 800 600
   backgroundSize 680 500
   background image/bk4.jpg

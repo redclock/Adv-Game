@@ -26,7 +26,7 @@ public class TellDeath extends SimpleScript {
                 if (alpha < 0) alpha = 0;
                 if (alpha > 1.0f) alpha = 1.0f;
             }   
-            Font f = new Font("ºÚÌå", Font.BOLD, size);
+            Font f = new Font("é»‘ä½“", Font.BOLD, size);
             g2d.setFont(f);
             g2d.setColor(new Color(r, g, b, alpha));
             Rectangle rect = f.getStringBounds(text, g2d.getFontRenderContext()).getBounds();
@@ -49,20 +49,20 @@ public class TellDeath extends SimpleScript {
         
         b.canControl = false;
         switch(m_counter){
-            case 1: b.say("´ó²®£¬ÄãÔõÃ´ÔÚÕâÀï£¿"); break;
-            case 2: a.say("ÄãÃ»ÓĞ¼ûµ½ÄãÄÌÄÌÂğ£¿"); break;
-            case 3: b.say("ß×£¬ÄÌÄÌÔõÃ´ÁË¡£Ëı³öÈ¥ÁËÂğ£¿"); break;
-            case 4: a.say("Ëı¿´Äã°ëÌìÃ»ÓĞ»ØÀ´£¬ºÜµ£ĞÄÄã»á³öÊÂ¡£\n" +
-                          "ËùÒÔ¾Í³öÈ¥ÕÒÄãÁË£¬»¹ÇëÎÒ°ïÃ¦¿´¼Ò¡£" ); break;
-            case 5: b.say("ÄÌÄÌÕæÊÇµÄ£¬ÎÒÓÖ²»ÊÇĞ¡º¢×ÓÁË¡£"); break;
+            case 1: b.say("å¤§ä¼¯ï¼Œä½ æ€ä¹ˆåœ¨è¿™é‡Œï¼Ÿ"); break;
+            case 2: a.say("ä½ æ²¡æœ‰è§åˆ°ä½ å¥¶å¥¶å—ï¼Ÿ"); break;
+            case 3: b.say("å’¦ï¼Œå¥¶å¥¶æ€ä¹ˆäº†ã€‚å¥¹å‡ºå»äº†å—ï¼Ÿ"); break;
+            case 4: a.say("å¥¹çœ‹ä½ åŠå¤©æ²¡æœ‰å›æ¥ï¼Œå¾ˆæ‹…å¿ƒä½ ä¼šå‡ºäº‹ã€‚\n" +
+                          "æ‰€ä»¥å°±å‡ºå»æ‰¾ä½ äº†ï¼Œè¿˜è¯·æˆ‘å¸®å¿™çœ‹å®¶ã€‚" ); break;
+            case 5: b.say("å¥¶å¥¶çœŸæ˜¯çš„ï¼Œæˆ‘åˆä¸æ˜¯å°å­©å­äº†ã€‚"); break;
             case 6: b.say("......"); 
                     
                     break;
-            case 7: b.say("ÎÒ»¹ÊÇÈ¥ÕÒÕÒÄÌÄÌ°É"); break;
+            case 7: b.say("æˆ‘è¿˜æ˜¯å»æ‰¾æ‰¾å¥¶å¥¶å§"); break;
             case 8: 
                 AbstractObject d = game.getMap().findStatic("door");
                 if (d != null){
-                    d.say("\ts30²»ºÃÁË£¬ÓĞÈËÊÜÉËÁË£¡");
+                    d.say("\ts30ä¸å¥½äº†ï¼Œæœ‰äººå—ä¼¤äº†ï¼");
                 }
                 game.stopMusic();
                 game.playSound("sound/shock.mid");
@@ -90,31 +90,31 @@ public class TellDeath extends SimpleScript {
                 }
                 break;
             case 14:
-                if (! textAnim(300, 250, "ÊÇ"+ b.getName()+"µÄÄÌÄÌ!" , 1, 1, 1)) m_counter --;
+                if (! textAnim(300, 250, "æ˜¯"+ b.getName()+"çš„å¥¶å¥¶!" , 1, 1, 1)) m_counter --;
                 else m_text_counter = 0;
                 break;
             case 15:
-                if (! textAnim(250, 200, "Ôõ...ÔõÃ´ÕâÑù°¡." ,1 ,1 ,0)) m_counter --;
+                if (! textAnim(250, 200, "æ€...æ€ä¹ˆè¿™æ ·å•Š." ,1 ,1 ,0)) m_counter --;
                 else m_text_counter = 0;
                 break;
             case 16:
-                if (! textAnim(400, 150, "ÌıËµÊÇÈ¥ÕÒ³öÈ¥ÍæµÄ" + b.getName() ,0 ,1 ,0)) m_counter --;
+                if (! textAnim(400, 150, "å¬è¯´æ˜¯å»æ‰¾å‡ºå»ç©çš„" + b.getName() ,0 ,1 ,0)) m_counter --;
                 else m_text_counter = 0;
                 break;
             case 17:
-                if (! textAnim(400, 150, "½á¹ûÓöµ½ÁË¹ÖÎï, ±»´òÉËÁË" ,0 ,1 ,0)) m_counter --;
+                if (! textAnim(400, 150, "ç»“æœé‡åˆ°äº†æ€ªç‰©, è¢«æ‰“ä¼¤äº†" ,0 ,1 ,0)) m_counter --;
                 else m_text_counter = 0;
                 break;
             case 18:
-                if (! textAnim(300, 250, "Ò½Éú, ÉËÊÆÔõÃ´Ñù?" ,1 ,1 ,1)) m_counter --;
+                if (! textAnim(300, 250, "åŒ»ç”Ÿ, ä¼¤åŠ¿æ€ä¹ˆæ ·?" ,1 ,1 ,1)) m_counter --;
                 else m_text_counter = 0;
                 break;
             case 19:
-                if (! textAnim(300, 350, "ÕâÉË, ¿ÖÅÂ......" ,0 ,1 ,1)) m_counter --;
+                if (! textAnim(300, 350, "è¿™ä¼¤, ææ€•......" ,0 ,1 ,1)) m_counter --;
                 else m_text_counter = 0;
                 break;
             case 20:
-                if (! textAnim(350, 150, b.getName() + "À´À²!" ,0 ,1 ,0)) m_counter --;
+                if (! textAnim(350, 150, b.getName() + "æ¥å•¦!" ,0 ,1 ,0)) m_counter --;
                 else m_text_counter = 0;
                 break;
             case 21:
@@ -138,23 +138,23 @@ public class TellDeath extends SimpleScript {
                 b.setPosition(300 + 4, 250 + 4);
                 break;
             case 24:
-                b.say("ÄÌ...ÄÌÄÌ?.....");
+                b.say("å¥¶...å¥¶å¥¶?.....");
                 break;    
             case 25:
-                b.say("ÄúÔõÃ´ÁË, ÄúÊÜÉËÁËÂğ?");
+                b.say("æ‚¨æ€ä¹ˆäº†, æ‚¨å—ä¼¤äº†å—?");
                 break;    
             case 26:
-                b.say("¶¼¹ÖÎÒ²»ºÃ, ÎÒ²»¸Ã³öÈ¥.");
+                b.say("éƒ½æ€ªæˆ‘ä¸å¥½, æˆ‘ä¸è¯¥å‡ºå».");
                 break;    
             case 27:
-                b.say("ÄÌÄÌ...");
+                b.say("å¥¶å¥¶...");
                 break;    
             case 28:
-                b.say("ÄÌÄÌ, Äú²»ÒªËÀÑ½...");
+                b.say("å¥¶å¥¶, æ‚¨ä¸è¦æ­»å‘€...");
                 break;    
             case 29:
                 game.stopMusic();
-                b.say("\ts40ÄÌÄÌ!");
+                b.say("\ts40å¥¶å¥¶!");
                 break;    
             case 30:
                 if (granny_down != null) granny_down.say("\te2");
@@ -165,39 +165,39 @@ public class TellDeath extends SimpleScript {
                     granny.setPosition(290, 300);
                     granny.setVisible(true);
                     granny.setGravity(false);
-                    granny.say("Î¹, ±ğÖäÎÒºÃ²»ºÃ.\nÎÒ»¹Ã»ËÀÄØ.");
+                    granny.say("å–‚, åˆ«å’’æˆ‘å¥½ä¸å¥½.\næˆ‘è¿˜æ²¡æ­»å‘¢.");
                 }
                 break;    
             case 32:
-                b.say("ß×? ÄÌÄÌÄúÃ»ÊÂÁËÂğ?");
+                b.say("å’¦? å¥¶å¥¶æ‚¨æ²¡äº‹äº†å—?");
                 break;    
             case 33:
                 if (granny != null) {
-                    granny.say("Äã·ÅĞÄ, ÎÒµÄÉí×Ó»¹Ó²ÀÊµÄºÜÄØ.");
+                    granny.say("ä½ æ”¾å¿ƒ, æˆ‘çš„èº«å­è¿˜ç¡¬æœ—çš„å¾ˆå‘¢.");
                 }
                 m_text_counter = 0;
                 break;    
             case 34:
-                if (!textAnim(300, 250, "ÄãÄÌÄÌÊÜµÄÖ»ÊÇÇáÎ¢µÄÆ¤ÈâÉË" ,0 ,1 ,1)) m_counter --;
+                if (!textAnim(300, 250, "ä½ å¥¶å¥¶å—çš„åªæ˜¯è½»å¾®çš„çš®è‚‰ä¼¤" ,0 ,1 ,1)) m_counter --;
                 else m_text_counter = 0;
                 break;    
             case 35:
-                if (!textAnim(300, 250, "·ÅĞÄºÃÁË" ,0 ,1 ,1)) m_counter --;
+                if (!textAnim(300, 250, "æ”¾å¿ƒå¥½äº†" ,0 ,1 ,1)) m_counter --;
                 else m_text_counter = 0;
                 break;    
             case 36:
-                if (!textAnim(150, 200, "Ì«ºÃÁË, Ì«ºÃÁË" ,1 ,1 ,1)) m_counter --;
+                if (!textAnim(150, 200, "å¤ªå¥½äº†, å¤ªå¥½äº†" ,1 ,1 ,1)) m_counter --;
                 else m_text_counter = 0;
                 break;
             case 37:
-                if (!textAnim(400, 300, "¸Õ²ÅÕæÊÇµ£ĞÄËÀÁË" ,1 ,1 ,0)) m_counter --;
+                if (!textAnim(400, 300, "åˆšæ‰çœŸæ˜¯æ‹…å¿ƒæ­»äº†" ,1 ,1 ,0)) m_counter --;
                 else {
                     m_text_counter = 0;
                     game.playSound("sound/win2.mid");
                 }    
                 break;
             case 38:
-                b.say("ÕæÊÇÌ«ºÃÁËÄØ!\te3");
+                b.say("çœŸæ˜¯å¤ªå¥½äº†å‘¢!\te3");
                 break;        
             case 39:
                 game.pushStatus(new SwitchStatus(game, new CompleteAllStatus(game), 1));

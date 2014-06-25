@@ -21,8 +21,8 @@ public class GameLib {
     	return gd;
     }
     /**
-     * ³õÊ¼»¯
-     * @param win ÓÎÏ·´°¿Ú
+     * åˆå§‹åŒ–
+     * @param win æ¸¸æˆçª—å£
      */
     public static void Init(Frame win){
         if (win == null) return;
@@ -31,7 +31,7 @@ public class GameLib {
         m_win = win;
     }
     /**
-     * ÇĞ»»´°¿ÚÓëÈ«ÆÁÄ»
+     * åˆ‡æ¢çª—å£ä¸å…¨å±å¹•
      */
     public static void setFullScreen(boolean full){
         if (gd == null) return;
@@ -54,14 +54,14 @@ public class GameLib {
         }
     }
     /**
-     * ·µ»Øµ±Ç°ÊÇ·ñÊÇÈ«ÆÁÄ»
+     * è¿”å›å½“å‰æ˜¯å¦æ˜¯å…¨å±å¹•
      */
     public static boolean isFullScreen(Window win){
         if (gd == null) return false;
         return gd.getFullScreenWindow() == win;
     }
     /**
-     * È·¶¨ÏÔÊ¾Ä£Ê½ÊÇ·ñ±»Ö§³Ö
+     * ç¡®å®šæ˜¾ç¤ºæ¨¡å¼æ˜¯å¦è¢«æ”¯æŒ
      */
     public static boolean displayModeSupported(int width, int height, int bitDepth){
         if (gd == null) return false;
@@ -76,7 +76,7 @@ public class GameLib {
         return false;        
     } 
     /**
-     * ÉèÖÃÏÔÊ¾Ä£Ê½
+     * è®¾ç½®æ˜¾ç¤ºæ¨¡å¼
      */
     public static boolean setMode(int width, int height, int bitDepth){
         if (gd == null) return false;

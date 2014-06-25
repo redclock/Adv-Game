@@ -7,7 +7,7 @@ import redgame.status.*;
 
 public class Music extends SimpleScript {
     private AbstractMenu m;
-    private String[] s = { "1943", "Mario", "»ê¶·ÂŞ", "ÈÈÑªÎïÓï"};
+    private String[] s = { "1943", "Mario", "é­‚æ–—ç½—", "çƒ­è¡€ç‰©è¯­"};
     public void start(){
        	super.start();
         m = new TextMenu(game, s);
@@ -17,7 +17,7 @@ public class Music extends SimpleScript {
         AbstractObject a = (AbstractObject) source.owner;
         
         switch(m_counter){
-            case 1: a.say("ÏëÌıÌıÎÒµÄÑİ×àÂğ?"); break;
+            case 1: a.say("æƒ³å¬å¬æˆ‘çš„æ¼”å¥å—?"); break;
             case 2:   
                 game.pushStatus(new ShowMenuStatus(game, 100, 30, m));break;
             case 3: 

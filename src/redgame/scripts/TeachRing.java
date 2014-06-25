@@ -22,43 +22,43 @@ public class TeachRing extends SimpleScript {
         int x = getIntVar("meetteacher_ring");
         if ( x == 0){
             switch(m_counter){
-                case 1: a.say("ÄêÇáÈË, ÄãÄÜµ½ÕâÀïÕæÊÇ²»ÈİÒ×."); break;
-                case 2: a.say("ÎÒÏë²â²âÄãµÄ¹¦·òÈçºÎ."); break;
+                case 1: a.say("å¹´è½»äºº, ä½ èƒ½åˆ°è¿™é‡ŒçœŸæ˜¯ä¸å®¹æ˜“."); break;
+                case 2: a.say("æˆ‘æƒ³æµ‹æµ‹ä½ çš„åŠŸå¤«å¦‚ä½•."); break;
                 case 3: if (b.canSword() == false){
-                            a.say("Ê²Ã´?Äã»¹Ã»ÕÒµ½Ò»¼şÎäÆ÷Âğ?");
+                            a.say("ä»€ä¹ˆ?ä½ è¿˜æ²¡æ‰¾åˆ°ä¸€ä»¶æ­¦å™¨å—?");
                             m_counter = 99; //jump to case 100
                         }else{
-                            a.say("ÄãÔ¸Òâ½ÓÊÜÎÒµÄ²âÊÔÂğ?");
+                            a.say("ä½ æ„¿æ„æ¥å—æˆ‘çš„æµ‹è¯•å—?");
                         }
                         break;
-                case 4: b.say("ÌıÄãËµµÄÄÇÃ´ÉñÃØ...\nÎÒµÃ¿¼ÂÇ¿¼ÂÇ"); 
+                case 4: b.say("å¬ä½ è¯´çš„é‚£ä¹ˆç¥ç§˜...\næˆ‘å¾—è€ƒè™‘è€ƒè™‘"); 
                     break;
-                case 5: b.say("Ô¸²»Ô¸ÒâÄØ?"); 
+                case 5: b.say("æ„¿ä¸æ„¿æ„å‘¢?"); 
                     break;
                 case 6:   
-                    m = new TextMenu(game, new String[]{ "Í¬Òâ²âÊÔ", "²»Ô¸Òâ"});
+                    m = new TextMenu(game, new String[]{ "åŒæ„æµ‹è¯•", "ä¸æ„¿æ„"});
                     game.pushStatus(new ShowMenuStatus(game, 895, 32, m));
                     break;
                 case 7: 
                         if (m.getIndex() == 1){
-                            a.say("²»Ô¸ÒâÂğ?\nÎÒ»¹ÒÔÎªÄãÊÇ¸öÓĞµ¨Á¿µÄÈËÄØ.");
+                            a.say("ä¸æ„¿æ„å—?\næˆ‘è¿˜ä»¥ä¸ºä½ æ˜¯ä¸ªæœ‰èƒ†é‡çš„äººå‘¢.");
                             b.canControl = true;
                             stop();
                         }else{
-                            a.say("ÄÇºÃ, ÎÒÃÇ¿ªÊ¼");
+                            a.say("é‚£å¥½, æˆ‘ä»¬å¼€å§‹");
                         }
                         break;
                 case 8: game.gotoMap("map/trains2.txt", 560, 370);
                         break;
-                case 9: a.say("ÄãµÄÌôÕ½ÊÇ´ò°ÜÕâ¼¸¸ö×ÏÒÂÈË"); break;
-                case 10: a.say("Ğ¡ĞÄÎªÃîÑ½!ºÇºÇ"); 
+                case 9: a.say("ä½ çš„æŒ‘æˆ˜æ˜¯æ‰“è´¥è¿™å‡ ä¸ªç´«è¡£äºº"); break;
+                case 10: a.say("å°å¿ƒä¸ºå¦™å‘€!å‘µå‘µ"); 
                         setVar("meetteacher_ring", x+1);
                         b.canControl = true; 
                         stop();
                         break;
                 
                 //if no sword
-                case 100: a.say("ÄÇÌ«¿ÉÏ§ÁË...\nÄãÕÒµ½ºÏÊÊµÄÎäÆ÷Ö®ºóÔÙÀ´ÕÒÎÒ°É"); 
+                case 100: a.say("é‚£å¤ªå¯æƒœäº†...\nä½ æ‰¾åˆ°åˆé€‚çš„æ­¦å™¨ä¹‹åå†æ¥æ‰¾æˆ‘å§"); 
                         break;
                 default: b.canControl = true; 
                         stop();        
@@ -71,26 +71,26 @@ public class TeachRing extends SimpleScript {
                 game.getMap().findActor("e3").getVisible() ||
                 game.getMap().findActor("e4").getVisible() ||
                 game.getMap().findActor("e5").getVisible())){
-                   a.say("Òª°Ñ×ÏÒÂÈË¶¼ÏûÃğµô\n¼ÓÓÍÑ½!"); 
+                   a.say("è¦æŠŠç´«è¡£äººéƒ½æ¶ˆç­æ‰\nåŠ æ²¹å‘€!"); 
                    b.canControl = true; 
                    stop();
             }else{
                 //succeed
                 switch(m_counter){
-                    case 1: a.say("ÄêÇáÈË, ¸ÉµÄ²»´í!"); break;
-                    case 2: b.say("ÕâÌ«¼òµ¥ÁË!"); break;
+                    case 1: a.say("å¹´è½»äºº, å¹²çš„ä¸é”™!"); break;
+                    case 2: b.say("è¿™å¤ªç®€å•äº†!"); break;
                     case 3: game.gotoMap("map/room4.txt", 806, 20); break;
-                    case 4: a.say("ÄãÍ¨¹ıÁË²âÊÔ, ¸øÄãÒ»¸ö½±Àø!"); break;
-                    case 5: a.say("\tcffff0000\tb\ts20³¬¼¶Ä§Á¦Ãæ°üÈ¦·¢ÉäÆ÷!"); 
+                    case 4: a.say("ä½ é€šè¿‡äº†æµ‹è¯•, ç»™ä½ ä¸€ä¸ªå¥–åŠ±!"); break;
+                    case 5: a.say("\tcffff0000\tb\ts20è¶…çº§é­”åŠ›é¢åŒ…åœˆå‘å°„å™¨!"); 
                         b.curItem = b.items[Player.ITEM_RING] = new RingItem(game);
                         b.items[Player.ITEM_RING].setCount(3);
                         break;
-                    case 6: a.say("²¢¸½ËÍÈı¸öÃæ°üÈ¦!\n½«ËüÔÒµ½µĞÈËÍ·ÉÏ\nÄÜÊ¹Æä»èÃÔÒ»¶ÎÊ±¼ä"); 
+                    case 6: a.say("å¹¶é™„é€ä¸‰ä¸ªé¢åŒ…åœˆ!\nå°†å®ƒç ¸åˆ°æ•Œäººå¤´ä¸Š\nèƒ½ä½¿å…¶æ˜è¿·ä¸€æ®µæ—¶é—´"); 
                         break;
-                    case 7: a.say("ÄãÏëÌı¸üÏêÏ¸µÄÊ¹ÓÃ·½·¨Âğ£¿");
+                    case 7: a.say("ä½ æƒ³å¬æ›´è¯¦ç»†çš„ä½¿ç”¨æ–¹æ³•å—ï¼Ÿ");
                         break;    
                     case 8:   
-                        m = new TextMenu(game, new String[]{ "ÎÒÏëÌıÌı", "²»±ØÁË"});
+                        m = new TextMenu(game, new String[]{ "æˆ‘æƒ³å¬å¬", "ä¸å¿…äº†"});
                         game.pushStatus(new ShowMenuStatus(game, 895, 40, m));
                         break;
                     case 9:
@@ -111,10 +111,10 @@ public class TeachRing extends SimpleScript {
             }
         }else if ( x == 2){
             switch(m_counter){
-                case 1: a.say("ÄãÏëÌıÃæ°üÈ¦µÄÊ¹ÓÃ·½·¨Âğ£¿");
+                case 1: a.say("ä½ æƒ³å¬é¢åŒ…åœˆçš„ä½¿ç”¨æ–¹æ³•å—ï¼Ÿ");
                     break;    
                 case 2:   
-                    m = new TextMenu(game, new String[]{ "ÎÒÏëÌıÌı", "²»±ØÁË"});
+                    m = new TextMenu(game, new String[]{ "æˆ‘æƒ³å¬å¬", "ä¸å¿…äº†"});
                     game.pushStatus(new ShowMenuStatus(game, 895, 32, m));
                     break;
                 case 3:
@@ -131,22 +131,22 @@ public class TeachRing extends SimpleScript {
             }
         }else if ( x == 3){
             switch(m_counter){
-                case 1: a.say("ÎÒÀ´½ÌÄãÃæ°üÈ¦µÄÊ¹ÓÃ·½·¨:"); break;
+                case 1: a.say("æˆ‘æ¥æ•™ä½ é¢åŒ…åœˆçš„ä½¿ç”¨æ–¹æ³•:"); break;
                 case 2:
-                    a.say("Äã¿ÉÒÔÍ¨¹ı²Ëµ¥ÖĞ[Ñ¡ÔñÎäÆ÷]×°Åä\n" +
-                          "Ãæ°üÈ¦£¬Ò²¿ÉÒÔ°´Êı×Ö¼ü2¿ìËÙ×°Åä"); 
+                    a.say("ä½ å¯ä»¥é€šè¿‡èœå•ä¸­[é€‰æ‹©æ­¦å™¨]è£…é…\n" +
+                          "é¢åŒ…åœˆï¼Œä¹Ÿå¯ä»¥æŒ‰æ•°å­—é”®2å¿«é€Ÿè£…é…"); 
                     break;      
                 case 3:
-                    a.say("µ±Äã×°ÅäºÃºó, ÓÒÏÂ½Ç»áÓĞÍ¼±êÖ¸Ê¾"); 
+                    a.say("å½“ä½ è£…é…å¥½å, å³ä¸‹è§’ä¼šæœ‰å›¾æ ‡æŒ‡ç¤º"); 
                     break;
-                case 4: a.say("°´×¡X¼ü²»·Å£¬³öÏÖÂÌÉ«×¼ĞÇºó°´¡û¡ú¼ü\n" +
-                              "µ÷Õûµ½ÊÊµ±Î»ÖÃ£¬·Å¿ªX¼ü£¬Ò»¸ö³äÂúµ¯\n" +
-                              "ĞÔµÄÃæ°üÈ¦¾Í·¢Éä³öÈ¥ÁË"); 
+                case 4: a.say("æŒ‰ä½Xé”®ä¸æ”¾ï¼Œå‡ºç°ç»¿è‰²å‡†æ˜ŸåæŒ‰â†â†’é”®\n" +
+                              "è°ƒæ•´åˆ°é€‚å½“ä½ç½®ï¼Œæ”¾å¼€Xé”®ï¼Œä¸€ä¸ªå……æ»¡å¼¹\n" +
+                              "æ€§çš„é¢åŒ…åœˆå°±å‘å°„å‡ºå»äº†"); 
                         break;
-                case 5: a.say("½«ËüÔÒµ½µĞÈËÍ·ÉÏ\nÄÜÊ¹Æä»èÃÔÒ»¶ÎÊ±¼ä"); 
-                case 6: a.say("ÄãÖ»ÓĞÓĞÏŞ¸öÃæ°üÈ¦, \nÓÒÏÂ½ÇµÄÍ¼±êÏÔÊ¾ÄãµÄÃæ°üÈ¦Êı"); 
+                case 5: a.say("å°†å®ƒç ¸åˆ°æ•Œäººå¤´ä¸Š\nèƒ½ä½¿å…¶æ˜è¿·ä¸€æ®µæ—¶é—´"); 
+                case 6: a.say("ä½ åªæœ‰æœ‰é™ä¸ªé¢åŒ…åœˆ, \nå³ä¸‹è§’çš„å›¾æ ‡æ˜¾ç¤ºä½ çš„é¢åŒ…åœˆæ•°"); 
                         break;
-                case 7: a.say("µ«ÔÚÃæ°üÈ¦¿¿½üÊ±°´C¼ü, ¿ÉÒÔ½«Ëü»ØÊÕ¡£"); 
+                case 7: a.say("ä½†åœ¨é¢åŒ…åœˆé è¿‘æ—¶æŒ‰Cé”®, å¯ä»¥å°†å®ƒå›æ”¶ã€‚"); 
                         break;
                 default: b.canControl = true; 
                          setVar("meetteacher_ring", 2);

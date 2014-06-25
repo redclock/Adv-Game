@@ -1,6 +1,6 @@
 package redgame.ui;
 /*
- * StateBar.java ×÷Õß£ºÒ¦´ºêÍ
+ * StateBar.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
  
 import java.awt.*;
@@ -9,9 +9,9 @@ import redgame.engine.*;
 import redgame.anim.*;
 
 /**
- * StateBarÀàÊÇ×´Ì¬Ìõ
+ * StateBarç±»æ˜¯çŠ¶æ€æ¡
  * 
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 
 public class StateBar{
@@ -41,13 +41,13 @@ public class StateBar{
     }
 
     /**
-     * ¸üĞÂ¼ÆÊ±Æ÷
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°è®¡æ—¶å™¨
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
     public void move(long passedTime){
         m_counter += passedTime;
     }
-    //¹¤¾ßº¯Êı:½«ºÁÃë×ª»»Îª×Ö·û´®
+    //å·¥å…·å‡½æ•°:å°†æ¯«ç§’è½¬æ¢ä¸ºå­—ç¬¦ä¸²
     private String timeToStr(long time){
         String s = "";
         long part;
@@ -68,8 +68,8 @@ public class StateBar{
         return s;
     }
     /**
-     * »­Í¼´úÂë
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public void draw(Graphics g){
         if (m_w != m_game.getSize().width)
@@ -83,7 +83,7 @@ public class StateBar{
         g2.drawImage(bi, x, y, m_game.getPanel());
         g2.setColor(Color.WHITE);
         Font f = g2.getFont();
-        Font bigf = new Font("ËÎÌå", 0, 12);
+        Font bigf = new Font("å®‹ä½“", 0, 12);
         g2.setFont(bigf);
         
         g2.drawString("Map:"+ m_game.getMap().getName(), 25+x, 18+y);

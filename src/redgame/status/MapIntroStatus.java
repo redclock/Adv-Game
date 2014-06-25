@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * MapIntroStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * MapIntroStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.event.*;
@@ -8,16 +8,16 @@ import java.awt.image.*;
 import redgame.engine.*;
 import redgame.util.*;
 /**
- * MapIntroStatusÀàÊÇ¹Ø¿¨¿ªÊ¼Ç°¼ò½éµÄÓÎÏ·×´Ì¬.
+ * MapIntroStatusç±»æ˜¯å…³å¡å¼€å§‹å‰ç®€ä»‹çš„æ¸¸æˆçŠ¶æ€.
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class MapIntroStatus extends AbstractStatus{
     private String[] m_intro;
     private BufferedImage bi;
     /**
-     * ´´½¨Ò»¸öMapIntroStatus
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªMapIntroStatus
+     * @param game æ¸¸æˆå¼•ç”¨
      */
     public MapIntroStatus(GameWorld game) {
         super(game);
@@ -32,7 +32,7 @@ public class MapIntroStatus extends AbstractStatus{
         g2.setColor(Color.WHITE);
         g2.setColor(Color.WHITE);
         Font f = g2.getFont();
-        Font msgf = new Font("ËÎÌå", 0, 14);
+        Font msgf = new Font("å®‹ä½“", 0, 14);
         g2.setFont(msgf);
         for (int i = 0; i < m_intro.length; i++){
            g2.drawString(m_intro[i], 50, 50+i*20);
@@ -42,7 +42,7 @@ public class MapIntroStatus extends AbstractStatus{
     }
     
     /**
-     * °´¼üÍË³ö
+     * æŒ‰é”®é€€å‡º
      */
     public int update(long passedTime){
         if ( KeyManager.isKeyJustDown(KeyEvent.VK_SPACE)
@@ -54,9 +54,9 @@ public class MapIntroStatus extends AbstractStatus{
     }
 
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         Graphics2D g2 = (Graphics2D)g;
@@ -70,7 +70,7 @@ public class MapIntroStatus extends AbstractStatus{
     }
 
     /**
-     * Ê²Ã´Ò²²»×ö
+     * ä»€ä¹ˆä¹Ÿä¸åš
      */
     public int move(long passedTime) {
         return 0;

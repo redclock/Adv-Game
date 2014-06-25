@@ -1,28 +1,28 @@
 package redgame.anim;
 /*
- * Animtion.java ×÷Õß£ºÒ¦´ºêÍ
+ * Animtion.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.image.*;
 import redgame.engine.*;
 /**
- * AnimationÀàÊÇ¹ÜÀíºÍÏÔÊ¾¶¯»­µÄÀà.
- * Ëü°ÑÍ¼Æ¬·Ö³É¼¸¸öĞ¡¸ñ,Ã¿Ò»¸ñ¾ÍÊÇÒ»Ö¡
- * @author Ò¦´ºêÍ
+ * Animationç±»æ˜¯ç®¡ç†å’Œæ˜¾ç¤ºåŠ¨ç”»çš„ç±».
+ * å®ƒæŠŠå›¾ç‰‡åˆ†æˆå‡ ä¸ªå°æ ¼,æ¯ä¸€æ ¼å°±æ˜¯ä¸€å¸§
+ * @author å§šæ˜¥æ™–
  */
 
 public class Animation {
-	//Ã¿Ò»Ö¡µÄÊ±¼ä
+	//æ¯ä¸€å¸§çš„æ—¶é—´
 	private int[] m_times;
-	//ÓÎÏ·ÒıÓÃ
+	//æ¸¸æˆå¼•ç”¨
 	protected GameWorld m_game;
-	//Í¼Ïñ
+	//å›¾åƒ
 	protected Image m_img;
-	//Ã¿Ö¡µÄ´óĞ¡
+	//æ¯å¸§çš„å¤§å°
 	private int m_w, m_h;
-	//ºá×İµÄÖ¡¸öÊı
+	//æ¨ªçºµçš„å¸§ä¸ªæ•°
 	private int m_nx, m_ny;
-	//×ÜÖ¡¸öÊı
+	//æ€»å¸§ä¸ªæ•°
 	private int m_imgCount;
 
 	private boolean m_loop = true;
@@ -30,12 +30,12 @@ public class Animation {
 	private Rectangle m_rect = new Rectangle(0,0,0,0);
 	private int m_counter = 0;
 	private int m_startCounter = 0;
-	//Í¼ÏñµãÕó,pix[i]ÎªµÚiÖ¡µÄµãÕó
+	//å›¾åƒç‚¹é˜µ,pix[i]ä¸ºç¬¬iå¸§çš„ç‚¹é˜µ
     private int[][] pix;
-    //ÁÙÊ±Í¼ÏñµãÕó,pix[i]ÎªµÚiÖ¡µÄµãÕó
+    //ä¸´æ—¶å›¾åƒç‚¹é˜µ,pix[i]ä¸ºç¬¬iå¸§çš„ç‚¹é˜µ
     private int[][] tmppix;
 
-    //¶¯»­·¶Î§
+    //åŠ¨ç”»èŒƒå›´
     public int start, end;
     public int currIndex = -1;
 
@@ -57,7 +57,7 @@ public class Animation {
 	private Rectangle getRect(int index){
 		return new Rectangle(index % m_nx * m_w, index / m_nx * m_h, m_w, m_h);
 	}
-    //È¡µÃÍ¼ÏñµãÕó	
+    //å–å¾—å›¾åƒç‚¹é˜µ	
 	private void grabPixels(int index){
         if (m_img == null) return;
         Rectangle rect = getRect(index);
@@ -72,11 +72,11 @@ public class Animation {
         }
 	}
     /**
-     * ¹¹ÔìAnimtion
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img Í¼Ïñ
-     * @param ptw Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param pth Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ Animtion
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img å›¾åƒ
+     * @param ptw å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param pth å›¾åƒä¸€æ ¼çš„é«˜åº¦
      */
     public Animation(GameWorld game, Image img, int ptw, int pth){
 		m_img = img;
@@ -88,10 +88,10 @@ public class Animation {
 		if (m_img != null)	setClips();
 	}
 	/**
-	 * ÉèÖÃ¶¯»­·¶Î§:
-	 * @param start ¿ªÊ¼µÄË÷Òı
-     * @param end ½áÊøµÄË÷Òı
-	 * @param time Ã¿Ö¡µÄÊ±¼ä
+	 * è®¾ç½®åŠ¨ç”»èŒƒå›´:
+	 * @param start å¼€å§‹çš„ç´¢å¼•
+     * @param end ç»“æŸçš„ç´¢å¼•
+	 * @param time æ¯å¸§çš„æ—¶é—´
 	 */
 	public void setRange(int start, int end, int time){
 		this.start = start;
@@ -105,14 +105,14 @@ public class Animation {
 		resetToStart();
 	}
 	/**
-	 * ÉèÖÃÍ¼Æ¬
+	 * è®¾ç½®å›¾ç‰‡
 	 */
 	public void setImage(Image img){
 		m_img = img;
 		setClips();
 	}
 	/**
-	 * ¸üĞÂ¶¯»­
+	 * æ›´æ–°åŠ¨ç”»
 	 */
 	public void update(long passedTime){
 		if (m_img == null || m_stop || m_imgCount == 0) return;
@@ -132,7 +132,7 @@ public class Animation {
 		}
 	}
 	/**
-	 * ·µ»Øµ½¶¯»­¿ªÊ¼×´Ì¬
+	 * è¿”å›åˆ°åŠ¨ç”»å¼€å§‹çŠ¶æ€
 	 */
 	public void resetToStart(){
 		if (currIndex != start){
@@ -144,7 +144,7 @@ public class Animation {
 	}
 
     /**
-     * ÔÚ(x,y)Î»ÖÃ»­¶¯»­, ²¢ÓÃalpha×÷°ëÍ¸Ã÷, 
+     * åœ¨(x,y)ä½ç½®ç”»åŠ¨ç”», å¹¶ç”¨alphaä½œåŠé€æ˜, 
      * @param alpha:0.0-1.0
      */
     public void paint_alpha(Graphics g, int x, int y, float alpha){
@@ -162,11 +162,11 @@ public class Animation {
     }
 
     /**
-     * ÔÚ(x,y)Î»ÖÃ»­¶¯»­, ²¢ÓÃcolorÎªÑÕÉ«Ìî³ä 
+     * åœ¨(x,y)ä½ç½®ç”»åŠ¨ç”», å¹¶ç”¨colorä¸ºé¢œè‰²å¡«å…… 
      * 
      */
     public void paint_mask(Graphics g, int x, int y, int color){
-        //×¥È¡µãÕó
+        //æŠ“å–ç‚¹é˜µ
         if (pix[currIndex] == null) grabPixels(currIndex);
         ColorModel cm = ColorModel.getRGBdefault();
         for (int i = 0; i < m_w * m_h; i++) {
@@ -180,11 +180,11 @@ public class Animation {
             m_game.getPanel());
     }
     /**
-     * ÔÚ(x,y)Î»ÖÃ»­¶¯»­, ²¢ÓÃalpha×÷°ëÍ¸Ã÷,ÓÃcolorÎªÑÕÉ«Ìî³ä 
+     * åœ¨(x,y)ä½ç½®ç”»åŠ¨ç”», å¹¶ç”¨alphaä½œåŠé€æ˜,ç”¨colorä¸ºé¢œè‰²å¡«å…… 
      * 
      */
     public void paint_alpha_mask(Graphics g, int x, int y, int color, float alpha){
-        //×¥È¡µãÕó
+        //æŠ“å–ç‚¹é˜µ
         if (pix[currIndex] == null) grabPixels(currIndex);
         ColorModel cm = ColorModel.getRGBdefault();
         for (int i = 0; i < m_w * m_h; i++) {
@@ -198,7 +198,7 @@ public class Animation {
             m_game.getPanel());
     }    
     /**
-	 * ÔÚ(x,y)Î»ÖÃ»­¶¯»­
+	 * åœ¨(x,y)ä½ç½®ç”»åŠ¨ç”»
 	 */
 	public void paint(Graphics g, int x, int y){
 		g.drawImage(m_img, x, y, x + m_w, y + m_h, 
@@ -210,25 +210,25 @@ public class Animation {
 //		return m_rect;
 //	}
 	/**
-	 * ÉèÖÃÊÇ·ñÑ­»·¶¯»­
+	 * è®¾ç½®æ˜¯å¦å¾ªç¯åŠ¨ç”»
 	 */
 	public void setLooped(boolean b){
 		m_loop = b;
 	}
 	/**
-	 * ¿ªÊ¼¶¯»­
+	 * å¼€å§‹åŠ¨ç”»
 	 */
 	public void start(){
 		m_stop = false;
 	}
     /**
-     * Í£Ö¹¶¯»­
+     * åœæ­¢åŠ¨ç”»
      */
     public void stop(){
         m_stop = true;
     }
     /**
-	 * ¶¯»­ÊÇ·ñÍ£Ö¹
+	 * åŠ¨ç”»æ˜¯å¦åœæ­¢
 	 */
 	public boolean isStopped(){
 		return m_stop;

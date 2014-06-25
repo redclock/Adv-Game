@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * TitleStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * TitleStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.event.*;
@@ -8,7 +8,7 @@ import redgame.engine.*;
 import redgame.anim.*;
 import redgame.util.*;
 
-//»ğÑæÁ£×ÓÏµÍ³
+//ç«ç„°ç²’å­ç³»ç»Ÿ
 class FireParticleSystem extends AbstractParticleSystem{
     private int m_y;
     private int m_x;
@@ -49,27 +49,27 @@ class FireParticleSystem extends AbstractParticleSystem{
 }
 
 /**
- * TitleStatusÀàÊÇÓÎÏ·ÖĞÏÔÊ¾±êÌâ¼°Ö÷²Ëµ¥µÄÓÎÏ·×´Ì¬.
- * ÔÚÕâÊ±»áÏÔÊ¾Ò»¸ö²Ëµ¥,¹©Íæ¼ÒÑ¡Ôñ
+ * TitleStatusç±»æ˜¯æ¸¸æˆä¸­æ˜¾ç¤ºæ ‡é¢˜åŠä¸»èœå•çš„æ¸¸æˆçŠ¶æ€.
+ * åœ¨è¿™æ—¶ä¼šæ˜¾ç¤ºä¸€ä¸ªèœå•,ä¾›ç©å®¶é€‰æ‹©
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class TitleStatus extends AbstractStatus{
-    //Á½ÍÅ»ğÑæ
+    //ä¸¤å›¢ç«ç„°
     private FireParticleSystem m_fps1;
     private FireParticleSystem m_fps2;
 
-    //µ±Ç°Ñ¡Ïî
+    //å½“å‰é€‰é¡¹
     private int m_curIndex;
-    //Ñ¡ÏîÁĞ±í
+    //é€‰é¡¹åˆ—è¡¨
 //    private Image m_menu_img;
-    //±êÌâ
+    //æ ‡é¢˜
 //    private Image m_title_img;
-    //±³¾°Í¼
+    //èƒŒæ™¯å›¾
     private Image m_bk_img;
     
     
-    //Ç°¾°ÈËÎï
+    //å‰æ™¯äººç‰©
 //    private Image m_bk_ren;
     
     private int FX1 = 290;
@@ -79,8 +79,8 @@ public class TitleStatus extends AbstractStatus{
     
     private int FDY = 60;  
     /**
-     * ´´½¨Ò»¸öTitleStatus
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªTitleStatus
+     * @param game æ¸¸æˆå¼•ç”¨
      */
     public TitleStatus(GameWorld game) {
         super(game);
@@ -101,24 +101,24 @@ public class TitleStatus extends AbstractStatus{
     }
 
     /**
-     * ÉèÖÃÇ°Ò»¸ö×´Ì¬
+     * è®¾ç½®å‰ä¸€ä¸ªçŠ¶æ€
      */
     public void setPrior(AbstractStatus prior){
         m_prior = null;
     }
     
     /**
-     * ¸üĞÂ×´Ì¬, ÊäÈëÉÏÏÂ¼üÑ¡Ôñ,¿Õ¸ñ¼üÈ·¶¨
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°çŠ¶æ€, è¾“å…¥ä¸Šä¸‹é”®é€‰æ‹©,ç©ºæ ¼é”®ç¡®å®š
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
     
     public int update(long passedTime){
         if ( KeyManager.isKeyJustDown(KeyEvent.VK_SPACE)
             ||KeyManager.isKeyJustDown(KeyEvent.VK_ENTER)){
             switch(m_curIndex){
-                case 0: m_game.reset(); break;      //"¿ªÊ¼ÓÎÏ·"
+                case 0: m_game.reset(); break;      //"å¼€å§‹æ¸¸æˆ"
                 case 1: m_game.pushStatus(new LoadGameStatus(m_game)); break;      
-                case 2: System.exit(0); break;      //"ÍË³ö"
+                case 2: System.exit(0); break;      //"é€€å‡º"
             }
            
         }else if ( KeyManager.isKeyJustDown(KeyEvent.VK_UP)){
@@ -135,9 +135,9 @@ public class TitleStatus extends AbstractStatus{
         return 0;
     }
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     
     public int draw(long passedTime, Graphics g){
@@ -165,8 +165,8 @@ public class TitleStatus extends AbstractStatus{
         return 0;
     }
     /**
-     * ¸üĞÂ¼ÆÊ±Æ÷
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°è®¡æ—¶å™¨
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
 
     public int move(long passedTime) {

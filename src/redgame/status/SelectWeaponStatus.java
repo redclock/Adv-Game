@@ -10,7 +10,7 @@ import redgame.obj.*;
 
 class ItemMenu extends AbstractMenu {
 	AbstractItem[] itemobjs; 
-	private Font namefont = new Font("ËÎÌå", Font.BOLD, 14);
+	private Font namefont = new Font("å®‹ä½“", Font.BOLD, 14);
 	int count;
 	public ItemMenu(GameWorld game) {
 		super(game);
@@ -31,9 +31,9 @@ class ItemMenu extends AbstractMenu {
 	
 	public void paint(Graphics2D g2d, int x, int y) {
         if (count == 0) {
-            g2d.setFont(new Font("ËÎÌå", Font.BOLD, 16));
+            g2d.setFont(new Font("å®‹ä½“", Font.BOLD, 16));
             g2d.setColor(Color.BLACK);                 
-            String s = "Äã»¹Ã»ÓĞÈÎºÎÎäÆ÷";
+            String s = "ä½ è¿˜æ²¡æœ‰ä»»ä½•æ­¦å™¨";
             g2d.setColor(Color.BLACK);                 
             g2d.drawString(s, x + 10 + 1, y + 30 + 1); 
             g2d.setColor(Color.WHITE);
@@ -82,7 +82,7 @@ public class SelectWeaponStatus extends AbstractStatus {
     private BoxImg m_box; 
     private BoxImg m_box_top; 
     private BoxImg m_box_bottom; 
-    private Font font = new Font("ËÎÌå", Font.PLAIN, 16);
+    private Font font = new Font("å®‹ä½“", Font.PLAIN, 16);
     Image emotion;
     private TextRenderer txtRender = new TextRenderer();
 
@@ -109,7 +109,7 @@ public class SelectWeaponStatus extends AbstractStatus {
     }
 
     /**
-     * °´¼üÍË³ö
+     * æŒ‰é”®é€€å‡º
      */
     
     public int update(long passedTime){
@@ -146,9 +146,9 @@ public class SelectWeaponStatus extends AbstractStatus {
     }
 
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         Graphics2D g2d = (Graphics2D) g;
@@ -157,7 +157,7 @@ public class SelectWeaponStatus extends AbstractStatus {
         m_box_bottom.paint(g, m_game.getPanel());
         g2d.setFont(font);
         g2d.setColor(Color.YELLOW);                 
-        g2d.drawString("¿ÉÑ¡µÄÎïÆ·", (int)m_box_top.x + 100, (int)m_box_top.y + 30);
+        g2d.drawString("å¯é€‰çš„ç‰©å“", (int)m_box_top.x + 100, (int)m_box_top.y + 30);
         m_menu.paint(g2d, (int)m_box.x + 20, (int)m_box.y + 30);
         g2d.setFont(font);
         g2d.setColor(Color.YELLOW); 

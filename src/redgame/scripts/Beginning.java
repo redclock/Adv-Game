@@ -37,48 +37,48 @@ public class Beginning extends SimpleScript {
                 case 1: 
                     b.canControl = false;
                     game.playSound("sound/voice/nihao.wav");
-                    b.say("\ts25´ó¼ÒºÃ!µÚÒ»´ÎºÍ´ó¼Ò¼ûÃæ"); 
+                    b.say("\ts25å¤§å®¶å¥½!ç¬¬ä¸€æ¬¡å’Œå¤§å®¶è§é¢"); 
                     b.setFace(Actor.G_DOWN);
                     break;
                 case 2: 
-                    b.say("ÏÈ×ÔÎÒ½éÉÜ, ÎÒµÄÃû×ÖÊÇ..."); 
+                    b.say("å…ˆè‡ªæˆ‘ä»‹ç», æˆ‘çš„åå­—æ˜¯..."); 
                     break;
                 case 3: 
-                    b.say("Ñ½, ÍüÁË, ÎÒ»¹Ã»ÓĞÃû×ÖÄØ!"); 
+                    b.say("å‘€, å¿˜äº†, æˆ‘è¿˜æ²¡æœ‰åå­—å‘¢!"); 
                     b.setFace(Actor.G_DOWN);
                     break;
                 case 4:
-                    game.pushStatus(new InputStatus(game, 220, 170, "ÇëÌæÎÒÈ¡Ò»¸öÃû×Ö°É:"));
+                    game.pushStatus(new InputStatus(game, 220, 170, "è¯·æ›¿æˆ‘å–ä¸€ä¸ªåå­—å§:"));
                     break;
                 case 5:
                     if (InputStatus.result.trim().equals("")){
-                        b.setName("ÎŞÃû");
+                        b.setName("æ— å");
                     }else{
                         b.setName(InputStatus.result.trim());
                     }
                     KeyManager.clearKeyState();
                     break;
                case 6:     
-                    b.say("¹ş¹ş, ÎÒ½Ğ"+b.getName()+".\te3");
+                    b.say("å“ˆå“ˆ, æˆ‘å«"+b.getName()+".\te3");
                     break;
                 case 7:     
-                    b.say("ÄÇÃ´ÎÒ½ÓÏÂÀ´½éÉÜÒ»ÏÂ»ù±¾²Ù×÷°É!"); 
+                    b.say("é‚£ä¹ˆæˆ‘æ¥ä¸‹æ¥ä»‹ç»ä¸€ä¸‹åŸºæœ¬æ“ä½œå§!"); 
                     break;
                 case 8: 
-                    b.say("\tb\tc00990000°´Z¼üÊÇÌøÔ¾!");
+                    b.say("\tb\tc00990000æŒ‰Zé”®æ˜¯è·³è·ƒ!");
                     break;
                 case 9: game.playSound("sound/voice/wa.wav");
                         b.setVY(-0.3f);
                         break;  
                 case 10: if(b.getVY() != 0) {m_counter --; break;  } 
-                    b.say("\tb\tc00990000Ìøµ½Ìİ×ÓÊ±°´ÉÏ¼ü,¾Í¿ÉÒÔÅÀÌİ×ÓÁË");
+                    b.say("\tb\tc00990000è·³åˆ°æ¢¯å­æ—¶æŒ‰ä¸Šé”®,å°±å¯ä»¥çˆ¬æ¢¯å­äº†");
                     break;
                 case 11: 
                     b.setFace(Actor.G_RIGHT);
-                    b.say("²»¹ı½ñÌìÕæÊÇ³öÈ¥ÍæµÄºÃÌìÆøÄØ");        
+                    b.say("ä¸è¿‡ä»Šå¤©çœŸæ˜¯å‡ºå»ç©çš„å¥½å¤©æ°”å‘¢");        
                     break;
                 case 12: 
-                    b.say("°¡,ÃÅ»¹Ëø×ÅÄØ,µÃÏòÄÌÄÌÒªÔ¿³×ÁË");
+                    b.say("å•Š,é—¨è¿˜é”ç€å‘¢,å¾—å‘å¥¶å¥¶è¦é’¥åŒ™äº†");
                     break;
                 default:
                     b.canControl = true; 

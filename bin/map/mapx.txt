@@ -1,17 +1,17 @@
 MAP
-  name ÑµÁ·µØÍ¼
+  name è®­ç»ƒåœ°å›¾
   size 1000 700
   backgroundSize 800 500
   background image/bk2.jpg
   music music/house.mid
   MaxScore 200
   Introduction
-    ÕâÊÇµÚÒ»¸öÑµÁ·¹Ø£¬ÔÚÕâÀï£¬Äã¿ÉÒÔÊ¹ÓÃ×î»ù±¾µÄ²Ù×÷£º
-    ×ßºÍÌø¡£ÓÃ×óÓÒ·½Ïò¼ü¿ÉÒÔ×ß¶¯£¬°´Z¼üÌøÔ¾¡£
-    ÄãÐèÒªÊÕ¼¯Æä±¾¹ØÖÐËùÓÐÉÁ¹âµÄ±¦Îï£¬¼¯ÆëºóÌúÃÅ»á×Ô
-    ¶¯´ò¿ª£¬×ßµ½ÃÅ´¦°´¿Õ¸ñ¼ü¹ý¹Ø¡£
+    è¿™æ˜¯ç¬¬ä¸€ä¸ªè®­ç»ƒå…³ï¼Œåœ¨è¿™é‡Œï¼Œä½ å¯ä»¥ä½¿ç”¨æœ€åŸºæœ¬çš„æ“ä½œï¼š
+    èµ°å’Œè·³ã€‚ç”¨å·¦å³æ–¹å‘é”®å¯ä»¥èµ°åŠ¨ï¼ŒæŒ‰Zé”®è·³è·ƒã€‚
+    ä½ éœ€è¦æ”¶é›†å…¶æœ¬å…³ä¸­æ‰€æœ‰é—ªå…‰çš„å®ç‰©ï¼Œé›†é½åŽé“é—¨ä¼šè‡ª
+    åŠ¨æ‰“å¼€ï¼Œèµ°åˆ°é—¨å¤„æŒ‰ç©ºæ ¼é”®è¿‡å…³ã€‚
     
-    °´ESC¼üºô³ö²Ëµ¥
+    æŒ‰ESCé”®å‘¼å‡ºèœå•
   end
   Wall
     position 0 100

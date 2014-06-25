@@ -1,12 +1,12 @@
 package redgame.status;
 /*
- * LogoStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * LogoStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.event.*;
 import redgame.engine.*;
 import redgame.anim.*;
-//»ğÑæÁ£×ÓÏµÍ³
+//ç«ç„°ç²’å­ç³»ç»Ÿ
 class FlowerParticleSystem extends AbstractParticleSystem{
     private int x, y, w, h;
     private boolean isfirst = true;
@@ -50,10 +50,10 @@ class FlowerParticleSystem extends AbstractParticleSystem{
 
 
 /**
- * LogoStatusÀàÊÇÓÎÏ·ÖĞÏÔÊ¾±êÌâ¼°Ö÷²Ëµ¥µÄÓÎÏ·×´Ì¬.
- * ÔÚÕâÊ±»áÏÔÊ¾Ò»¸ö²Ëµ¥,¹©Íæ¼ÒÑ¡Ôñ
+ * LogoStatusç±»æ˜¯æ¸¸æˆä¸­æ˜¾ç¤ºæ ‡é¢˜åŠä¸»èœå•çš„æ¸¸æˆçŠ¶æ€.
+ * åœ¨è¿™æ—¶ä¼šæ˜¾ç¤ºä¸€ä¸ªèœå•,ä¾›ç©å®¶é€‰æ‹©
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class LogoStatus extends AbstractStatus{
     private Image m_img;
@@ -79,9 +79,9 @@ public class LogoStatus extends AbstractStatus{
         return 0;
     }
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     
     public int draw(long passedTime, Graphics g){
@@ -93,8 +93,8 @@ public class LogoStatus extends AbstractStatus{
         return 0;
     }
     /**
-     * ¸üĞÂ¼ÆÊ±Æ÷
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°è®¡æ—¶å™¨
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
 
     public int move(long passedTime) {

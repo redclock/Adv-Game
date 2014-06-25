@@ -1,40 +1,40 @@
 package redgame.status;
 /*
- * AbstractStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * AbstractStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import redgame.engine.*;
 
 /**
- * AbstractStatusÀàÊÇ"ÓÎÏ·×´Ì¬"µÄ»ùÀà."ÓÎÏ·×´Ì¬"ÎªÓÎÏ·µ±Ç°ÔÚ×öÊ²Ã´.
- * ËùÓĞ×´Ì¬¶¼ÔÚÓÎÏ·×´Ì¬Õ»ÖĞ,Õ»¶¥×´Ì¬Îªµ±Ç°»î¶¯×´Ì¬.
- * ÕâÊÇÒ»¸ö³éÏóÀà£¬ÒªÊ¹ÓÃËüµÄÅÉÉúÀà
+ * AbstractStatusç±»æ˜¯"æ¸¸æˆçŠ¶æ€"çš„åŸºç±»."æ¸¸æˆçŠ¶æ€"ä¸ºæ¸¸æˆå½“å‰åœ¨åšä»€ä¹ˆ.
+ * æ‰€æœ‰çŠ¶æ€éƒ½åœ¨æ¸¸æˆçŠ¶æ€æ ˆä¸­,æ ˆé¡¶çŠ¶æ€ä¸ºå½“å‰æ´»åŠ¨çŠ¶æ€.
+ * è¿™æ˜¯ä¸€ä¸ªæŠ½è±¡ç±»ï¼Œè¦ä½¿ç”¨å®ƒçš„æ´¾ç”Ÿç±»
  * @see StatusStack
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 abstract public class AbstractStatus {
-	//ÓÎÏ·ÒıÓÃ
+	//æ¸¸æˆå¼•ç”¨
 	GameWorld m_game = null;
-	//¼ÆÊ±Æ÷
+	//è®¡æ—¶å™¨
 	long m_counter = 0;
-	//×´Ì¬Õ»ÖĞµÄÇ°Ò»¸ö×´Ì¬
+	//çŠ¶æ€æ ˆä¸­çš„å‰ä¸€ä¸ªçŠ¶æ€
 	protected AbstractStatus m_prior;
 	/**
-     * ´´½¨Ò»¸öAbstractStatus
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªAbstractStatus
+     * @param game æ¸¸æˆå¼•ç”¨
      */
 	public AbstractStatus(GameWorld game) {
 		m_game = game;
 	}
 	/**
-	 * ÉèÖÃÇ°Ò»¸ö×´Ì¬
+	 * è®¾ç½®å‰ä¸€ä¸ªçŠ¶æ€
 	 */
 	public void setPrior(AbstractStatus prior){
 		m_prior = prior;
 	}
 	/**
-	 * ¸üĞÂÇ°Ò»¸ö×´Ì¬,Ä¬ÈÏĞĞÎªÎªµ÷ÓÃdraw,move,¶ø²»µ÷ÓÃupdate
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+	 * æ›´æ–°å‰ä¸€ä¸ªçŠ¶æ€,é»˜è®¤è¡Œä¸ºä¸ºè°ƒç”¨draw,move,è€Œä¸è°ƒç”¨update
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
 	 */
 	public void updatePrior(long passedTime, java.awt.Graphics g){
 		if (m_prior != null) {
@@ -48,22 +48,22 @@ abstract public class AbstractStatus {
 	   return 0;
 	}
 	/**
-	 * ¸²¸ÇÕâ¸ö·½·¨, ¼ÓÈë¸üĞÂ×´Ì¬´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+	 * è¦†ç›–è¿™ä¸ªæ–¹æ³•, åŠ å…¥æ›´æ–°çŠ¶æ€ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
 	public abstract int update(long passedTime);
 
 
     /**
-     * ¸²¸ÇÕâ¸ö·½·¨, ¼ÓÈë»­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * è¦†ç›–è¿™ä¸ªæ–¹æ³•, åŠ å…¥ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public abstract int draw(long passedTime, java.awt.Graphics g);
 
     /**
-     * ¸üĞÂ¼ÆÊ±Æ÷
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°è®¡æ—¶å™¨
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
     public int move(long passedTime) {
 		m_counter += passedTime;

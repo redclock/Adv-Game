@@ -6,12 +6,12 @@ import javax.swing.*;
 
 import redgame.util.*;
 
-//»­Í¼µÄpanel
+//ç”»å›¾çš„panel
 
 public class GamePanel extends JPanel {
     protected GameWorld m_game;
     private String m_prompt = "LOADING...";
-    //¼üÅÌ¼àÌıÆ÷
+    //é”®ç›˜ç›‘å¬å™¨
     public GameWorld getGame(){
         return m_game;
     }
@@ -21,8 +21,8 @@ public class GamePanel extends JPanel {
         setFocusable(true);
 //        setIgnoreRepaint(true);
         addKeyListener(KeyManager.getDefault());  
-        //ÒòÎªÓÎÏ·Í¼»­¸ù¾İ´°Ìå´óĞ¡±ä»¯
-        //µ±PANEL´óĞ¡±ä»¯Ê±ĞèÒªÖØ»­.·ñÔòÓÉĞ¡±ä´ó²»»áµ÷ÓÃpaint
+        //å› ä¸ºæ¸¸æˆå›¾ç”»æ ¹æ®çª—ä½“å¤§å°å˜åŒ–
+        //å½“PANELå¤§å°å˜åŒ–æ—¶éœ€è¦é‡ç”».å¦åˆ™ç”±å°å˜å¤§ä¸ä¼šè°ƒç”¨paint
         addComponentListener(new ComponentAdapter(){
             public void componentResized(ComponentEvent e){
                 if (m_game != null)
@@ -30,7 +30,7 @@ public class GamePanel extends JPanel {
             }
         });
         
-        //µ±Ê§È¥½¹µã,ÒªÇå¿Õ¼üÅÌ,·ñÔò¿ÉÄÜµ¼ÖÂÖ»ÓĞ°´¼üÎŞÌ§¼ü
+        //å½“å¤±å»ç„¦ç‚¹,è¦æ¸…ç©ºé”®ç›˜,å¦åˆ™å¯èƒ½å¯¼è‡´åªæœ‰æŒ‰é”®æ— æŠ¬é”®
         addFocusListener(new FocusAdapter(){
             public void focusLost(FocusEvent e){
 //                System.out.println("lost Focus");
@@ -48,7 +48,7 @@ public class GamePanel extends JPanel {
     }
 
     /**
-     * ¿ªÆôÓÎÏ·
+     * å¼€å¯æ¸¸æˆ
      */
     public void startGame(MyIO io){
         if (io.isApplet() == false){
@@ -65,7 +65,7 @@ public class GamePanel extends JPanel {
         m_game.start();
     }
     /**
-     * Í£Ö¹ÓÎÏ·
+     * åœæ­¢æ¸¸æˆ
      */
     
     public void stopGame(){
@@ -78,7 +78,7 @@ public class GamePanel extends JPanel {
         return new Dimension(640, 480);
     }
 
-    //ÖØ»­Ê±Çå³ıÆÁÄ»
+    //é‡ç”»æ—¶æ¸…é™¤å±å¹•
     public void paint(Graphics g){
         g.setColor(new Color(0, 0, 0));
         g.fillRect(0, 0, getWidth(), getHeight());

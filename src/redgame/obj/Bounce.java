@@ -1,24 +1,24 @@
 package redgame.obj;
 /*
- * Bounce.java ×÷Õß£ºÒ¦´ºêÍ
+ * Bounce.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
 import redgame.engine.*;
 /**
- * BounceÀàÊÇ¿ÉÒÔµ¯ÌøµÄÎïÌå£¬ËüÅöµ½Ç½±Ú¿ÉÒÔµ¯»Ø
+ * Bounceç±»æ˜¯å¯ä»¥å¼¹è·³çš„ç‰©ä½“ï¼Œå®ƒç¢°åˆ°å¢™å£å¯ä»¥å¼¹å›
  * 
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class Bounce extends MovableObject {
     /**
-     * ¹¹ÔìÎïÌå£¬²¢¿ªÆô¶¯»­
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param h Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ ç‰©ä½“ï¼Œå¹¶å¼€å¯åŠ¨ç”»
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param h å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Animation
      * @see GameWorld
      */
@@ -28,14 +28,14 @@ public class Bounce extends MovableObject {
         m_blocked = true;
     }
     /**
-     * ÒÆ¶¯
+     * ç§»åŠ¨
      */   
     public void move(long passedTime){
         m_anim.update(passedTime);
         moveDown(passedTime);
     }
     /**
-     * ÉèÖÃ³õËÙ¶È
+     * è®¾ç½®åˆé€Ÿåº¦
      */   
     public void setSpeed(float vx, float vy){
         m_vx = vx;
@@ -43,7 +43,7 @@ public class Bounce extends MovableObject {
     }
     
     /**
-     * ÓÉÓÚÖØÁ¦¶øÏÂÂä
+     * ç”±äºé‡åŠ›è€Œä¸‹è½
      */
     public void moveDown(long passedTime){
         float dy;

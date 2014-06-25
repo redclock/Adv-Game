@@ -8,32 +8,32 @@ import java.awt.*;
 import java.awt.image.*;
 
 /**
- * BoxImg ¶Ô»°¿ò£¬Ãæ°åµÄ±ß¿ò,Ëü¾ßÓÐ·ÉÈëÐ§¹û
- * @author Ò¦´ºêÍ
+ * BoxImg å¯¹è¯æ¡†ï¼Œé¢æ¿çš„è¾¹æ¡†,å®ƒå…·æœ‰é£žå…¥æ•ˆæžœ
+ * @author å§šæ˜¥æ™–
  *
  */
 public class BoxImg{
-    //±£´æÍ¼Ïñ
+    //ä¿å­˜å›¾åƒ
 	private BufferedImage img;
     /**
-     * ³õÊ¼Î»ÖÃ
+     * åˆå§‹ä½ç½®
      */
 	public int bx, by;
     /**
-     * µ±Ç°Î»ÖÃ
+     * å½“å‰ä½ç½®
      */
 	public int x, y;
 	/**
-	 * Ä¿±êÎ»ÖÃ
+	 * ç›®æ ‡ä½ç½®
 	 */
     public int dx, dy;
     /**
-     * ´óÐ¡
+     * å¤§å°
      */
     public int bw, bh;
     private int stop = 5, sleft = 5, sbottom = 5, sright = 5;
     
-    //³õÊ¼»¯Í¼Æ¬
+    //åˆå§‹åŒ–å›¾ç‰‡
     private BufferedImage createBox(int w, int h){
         BufferedImage box = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2d = (Graphics2D) box.getGraphics();
@@ -51,12 +51,12 @@ public class BoxImg{
     
     /**
      * 
-     * @param x Î»ÖÃ
-     * @param y Î»ÖÃ
-     * @param w ´óÐ¡
-     * @param h ´óÐ¡
-     * @param destx Ä¿±êÎ»ÖÃ
-     * @param desty Ä¿±êÎ»ÖÃ
+     * @param x ä½ç½®
+     * @param y ä½ç½®
+     * @param w å¤§å°
+     * @param h å¤§å°
+     * @param destx ç›®æ ‡ä½ç½®
+     * @param desty ç›®æ ‡ä½ç½®
      */
     public BoxImg(int x, int y, int w, int h, int destx, int desty){
         bx = x;
@@ -72,8 +72,8 @@ public class BoxImg{
     }
     
     /**
-     * »­ÔÚÆÁÄ»ÉÏ
-     * @param g Í¼ÐÎÉè±¸
+     * ç”»åœ¨å±å¹•ä¸Š
+     * @param g å›¾å½¢è®¾å¤‡
      * @param obs ImageObserver 
      */
     public void paint(Graphics g, ImageObserver obs){
@@ -81,22 +81,22 @@ public class BoxImg{
     }
     
     /**
-     * ·ÉÈë ÒÆ¶¯
-     * @param delta ÔöÁ¿(0~1 1ÎªÖ±½Ó´Ó³õÊ¼µ½Ä¿±ê)
-     * @return ÊÇ·ñÒÆ¶¯Íê³É
+     * é£žå…¥ ç§»åŠ¨
+     * @param delta å¢žé‡(0~1 1ä¸ºç›´æŽ¥ä»Žåˆå§‹åˆ°ç›®æ ‡)
+     * @return æ˜¯å¦ç§»åŠ¨å®Œæˆ
      */
     public boolean move(float delta){
         x += (dx - bx) * delta;
         y += (dy - by) * delta;
         boolean finished = true;
-        //ÕýÏòÒÆ¶¯
+        //æ­£å‘ç§»åŠ¨
         if (delta > 0){
             if ((dx - bx) * (dx - x) <= 0 ) x = dx;
             else finished = false;
             if ((dy - by) * (dy  - y) <= 0 ) y = dy;
             else finished = false;
         }else {
-        	//·´ÏòÒÆ¶¯
+        	//åå‘ç§»åŠ¨
             if ((bx - dx) * (bx - x) <= 0 ) x = bx;
             else finished = false;
             if ((by - dy) * (by - y) <= 0 ) y = by;

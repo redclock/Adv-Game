@@ -1,26 +1,26 @@
 package redgame.obj;
 /*
- * Friend.java ×÷Õß£ºÒ¦´ºêÍ
+ * Friend.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
 import redgame.engine.*;
 
 /**
- * FriendÀàÊÇ·ÇµĞÈË½ÇÉ«
+ * Friendç±»æ˜¯éæ•Œäººè§’è‰²
  * 
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 
 public class Friend extends NPC{
     /**
-     * ¹¹ÔìFriend
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param h Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ Friend
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param h å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Actor
      */
     
@@ -30,7 +30,7 @@ public class Friend extends NPC{
         HP = 10000000;
     }
     /**
-     * ¸²¸Çcollision
+     * è¦†ç›–collision
      * @see NPC#collision
      */
     

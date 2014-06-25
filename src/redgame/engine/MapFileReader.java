@@ -1,6 +1,6 @@
 package redgame.engine;
 /*
- * MapFileReader.java ×÷Õß£ºÒ¦´ºêÍ
+ * MapFileReader.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
  
 import java.io.*;
@@ -8,8 +8,8 @@ import java.awt.*;
 import redgame.obj.*;
 
 /**
- * MapFileReaderÀàÊÇ¶ÁµØÍ¼ÎÄ¼şÉú³ÉµØÍ¼µÄÀà
- * @author Ò¦´ºêÍ
+ * MapFileReaderç±»æ˜¯è¯»åœ°å›¾æ–‡ä»¶ç”Ÿæˆåœ°å›¾çš„ç±»
+ * @author å§šæ˜¥æ™–
  */
 
 public class MapFileReader {
@@ -39,7 +39,7 @@ public class MapFileReader {
 	public MapFileReader(){
 		
 	}
-	//¹¤¾ßº¯Êı: ´ÓÎÄ¼şÖĞ¶Á³öÓÃ¿Õ¸ñ¸ô¿ªµÄÒ»¶ÎÎÄ×Ö
+	//å·¥å…·å‡½æ•°: ä»æ–‡ä»¶ä¸­è¯»å‡ºç”¨ç©ºæ ¼éš”å¼€çš„ä¸€æ®µæ–‡å­—
 	private String getItem() throws IOException{
 		String r = "";
 		int c;
@@ -54,7 +54,7 @@ public class MapFileReader {
 		return r;
 		
 	}
-	//¶ÁÈëÒ»¸ö¶Î
+	//è¯»å…¥ä¸€ä¸ªæ®µ
 	private void readSection() throws IOException{
 	
 		String s;
@@ -137,7 +137,7 @@ public class MapFileReader {
 			}
         }while (!s.equals(""));
 	}
-	//ÉèÖÃ¹«¹²µÄ²ÎÊı
+	//è®¾ç½®å…¬å…±çš„å‚æ•°
 	private void setParams(AbstractObject r){
         r.setBlockRect(new Rectangle(sleft, sup, 
                             w - sleft - sright, h - sdown - sup));
@@ -151,7 +151,7 @@ public class MapFileReader {
         r.setScript(script);                        
     }
 	
-    //Éú³ÉPatrolµÄĞÅÏ¢
+    //ç”ŸæˆPatrolçš„ä¿¡æ¯
     private Patrol readPatrol() throws IOException{
 		readSection();
 		Patrol r = new Patrol(m_game, img, x, y, w, h, begin, end);
@@ -184,7 +184,7 @@ public class MapFileReader {
         return r;
 	}
 
-    //Éú³ÉFriendµÄĞÅÏ¢
+    //ç”ŸæˆFriendçš„ä¿¡æ¯
     private Friend readFriend() throws IOException{
         readSection();
         Friend r = new Friend(m_game, img, x, y, w, h);
@@ -194,7 +194,7 @@ public class MapFileReader {
         return r;
     }
 
-    //Éú³ÉWallµÄĞÅÏ¢
+    //ç”ŸæˆWallçš„ä¿¡æ¯
     private MapObject readWall() throws IOException{
 		readSection();
 		Wall r = new Wall(m_game, img, x, y, w, h, tilew, tileh, bad);
@@ -203,7 +203,7 @@ public class MapFileReader {
         return r;
 	}
 
-    //Éú³ÉSpringµÄĞÅÏ¢
+    //ç”ŸæˆSpringçš„ä¿¡æ¯
 
     private MapObject readSpring() throws IOException{
         readSection();
@@ -212,7 +212,7 @@ public class MapFileReader {
         setParams(r);
         return r;
     }
-    //Éú³ÉLadderµÄĞÅÏ¢
+    //ç”ŸæˆLadderçš„ä¿¡æ¯
 
 	private MapObject readLadder() throws IOException{
 		readSection();
@@ -221,7 +221,7 @@ public class MapFileReader {
         setParams(r);
         return r;
 	}
-    //Éú³ÉStaticµÄĞÅÏ¢
+    //ç”ŸæˆStaticçš„ä¿¡æ¯
 
     private StaticObject readStatic() throws IOException{
         readSection();
@@ -229,7 +229,7 @@ public class MapFileReader {
         setParams(r);
         return r;
     }
-    //Éú³ÉBonusµÄĞÅÏ¢
+    //ç”ŸæˆBonusçš„ä¿¡æ¯
 
     private Bonus readBonus() throws IOException{
 		readSection();
@@ -238,7 +238,7 @@ public class MapFileReader {
         r.kind = kind;
         return r;
 	}
-    //Éú³ÉKeyµÄĞÅÏ¢
+    //ç”ŸæˆKeyçš„ä¿¡æ¯
 
     private DoorKey readKey() throws IOException{
         readSection();
@@ -246,7 +246,7 @@ public class MapFileReader {
         setParams(r);
         return r;
     }
-    //Éú³ÉDoorµÄĞÅÏ¢
+    //ç”ŸæˆDoorçš„ä¿¡æ¯
     
 	private Door readDoor() throws IOException{
 		readSection();
@@ -258,7 +258,7 @@ public class MapFileReader {
         if (open) r.open();									
         return r;
 	}
-    //Éú³ÉIntroµÄĞÅÏ¢
+    //ç”ŸæˆIntroçš„ä¿¡æ¯
 
     private String[] readIntro() throws IOException{
         String rr[] = null, r[] = new String[100];
@@ -284,7 +284,7 @@ public class MapFileReader {
         return rr;
     }
     /**
-     * ÓÉÖ¸¶¨ÎÄ¼şÉú³ÉµØÍ¼
+     * ç”±æŒ‡å®šæ–‡ä»¶ç”Ÿæˆåœ°å›¾
      */
 	public GameMap readMap(GameWorld game, String filename){
 		try{
@@ -347,7 +347,7 @@ public class MapFileReader {
 		}
 	}
     /**
-     * ¶ÁÈëµØÍ¼ÁĞ±í
+     * è¯»å…¥åœ°å›¾åˆ—è¡¨
      */
 	public static String[] readMapList(String filename, GameWorld game){
 		String rr[] = null, r[] = new String[100];
@@ -378,7 +378,7 @@ public class MapFileReader {
 		
 	}
 	/**
-	 * ½¨Á¢¿ÕµØÍ¼
+	 * å»ºç«‹ç©ºåœ°å›¾
 	 */
 	public GameMap createEmptyMap(GameWorld game){
 		GameMap map = new GameMap(game);
@@ -386,7 +386,7 @@ public class MapFileReader {
 		return map;
 	}	
 	/**
-	 * ½¨Á¢Ä¬ÈÏµØÍ¼
+	 * å»ºç«‹é»˜è®¤åœ°å›¾
 	 */
 	public GameMap createDefaultMap(GameWorld game){
 		GameMap map = createEmptyMap(game);
@@ -396,7 +396,7 @@ public class MapFileReader {
 						100, 100, 32, 48
 						));
 		
-		map.setName("Ä¬ÈÏµØÍ¼");
+		map.setName("é»˜è®¤åœ°å›¾");
 		map.setBkImg(game.loadImage("image/bk1.jpg"));				
 		return map;
 	}	

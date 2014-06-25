@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * StageStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * StageStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 
 import java.awt.*;
@@ -9,22 +9,22 @@ import redgame.engine.*;
 import redgame.ui.*;
 import redgame.util.*;
 /**
- * StageStatusÀàÊÇÏÔÊ¾ºÍ¸üĞÂµØÍ¼µÄÓÎÏ·×´Ì¬.
+ * StageStatusç±»æ˜¯æ˜¾ç¤ºå’Œæ›´æ–°åœ°å›¾çš„æ¸¸æˆçŠ¶æ€.
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class StageStatus extends AbstractStatus {
-    //×´Ì¬Ìõ
+    //çŠ¶æ€æ¡
     private StateBar m_bar;
     private String m_mapName;
     private int m_x, m_y;
 
     /**
-     * ´´½¨Ò»¸öStageStatus
-     * @param game ÓÎÏ·ÒıÓÃ
-     * @param mapName Òª×°ÔØµÄµØÍ¼
-     * @param x Ö÷ÈË¹«³ö³¡Î»ÖÃ
-     * @param y Ö÷ÈË¹«³ö³¡Î»ÖÃ
+     * åˆ›å»ºä¸€ä¸ªStageStatus
+     * @param game æ¸¸æˆå¼•ç”¨
+     * @param mapName è¦è£…è½½çš„åœ°å›¾
+     * @param x ä¸»äººå…¬å‡ºåœºä½ç½®
+     * @param y ä¸»äººå…¬å‡ºåœºä½ç½®
      */
     public StageStatus(GameWorld game, String mapName, int x, int y) {
         super(game);
@@ -46,8 +46,8 @@ public class StageStatus extends AbstractStatus {
         return 0;
     }
     /**
-     * ¸üĞÂ×´Ì¬, ÊäÈëÍê±ÏÔòÍ£Ö¹
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°çŠ¶æ€, è¾“å…¥å®Œæ¯•åˆ™åœæ­¢
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
     public int update(long passedTime){
         m_game.getScript().update();
@@ -59,9 +59,9 @@ public class StageStatus extends AbstractStatus {
     }
 
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         m_game.getMap().paint(g);
@@ -69,8 +69,8 @@ public class StageStatus extends AbstractStatus {
         return 0;
     }
     /**
-     * ¸üĞÂ¼ÆÊ±Æ÷
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°è®¡æ—¶å™¨
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
 
     public int move(long passedTime) {

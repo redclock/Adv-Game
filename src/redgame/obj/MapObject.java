@@ -1,28 +1,28 @@
 package redgame.obj;
 /*
- * MapObject.java ×÷Õß£ºÒ¦´ºêÍ
+ * MapObject.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
 import redgame.engine.*;
 import redgame.anim.*;
 /**
- * MapObjectÀàÊÇµØÍ¼ÔªËØ£¬ËüµÄÍ¼ÏñÊÇĞ¡Í¼Æ¬Æ½ÆÌ³É´ó¿é
- * ÕâÊÇÒ»¸ö³éÏóÀà£¬ÒªÊ¹ÓÃËüµÄÅÉÉúÀà¡£
- * @author Ò¦´ºêÍ
+ * MapObjectç±»æ˜¯åœ°å›¾å…ƒç´ ï¼Œå®ƒçš„å›¾åƒæ˜¯å°å›¾ç‰‡å¹³é“ºæˆå¤§å—
+ * è¿™æ˜¯ä¸€ä¸ªæŠ½è±¡ç±»ï¼Œè¦ä½¿ç”¨å®ƒçš„æ´¾ç”Ÿç±»ã€‚
+ * @author å§šæ˜¥æ™–
  */
 abstract public class MapObject extends AbstractObject{
     protected boolean m_damagable = false;
     /**
-     * ¹¹ÔìµØÍ¼ÔªËØ
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w ÔªËØ¿í¶È
-     * @param h ÔªËØ¸ß¶È
-     * @param tilew Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param tileh Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ åœ°å›¾å…ƒç´ 
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å…ƒç´ å®½åº¦
+     * @param h å…ƒç´ é«˜åº¦
+     * @param tilew å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param tileh å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Animation
      * @see GameWorld
      * @see AbstractObject#AbstractObject
@@ -31,18 +31,18 @@ abstract public class MapObject extends AbstractObject{
 					int x, int y, int w, int h,
 	 				int tilew, int tileh) {
 		super(game, null, x, y, w, h);
-        //²»Ê¹ÓÃÄ¬ÈÏµÄ¶¯»­£¬¶øÊ¹ÓÃTiledAnimation
+        //ä¸ä½¿ç”¨é»˜è®¤çš„åŠ¨ç”»ï¼Œè€Œä½¿ç”¨TiledAnimation
 		m_anim = new TiledAnimation(game, img, w, h, tilew, tileh);
 	}	
 	/**
-	 * Ä¬ÈÏ´¦ÀíÅö×²£ºÊ²Ã´Ò²²»×ö
+	 * é»˜è®¤å¤„ç†ç¢°æ’ï¼šä»€ä¹ˆä¹Ÿä¸åš
 	 */
 	public boolean collision(AbstractObject obj, int direction){
 		
 		return false;
 	} 
 	/**
-	 * Õâ¸ö¶ÔÏóÊÇ·ñ¿ÉÅÀ
+	 * è¿™ä¸ªå¯¹è±¡æ˜¯å¦å¯çˆ¬
 	 */
 	abstract public boolean isClimbable();
 	

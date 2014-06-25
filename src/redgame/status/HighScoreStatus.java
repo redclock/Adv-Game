@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * HighScoreStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * HighScoreStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.event.*;
@@ -8,16 +8,16 @@ import redgame.engine.*;
 import redgame.util.*;
 
 /**
- * HighScoreStatusÀàÊÇÏÔÊ¾¸ß·Ö°ñµÄÓÎÏ·×´Ì¬.
+ * HighScoreStatusç±»æ˜¯æ˜¾ç¤ºé«˜åˆ†æ¦œçš„æ¸¸æˆçŠ¶æ€.
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class HighScoreStatus extends AbstractStatus {
     private Image m_bk_img;
     private HighScoreManager m_highScore;
     /**
-     * ´´½¨Ò»¸öAddHighScoreStatus
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªAddHighScoreStatus
+     * @param game æ¸¸æˆå¼•ç”¨
      */
     public HighScoreStatus(GameWorld game) {
         super(game);
@@ -26,12 +26,12 @@ public class HighScoreStatus extends AbstractStatus {
     }
 
     /**
-     * ¶ÔÓÚÇ°¸ö×´Ì¬:½ûÖ¹Æä¸üĞÂºÍÏÔÊ¾
+     * å¯¹äºå‰ä¸ªçŠ¶æ€:ç¦æ­¢å…¶æ›´æ–°å’Œæ˜¾ç¤º
      */
     public void updatePrior(long passedTime, Graphics g){
     }
     /**
-     * °´¼üÍË³ö
+     * æŒ‰é”®é€€å‡º
      */
      public int update(long passedTime){
         if ( KeyManager.isKeyJustDown(KeyEvent.VK_SPACE)
@@ -42,15 +42,15 @@ public class HighScoreStatus extends AbstractStatus {
         return 0;
     }
     /**
-     * Ê²Ã´Ò²²»×ö
+     * ä»€ä¹ˆä¹Ÿä¸åš
      */
     public  int move(long passedTime){
         return 0;
     }
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         Rectangle sc = m_game.getScreenArea();
@@ -60,7 +60,7 @@ public class HighScoreStatus extends AbstractStatus {
         if (y < 0) y = 0;
         g.drawImage(m_bk_img, x, y, m_game.getPanel());
         Font f = g.getFont();
-        Font bigf = new Font("ËÎÌå", 0, 14);
+        Font bigf = new Font("å®‹ä½“", 0, 14);
         g.setColor(Color.green);
         g.setFont(bigf);
         for (int i = 0; i < m_highScore.count; i++){

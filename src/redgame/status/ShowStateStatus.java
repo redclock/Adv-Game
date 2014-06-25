@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * ShowStateStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * ShowStateStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import redgame.scripts.*; 
 import java.awt.*;
@@ -15,9 +15,9 @@ import redgame.anim.*;
 import redgame.item.*;
 
 /**
- * ShowStateStatusÀàÊÇÓÎÏ·ÖĞÏÔÊ¾Íæ¼Ò×´Ì¬
+ * ShowStateStatusç±»æ˜¯æ¸¸æˆä¸­æ˜¾ç¤ºç©å®¶çŠ¶æ€
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class ShowStateStatus extends AbstractStatus{
 
@@ -30,7 +30,7 @@ public class ShowStateStatus extends AbstractStatus{
     private BoxImg m_box; 
     private BoxImg m_box_top; 
 
-    private Font font = new Font("ËÎÌå", Font.PLAIN, 16);
+    private Font font = new Font("å®‹ä½“", Font.PLAIN, 16);
     private Animation m_heart;
     
     private String weaponStr;
@@ -57,10 +57,10 @@ public class ShowStateStatus extends AbstractStatus{
         m_heart = new Animation(game, game.loadImage("image/heart.png"), 20, 20);
         Player p = m_game.getPlayer();
         weaponStr = "";
-        if (p.items[Player.ITEM_SWORD] != null) weaponStr += "½£  ";
-        if (p.items[Player.ITEM_RING] != null) weaponStr += "Ãæ°üÈ¦  ";
-        if (p.items[Player.ITEM_BOMB] != null) weaponStr += "Õ¨µ¯";
-        if (weaponStr.equals("")) weaponStr = "ÎŞ";
+        if (p.items[Player.ITEM_SWORD] != null) weaponStr += "å‰‘  ";
+        if (p.items[Player.ITEM_RING] != null) weaponStr += "é¢åŒ…åœˆ  ";
+        if (p.items[Player.ITEM_BOMB] != null) weaponStr += "ç‚¸å¼¹";
+        if (weaponStr.equals("")) weaponStr = "æ— ";
         for (int i = 0; i < 256; i++) {
             if (p.hasKey[i] && !p.openedDoor[i]) keyCount ++; 
         }
@@ -100,12 +100,12 @@ public class ShowStateStatus extends AbstractStatus{
         m_box_top.paint(g, m_game.getPanel());
         g2d.setFont(font);
         g2d.setColor(Color.YELLOW);                 
-        g2d.drawString("Íæ¼Ò×´Ì¬", (int)m_box_top.x + 120, (int)m_box_top.y + 30);
+        g2d.drawString("ç©å®¶çŠ¶æ€", (int)m_box_top.x + 120, (int)m_box_top.y + 30);
         g2d.setColor(Color.white);
-        g2d.drawString("Ãû×Ö:", (int)m_box.x + 50, (int)m_box.y + 50);
-        g2d.drawString("ÉúÃü:", (int)m_box.x + 50, (int)m_box.y + 90);
-        g2d.drawString("ÎäÆ÷:", (int)m_box.x + 50, (int)m_box.y + 130);
-        g2d.drawString("Ô¿³×:", (int)m_box.x + 50, (int)m_box.y + 170);
+        g2d.drawString("åå­—:", (int)m_box.x + 50, (int)m_box.y + 50);
+        g2d.drawString("ç”Ÿå‘½:", (int)m_box.x + 50, (int)m_box.y + 90);
+        g2d.drawString("æ­¦å™¨:", (int)m_box.x + 50, (int)m_box.y + 130);
+        g2d.drawString("é’¥åŒ™:", (int)m_box.x + 50, (int)m_box.y + 170);
         
         g2d.setColor(Color.CYAN);
         g2d.drawString(m_game.getPlayer().getName(), (int)m_box.x + 150, (int)m_box.y + 50);

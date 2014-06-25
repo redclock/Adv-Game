@@ -1,43 +1,43 @@
 package redgame.obj;
 /*
- * NPC.java ×÷Õß£ºÒ¦´ºêÍ
+ * NPC.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
 import redgame.engine.*;
 /**
- * NPCÀàÊÇ·ÇÍæ¼Ò½ÇÉ«,Êµ¼ÊÉÏÍæ¼Ò½ÇÉ«Ò²ÊÇÆä×ÓÀà
- * Ã¿´Î¸üĞÂ,ÓÉupdate·½·¨ÉèÖÃnew_faceÖµ,ÔÙÓĞmove·½·¨½øĞĞÒÆ¶¯
- * @author Ò¦´ºêÍ
+ * NPCç±»æ˜¯éç©å®¶è§’è‰²,å®é™…ä¸Šç©å®¶è§’è‰²ä¹Ÿæ˜¯å…¶å­ç±»
+ * æ¯æ¬¡æ›´æ–°,ç”±updateæ–¹æ³•è®¾ç½®new_faceå€¼,å†æœ‰moveæ–¹æ³•è¿›è¡Œç§»åŠ¨
+ * @author å§šæ˜¥æ™–
  */
 
 public class NPC extends Actor{
-    /**ÊÇ·ñÔÚÅÀÌİ×Ó¡£*/
+    /**æ˜¯å¦åœ¨çˆ¬æ¢¯å­ã€‚*/
     protected boolean m_isClimbing = false;  
-    /**ÊÇ·ñÔÚ»Ó½£*/
+    /**æ˜¯å¦åœ¨æŒ¥å‰‘*/
     protected boolean m_isSwording = false; 
-    //Òª×ßµ½µÄÄ¿±êÎ»ÖÃµÄºá×ø±ê
+    //è¦èµ°åˆ°çš„ç›®æ ‡ä½ç½®çš„æ¨ªåæ ‡
     protected int m_destRangeStart;
     protected int m_destRangeEnd;
     /**
-     *½£¹â
+     *å‰‘å…‰
      */
     protected Sword m_sword;
 
     /**
-     * ½«new_faceÉèÎª0~3µÄÊı,Ê¹Æä¿ÉÒÔ³¯Ä³Ò»·½Ïò×ß,
-     * ÉèÎª-1Ôò¾²Ö¹.
+     * å°†new_faceè®¾ä¸º0~3çš„æ•°,ä½¿å…¶å¯ä»¥æœæŸä¸€æ–¹å‘èµ°,
+     * è®¾ä¸º-1åˆ™é™æ­¢.
      * @see Actor#m_face
      */
 	protected int new_face = -1;
     /**
-     * ¹¹ÔìNPC
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param h Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ NPC
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param h å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Actor
      */
 
@@ -49,11 +49,11 @@ public class NPC extends Actor{
         HP = 3;
 	}
     /**
-     * ¸²¸ÇActor.move
+     * è¦†ç›–Actor.move
      * @see Actor#move
      */
 	public void move(long passedTime){
-        //ËÀÁË¾Í²»¶¯ÁË
+        //æ­»äº†å°±ä¸åŠ¨äº†
         if (m_spark1 != null)
         {
         	m_spark1.move(passedTime);
@@ -69,17 +69,17 @@ public class NPC extends Actor{
 
         float t = (passedTime * 10.0f/ m_delay);
 		float dt;
-        //»èÃÔÖĞ
+        //æ˜è¿·ä¸­
         if (m_lull) {
             waitLull(passedTime);
             return;
         }
-        //ĞË·Ü¼ÁÖĞ
+        //å…´å¥‹å‰‚ä¸­
         if (m_cordial) {
             m_delay = 50;
             waitCordial(passedTime);
         }
-        //»Ó½£ÖĞ
+        //æŒ¥å‰‘ä¸­
         if (m_isSwording){
             if (m_sword.finished()){
                 m_isSwording = false;  
@@ -90,23 +90,23 @@ public class NPC extends Actor{
             moveDown(passedTime);
             return;
         }else if (m_isClimbing){
-            //¸üĞÂÊÇ·ñÔÚÅÀÌİ×ÓµÄ×´Ì¬
+            //æ›´æ–°æ˜¯å¦åœ¨çˆ¬æ¢¯å­çš„çŠ¶æ€
             m_isClimbing = m_game.getMap().canClimb(this);
             if (!m_isClimbing){
-                //Èç¹û²»ÔÙÅÀÁË,Ëæ»úÑ¡Ôñ×óÓÒ
+                //å¦‚æœä¸å†çˆ¬äº†,éšæœºé€‰æ‹©å·¦å³
                 m_face = (m_game.getRandom(2) == 0) ? G_LEFT: G_RIGHT;
                 updateAnimation();
             }else{
-                //Á³³¯ÉÏ
+                //è„¸æœä¸Š
                 if (m_face != G_UP){
                     m_face = G_UP;
                     updateAnimation();
                 }
-                //²»¶¯Ê±
+                //ä¸åŠ¨æ—¶
                 if (new_face == -1) {
                     m_anim.resetToStart();
                 }
-                //ÒÆ¶¯
+                //ç§»åŠ¨
                 else if (new_face == G_UP){
                     dt = m_game.getMap().gotoUp(this, t);
                     y -= t;
@@ -126,12 +126,12 @@ public class NPC extends Actor{
                 m_anim.update(passedTime);
             }
         }else{
-            //Õı³£ÒÆ¶¯                
-            //new_face == -1±íÊ¾²»¶¯
+            //æ­£å¸¸ç§»åŠ¨                
+            //new_face == -1è¡¨ç¤ºä¸åŠ¨
             if (new_face == -1) {
     			m_anim.resetToStart();
     		}else {
-    		//°´new_faceÒÆ¶¯  
+    		//æŒ‰new_faceç§»åŠ¨  
     			if (m_face != new_face){
     				m_face = new_face;
     				updateAnimation();
@@ -153,13 +153,13 @@ public class NPC extends Actor{
         }		
 	}
     /**
-     * ¸²¸Çcollision
+     * è¦†ç›–collision
      * @see MovableObject#collision
      */
     
     public boolean collision(AbstractObject obj, int direction){
         if(!m_isSwording && !m_lull && new_face != -1 && direction == G_DOWN && obj instanceof MovableObject)
-        //¶¥×Å´ÓÉÏ±ßÀ´µÄÎïÌå
+        //é¡¶ç€ä»ä¸Šè¾¹æ¥çš„ç‰©ä½“
         {
             float t = (m_game.passedTime * 10.0f/ m_delay);
             float dt;
@@ -172,7 +172,7 @@ public class NPC extends Actor{
                 obj.setPosition(obj.getX() + dt, obj.getY());
             }
         }
-        //Ö´ĞĞ½Å±¾
+        //æ‰§è¡Œè„šæœ¬
         if (m_script != null && obj instanceof Player){
             m_game.getScript().add(m_script, 
                                     new ScriptSource(this, obj, direction));
@@ -181,7 +181,7 @@ public class NPC extends Actor{
         return false;
     } 
     /**
-     * µ±Óöµ½ÕÏ°­Ê±µ÷ÓÃ
+     * å½“é‡åˆ°éšœç¢æ—¶è°ƒç”¨
      */
 	public void cannotGo(){
 	}
@@ -192,7 +192,7 @@ public class NPC extends Actor{
         else new_face = -1;
 	}
 	/**
-	 * »Ó½£
+	 * æŒ¥å‰‘
 	 */
 	public void doSword(int delay, boolean special){
        if (! m_isSwording ){
@@ -245,7 +245,7 @@ public class NPC extends Actor{
         }
 	}
 	/**
-	 * µ¯Éä
+	 * å¼¹å°„
 	 */
 	public void doShoot(int ox, int oy, float vx, float vy){
         Bounce bullet = new Bounce(m_game, m_game.loadImage("image/icon1.png"),
@@ -255,7 +255,7 @@ public class NPC extends Actor{
         m_game.getMap().addBullet(bullet);                        
 	}	
     /**
-     * µ¯Éä
+     * å¼¹å°„
      */
     public void doShoot(float angle, float r, float v){
         int ox = (int)(getX()+ getW()/2 + r*Math.cos(angle)-12);
@@ -265,7 +265,7 @@ public class NPC extends Actor{
         doShoot(ox, oy, vx, vy);       
     }
     /**
-     * ÈÓÕ¨µ¯
+     * æ‰”ç‚¸å¼¹
      */
     public void doBomb(int x, int y){
         Bomb bomb = new Bomb(m_game, m_game.loadImage("image/bomb.png"),
@@ -273,7 +273,7 @@ public class NPC extends Actor{
         m_game.getMap().addBullet(bomb);                        
     } 
     /**
-     * ÁîÆäËÀÍö
+     * ä»¤å…¶æ­»äº¡
      */    
     public void die(){
         super.die();

@@ -8,7 +8,7 @@ import redgame.anim.*;
 public class BombItem extends AbstractItem {
     private Animation m_anim;
     public BombItem(GameWorld game){
-        super(game, "Õ¨µ¯", null );
+        super(game, "ç‚¸å¼¹", null );
         m_sicon = game.loadImage("image/icon5.png");
         m_anim = new Animation(game, game.loadImage("image/bomb.png"), 32, 48);
         m_anim.setRange(0, 8, 300);
@@ -19,7 +19,7 @@ public class BombItem extends AbstractItem {
     }
 
     public String getDescription() {
-        return "\ts30\tbàØ!";
+        return "\ts30\tbå˜­!";
     }
     
     public void drawStateIcon( Graphics2D g2d, int x, int y ){

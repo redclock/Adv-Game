@@ -1,18 +1,18 @@
 package redgame.util;
 /*
  * MidiPlayer.java
- * ´ËÎÄ¼şµÄºËĞÄËã·¨Õª×Ô: http://www.gameres.com/bbs/showthread.asp?threadid=19304
+ * æ­¤æ–‡ä»¶çš„æ ¸å¿ƒç®—æ³•æ‘˜è‡ª: http://www.gameres.com/bbs/showthread.asp?threadid=19304
  */
 import java.io.*;
 import javax.sound.midi.*;
 
 /**
- * MidiPlayerÀàÊÇ²¥·ÅMIDIÒôÀÖµÄÀà
+ * MidiPlayerç±»æ˜¯æ’­æ”¾MIDIéŸ³ä¹çš„ç±»
  */
 
 public class MidiPlayer implements MetaEventListener{
 
-    //ĞòÁĞÆ÷
+    //åºåˆ—å™¨
     private Sequence sequence;
     private Sequencer sequencer;
 
@@ -20,17 +20,17 @@ public class MidiPlayer implements MetaEventListener{
 
     private File MidiFile;
 
-    private static final int END_OF_TRACK_MESSAGE = 47; //´ÅµÀĞÅÏ¢Î²
+    private static final int END_OF_TRACK_MESSAGE = 47; //ç£é“ä¿¡æ¯å°¾
 
     /**
-     * ´ò¿ªĞòÁĞ
+     * æ‰“å¼€åºåˆ—
      * @param filename
      */
     public void InitSequence( String filename )
     {
         try{
             MidiFile = new File( filename );
-            sequence = MidiSystem.getSequence( MidiFile ); //´ÓMidiStreamÁ÷È¡µÃĞòÁĞ
+            sequence = MidiSystem.getSequence( MidiFile ); //ä»MidiStreamæµå–å¾—åºåˆ—
             sequencer = MidiSystem.getSequencer();
             sequencer.open();
             sequencer.addMetaEventListener( this );
@@ -40,8 +40,8 @@ public class MidiPlayer implements MetaEventListener{
     }
 
     /**
-     * ²¥·ÅĞòÁĞ
-     * @param isLoop ÊÇ·ñÑ­»·²¥·Å
+     * æ’­æ”¾åºåˆ—
+     * @param isLoop æ˜¯å¦å¾ªç¯æ’­æ”¾
      */
     public void play( boolean isLoop )
     {
@@ -58,10 +58,10 @@ public class MidiPlayer implements MetaEventListener{
         }
     }
     /**
-     * ÊµÏÖMetaEventListener½Ó¿Ú
+     * å®ç°MetaEventListeneræ¥å£
      */
     public void meta( MetaMessage metaMessage ) {
-        //Ñ­»·²¥·Å
+        //å¾ªç¯æ’­æ”¾
         if( metaMessage.getType() == END_OF_TRACK_MESSAGE )
         {
 //            System.out.println("loop midi");
@@ -69,7 +69,7 @@ public class MidiPlayer implements MetaEventListener{
             {
                 sequencer.stop();
                 try{
-                    sequence = MidiSystem.getSequence( MidiFile ); //´ÓMidiStreamÁ÷È¡µÃĞòÁĞ
+                    sequence = MidiSystem.getSequence( MidiFile ); //ä»MidiStreamæµå–å¾—åºåˆ—
                     sequencer = MidiSystem.getSequencer();
                     sequencer.open();
                     sequencer.addMetaEventListener( this );
@@ -81,7 +81,7 @@ public class MidiPlayer implements MetaEventListener{
         }
     }
     /**
-     * Í£Ö¹ÒôÀÖ
+     * åœæ­¢éŸ³ä¹
      */
     public void stop()
     {
@@ -93,7 +93,7 @@ public class MidiPlayer implements MetaEventListener{
         }
     }
     /**
-     * ¹Ø±ÕĞòÁĞ
+     * å…³é—­åºåˆ—
      */
     public void close()
     {

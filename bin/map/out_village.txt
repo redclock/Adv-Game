@@ -1,5 +1,5 @@
 MAP
-  name ĞÇĞÇ´åÍâ
+  name æ˜Ÿæ˜Ÿæ‘å¤–
   size 1300 480
   backgroundSize 750 480
   background image/bk1.jpg

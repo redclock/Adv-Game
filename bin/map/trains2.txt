@@ -1,5 +1,5 @@
 MAP
-  name ÑµÁ·2
+  name è®­ç»ƒ2
   size 640 480
   backgroundSize 640 480
   background image/bk9.jpg

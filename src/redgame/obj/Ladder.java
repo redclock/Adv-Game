@@ -1,25 +1,25 @@
 package redgame.obj;
 /*
- * Ladder.java ×÷Õß£ºÒ¦´ºêÍ
+ * Ladder.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import redgame.engine.*;
 /**
- * LadderÀàÊÇµØÍ¼ÔªËØÌİ×Ó£¬Ëü¿ÉÒÔÅÀ£¬²»ÄÜÅö×²
- * @author Ò¦´ºêÍ
+ * Ladderç±»æ˜¯åœ°å›¾å…ƒç´ æ¢¯å­ï¼Œå®ƒå¯ä»¥çˆ¬ï¼Œä¸èƒ½ç¢°æ’
+ * @author å§šæ˜¥æ™–
  */
 
 public class Ladder extends MapObject {
     /**
-     * ¹¹ÔìÌİ×Ó
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w ÔªËØ¿í¶È
-     * @param h ÔªËØ¸ß¶È
-     * @param tilew Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param tileh Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ æ¢¯å­
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å…ƒç´ å®½åº¦
+     * @param h å…ƒç´ é«˜åº¦
+     * @param tilew å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param tileh å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Animation
      * @see GameWorld
      * @see MapObject#MapObject
@@ -31,7 +31,7 @@ public class Ladder extends MapObject {
 		m_blocked = false;
 	}
     /**
-     * ·µ»ØÕæ
+     * è¿”å›çœŸ
      */
 	public boolean isClimbable(){
 		return true;

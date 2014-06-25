@@ -1,15 +1,15 @@
 package redgame.obj;
 /*
- * Enmey.java ×÷Õß£ºÒ¦´ºêÍ
+ * Enmey.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
 import redgame.engine.*;
 
 /**
- * EnemyÀàÊÇµĞÈË½ÇÉ«
+ * Enemyç±»æ˜¯æ•Œäººè§’è‰²
  * 
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 
 public class Enemy extends NPC{
@@ -17,13 +17,13 @@ public class Enemy extends NPC{
     private Bonus m_bonus;
 
     /**
-     * ¹¹ÔìEnemy
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param h Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ Enemy
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param h å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Actor
      */
 
@@ -31,7 +31,7 @@ public class Enemy extends NPC{
         super(game, img, x, y, w, h);
     }
     /**
-     * ¸²¸Çcollision
+     * è¦†ç›–collision
      * @see NPC#collision
      */
 

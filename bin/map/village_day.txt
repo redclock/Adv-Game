@@ -1,5 +1,5 @@
 MAP
-  name ĞÇĞÇ´å
+  name æ˜Ÿæ˜Ÿæ‘
   size 1000 600
   backgroundSize 800 500
   background image/bk19.jpg
@@ -160,7 +160,7 @@ MAP
     size 32 48
     image image/char10.png
     skip 4 4 3 2
-    script SayOne:ÄãºÃ:sound/voice/nihao.wav
+    script SayOne:ä½ å¥½:sound/voice/nihao.wav
   end
   Wall
     position 374 243
@@ -275,7 +275,7 @@ MAP
     image image/cat1.png
     delay 100
     skip 17 7 5 0
-    script SayOne:ß÷¡«
+    script SayOne:å–µï½
   end
   Door
     position 25 519

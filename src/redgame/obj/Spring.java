@@ -2,7 +2,7 @@ package redgame.obj;
 import java.awt.*;
 import redgame.engine.*;
 import redgame.anim.*;
-//»ğÑæÁ£×ÓÏµÍ³
+//ç«ç„°ç²’å­ç³»ç»Ÿ
 class StarParticleSystem extends AbstractParticleSystem{
     private int m_y;
     private int m_x;
@@ -36,21 +36,21 @@ class StarParticleSystem extends AbstractParticleSystem{
         p.start();
     }
 }/**
- * SpringÀàÊÇµØÍ¼ÔªËØµ¯»É£¬ËüÊôÓÚÇ½£¬Ìøµ½ÉÏÃæ¿ÉÒÔµ¯ÆğÀ´
- * @author Ò¦´ºêÍ
+ * Springç±»æ˜¯åœ°å›¾å…ƒç´ å¼¹ç°§ï¼Œå®ƒå±äºå¢™ï¼Œè·³åˆ°ä¸Šé¢å¯ä»¥å¼¹èµ·æ¥
+ * @author å§šæ˜¥æ™–
  */
  public class Spring extends MapObject {
     private StarParticleSystem m_sps;
     /**
-     * ¹¹Ôìµ¯»É
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w ÔªËØ¿í¶È
-     * @param h ÔªËØ¸ß¶È
-     * @param tilew Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param tileh Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ å¼¹ç°§
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å…ƒç´ å®½åº¦
+     * @param h å…ƒç´ é«˜åº¦
+     * @param tilew å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param tileh å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Animation
      * @see GameWorld
      * @see MapObject#MapObject
@@ -66,7 +66,7 @@ class StarParticleSystem extends AbstractParticleSystem{
                                 (int)getX(), (int)getY()+8, getW());
     }
     /**
-     * ·µ»Ø¼Ù
+     * è¿”å›å‡
      */
     public boolean isClimbable(){
         return false;

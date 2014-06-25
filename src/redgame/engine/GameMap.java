@@ -1,6 +1,6 @@
 package redgame.engine;
 /*
- * Player.java ×÷Õß£ºÒ¦´ºêÍ
+ * Player.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
@@ -13,8 +13,8 @@ import redgame.status.*;
 
 
 /**
- * GameMapÀàÊÇÓÎÏ·µÄµØÍ¼£¬Ã¿Ò»¹Ø¶¼ÊÇÒ»¸öĞÂµÄµØÍ¼¡£
- * @author Ò¦´ºêÍ
+ * GameMapç±»æ˜¯æ¸¸æˆçš„åœ°å›¾ï¼Œæ¯ä¸€å…³éƒ½æ˜¯ä¸€ä¸ªæ–°çš„åœ°å›¾ã€‚
+ * @author å§šæ˜¥æ™–
  * @see MapFileReader
  * @see GameWorld
  */
@@ -45,8 +45,8 @@ public class GameMap {
     private String startScript;
     
     /**
-     * ¹¹ÔìµØÍ¼
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
+     * æ„é€ åœ°å›¾
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
      * @see MapFileReader
      * @see GameWorld
      */
@@ -56,28 +56,28 @@ public class GameMap {
     }
 
     /**
-     * µÃµ½µØÍ¼¿í¶È
+     * å¾—åˆ°åœ°å›¾å®½åº¦
      */
     public int getWidth() {
         return m_w;
     }
 
     /**
-     * µÃµ½µØÍ¼¸ß¶È
+     * å¾—åˆ°åœ°å›¾é«˜åº¦
      */
     public int getHeight() {
         return m_h;
     }
     
     /**
-     * ÉèÖÃµØÍ¼´óĞ¡
+     * è®¾ç½®åœ°å›¾å¤§å°
      */
     public void setSize(int w, int h){
         m_w = w; m_h = h;
     }
     
     /**
-     * µÃµ½µØÍ¼Ãû
+     * å¾—åˆ°åœ°å›¾å
      */
 
     public String getName(){
@@ -85,14 +85,14 @@ public class GameMap {
     }
     
     /**
-     * ÉèÖÃµØÍ¼Ãû
+     * è®¾ç½®åœ°å›¾å
      */
     public void setName(String name){
         m_name = name;
     }
    
     /**
-     * ÉèÖÃµØÍ¼±³¾°
+     * è®¾ç½®åœ°å›¾èƒŒæ™¯
      */
     public void setBkImg(Image img) {
         m_bkImg = img;
@@ -103,7 +103,7 @@ public class GameMap {
     }
 
     /**
-     * ÉèÖÃµØÍ¼±³¾°, Èç¹ûÎª"<none>"Ôò±íÊ¾±³¾°Îª¿Õ
+     * è®¾ç½®åœ°å›¾èƒŒæ™¯, å¦‚æœä¸º"<none>"åˆ™è¡¨ç¤ºèƒŒæ™¯ä¸ºç©º
      */
     public void setBkImg(String filename) {
         if (filename.equals("<none>")) {
@@ -117,52 +117,52 @@ public class GameMap {
     }
 
     /**
-     * ÉèÖÃµØÍ¼±³¾°´óĞ¡
+     * è®¾ç½®åœ°å›¾èƒŒæ™¯å¤§å°
      */
     public void setBkSize(int w, int h){
         m_bkSize = new Dimension(w, h);
     }
     /**
-     * È¡µÃ¿ªÊ¼Ê±µÄ½Å±¾ 
-     * @return ¿ªÊ¼Ê±µÄ½Å±¾Ãû
+     * å–å¾—å¼€å§‹æ—¶çš„è„šæœ¬ 
+     * @return å¼€å§‹æ—¶çš„è„šæœ¬å
      */
     public String getStartScript() {
     	return startScript;
     }
     /**
-     * ÉèÖÃ¿ªÊ¼Ê±µÄ½Å±¾ 
-     * @param name ½Å±¾Ãû
+     * è®¾ç½®å¼€å§‹æ—¶çš„è„šæœ¬ 
+     * @param name è„šæœ¬å
      */
     public void setStartScript(String name) {
     	startScript = name;
     }
     /**
-     * ÉèÖÃ¹Ø¿¨¼ò½é
+     * è®¾ç½®å…³å¡ç®€ä»‹
      */
     public void setIntro(String[] intro){
         m_intro = intro;
     }
     /**
-     * µÃµ½¹Ø¿¨¼ò½é
+     * å¾—åˆ°å…³å¡ç®€ä»‹
      */
     public String[] getIntro(){
         if (m_intro == null){
             m_intro = new String[1];
-            m_intro[0] = "±¾¹ØÃ»ÓĞ½éÉÜ";
+            m_intro[0] = "æœ¬å…³æ²¡æœ‰ä»‹ç»";
         }
         return m_intro;
     }
     
     /**
-     * È¡µÃ¼ÆÊ±Æ÷
+     * å–å¾—è®¡æ—¶å™¨
      */
     public long getCounter(){
         return m_counter;
     }
     /**
-     * ¼ì²âÊÇ·ñ½Ó´¥µ½ÁË¾²Ì¬ÎïÌå
-     * @param obj ±»¼ì²âµÄÎïÌå
-     * @return Èç¹û½Ó´¥µ½ÁË¾²Ì¬ÎïÌå£¬·µ»Ø¾²Ì¬ÎïÌåÊµÀı£¬·ñÔò·µ»Ønull
+     * æ£€æµ‹æ˜¯å¦æ¥è§¦åˆ°äº†é™æ€ç‰©ä½“
+     * @param obj è¢«æ£€æµ‹çš„ç‰©ä½“
+     * @return å¦‚æœæ¥è§¦åˆ°äº†é™æ€ç‰©ä½“ï¼Œè¿”å›é™æ€ç‰©ä½“å®ä¾‹ï¼Œå¦åˆ™è¿”å›null
      */
     public StaticObject reachStatic(AbstractObject obj){
         for (int i = 0; i < m_statics.size(); i ++){
@@ -174,21 +174,21 @@ public class GameMap {
     }
     
     /**
-     * Ìí¼ÓÈËÎï
+     * æ·»åŠ äººç‰©
      */
     public void addActor(Actor act){
         m_actors.add(act);
     }
 
     /**
-     * Ìí¼ÓÍæ¼ÒÈËÎï
+     * æ·»åŠ ç©å®¶äººç‰©
      */
     public void addPlayer(Player player){
         m_actors.insertElementAt(player, 0);
     }
 
     /**
-     * Ìí¼Ó¾²Ì¬ÎïÌå
+     * æ·»åŠ é™æ€ç‰©ä½“
      */
     public void addStatic(StaticObject s){
         m_statics.add(s);
@@ -196,20 +196,20 @@ public class GameMap {
     }
 
     /**
-     * Ìí¼ÓµØÍ¼ÔªËØ£¬ÈçÇ½£¬Ìİ×Ó
+     * æ·»åŠ åœ°å›¾å…ƒç´ ï¼Œå¦‚å¢™ï¼Œæ¢¯å­
      */
     public void addMapObject(MapObject mobj){
         m_objs.add(mobj);
     }
     
     /**
-     * Ìí¼Ó×Óµ¯
+     * æ·»åŠ å­å¼¹
      */
     public void addBullet(MovableObject s){
         m_bullets.add(s);
     }
    /**
-     * É¾³ıÖ¸¶¨µÄÒ»¿Å×Óµ¯
+     * åˆ é™¤æŒ‡å®šçš„ä¸€é¢—å­å¼¹
      */
     public void removeBullet(AbstractObject b){
         for (int i = 0; i < m_bullets.size(); i++)
@@ -287,11 +287,11 @@ public class GameMap {
         return min;
     } 
    /**
-    * Ò»¸öÎïÌåÒªÏò×ó×ßÒ»¶¨¾àÀë£¬Òª¼ì²âËüµÄÅö×²£¬ÏòËüËùÅöµ½µÄÎïÌå·¢ËÍ±»ÅöÏûÏ¢
+    * ä¸€ä¸ªç‰©ä½“è¦å‘å·¦èµ°ä¸€å®šè·ç¦»ï¼Œè¦æ£€æµ‹å®ƒçš„ç¢°æ’ï¼Œå‘å®ƒæ‰€ç¢°åˆ°çš„ç‰©ä½“å‘é€è¢«ç¢°æ¶ˆæ¯
     * @see AbstractObject#collision
-    * @param obj ¶ÔÏó
-    * @param len ¶ÔÏóÏ£Íû×ßµÄ¾àÀë
-    * @return ÓÉÓÚÅö×²µÈÔ­Òò£¬¶ÔÏó×î¶àÄÜ×ßµÄ¾àÀë
+    * @param obj å¯¹è±¡
+    * @param len å¯¹è±¡å¸Œæœ›èµ°çš„è·ç¦»
+    * @return ç”±äºç¢°æ’ç­‰åŸå› ï¼Œå¯¹è±¡æœ€å¤šèƒ½èµ°çš„è·ç¦»
     */
     public float gotoLeft(AbstractObject obj, float len) {
         float min = obj.getX();
@@ -308,11 +308,11 @@ public class GameMap {
     }
 
    /**
-    * Ò»¸öÎïÌåÒªÏòÓÒ×ßÒ»¶¨¾àÀë£¬Òª¼ì²âËüµÄÅö×²£¬ÏòËüËùÅöµ½µÄÎïÌå·¢ËÍ±»ÅöÏûÏ¢
+    * ä¸€ä¸ªç‰©ä½“è¦å‘å³èµ°ä¸€å®šè·ç¦»ï¼Œè¦æ£€æµ‹å®ƒçš„ç¢°æ’ï¼Œå‘å®ƒæ‰€ç¢°åˆ°çš„ç‰©ä½“å‘é€è¢«ç¢°æ¶ˆæ¯
     * @see AbstractObject#collision
-    * @param obj ¶ÔÏó
-    * @param len ¶ÔÏóÏ£Íû×ßµÄ¾àÀë
-    * @return ÓÉÓÚÅö×²µÈÔ­Òò£¬¶ÔÏó×î¶àÄÜ×ßµÄ¾àÀë
+    * @param obj å¯¹è±¡
+    * @param len å¯¹è±¡å¸Œæœ›èµ°çš„è·ç¦»
+    * @return ç”±äºç¢°æ’ç­‰åŸå› ï¼Œå¯¹è±¡æœ€å¤šèƒ½èµ°çš„è·ç¦»
     */
     public float gotoRight(AbstractObject obj, float len) {
         float min = m_w - obj.getX() - obj.getW();
@@ -329,17 +329,17 @@ public class GameMap {
     }
 
    /**
-    * Ò»¸öÎïÌåÒªÏòÉÏ×ßÒ»¶¨¾àÀë£¬Òª¼ì²âËüµÄÅö×²£¬ÏòËüËùÅöµ½µÄÎïÌå·¢ËÍ±»ÅöÏûÏ¢
-    * ÏòÉÏÓĞÒ»¸öÌØµã£¬Ã»ÓĞ±ß½ç£¬¼´ÎïÌå¿ÉÒÔÅÜµ½ÆÁÄ»Ö®ÉÏ
+    * ä¸€ä¸ªç‰©ä½“è¦å‘ä¸Šèµ°ä¸€å®šè·ç¦»ï¼Œè¦æ£€æµ‹å®ƒçš„ç¢°æ’ï¼Œå‘å®ƒæ‰€ç¢°åˆ°çš„ç‰©ä½“å‘é€è¢«ç¢°æ¶ˆæ¯
+    * å‘ä¸Šæœ‰ä¸€ä¸ªç‰¹ç‚¹ï¼Œæ²¡æœ‰è¾¹ç•Œï¼Œå³ç‰©ä½“å¯ä»¥è·‘åˆ°å±å¹•ä¹‹ä¸Š
     * @see AbstractObject#collision
-    * @param obj ¶ÔÏó
-    * @param len ¶ÔÏóÏ£Íû×ßµÄ¾àÀë
-    * @return ÓÉÓÚÅö×²µÈÔ­Òò£¬¶ÔÏó×î¶àÄÜ×ßµÄ¾àÀë
+    * @param obj å¯¹è±¡
+    * @param len å¯¹è±¡å¸Œæœ›èµ°çš„è·ç¦»
+    * @return ç”±äºç¢°æ’ç­‰åŸå› ï¼Œå¯¹è±¡æœ€å¤šèƒ½èµ°çš„è·ç¦»
     */
    public float gotoUp(AbstractObject obj, float len) {
-        //ÏòÉÏÌØÊâ´¦Àí£¬Ã»ÓĞ±ß½ç
+        //å‘ä¸Šç‰¹æ®Šå¤„ç†ï¼Œæ²¡æœ‰è¾¹ç•Œ
         float min = len;
-        //float min = obj.getY(); //Õâ¾äÎªÓĞ±ß½ç
+        //float min = obj.getY(); //è¿™å¥ä¸ºæœ‰è¾¹ç•Œ
         m_lastObject = null;
         
         if (obj.isBlocked()){
@@ -355,11 +355,11 @@ public class GameMap {
     }
 
    /**
-    * Ò»¸öÎïÌåÒªÏòÏÂ×ßÒ»¶¨¾àÀë£¬Òª¼ì²âËüµÄÅö×²£¬ÏòËüËùÅöµ½µÄÎïÌå·¢ËÍ±»ÅöÏûÏ¢
+    * ä¸€ä¸ªç‰©ä½“è¦å‘ä¸‹èµ°ä¸€å®šè·ç¦»ï¼Œè¦æ£€æµ‹å®ƒçš„ç¢°æ’ï¼Œå‘å®ƒæ‰€ç¢°åˆ°çš„ç‰©ä½“å‘é€è¢«ç¢°æ¶ˆæ¯
     * @see AbstractObject#collision
-    * @param obj ¶ÔÏó
-    * @param len ¶ÔÏóÏ£Íû×ßµÄ¾àÀë
-    * @return ÓÉÓÚÅö×²µÈÔ­Òò£¬¶ÔÏó×î¶àÄÜ×ßµÄ¾àÀë
+    * @param obj å¯¹è±¡
+    * @param len å¯¹è±¡å¸Œæœ›èµ°çš„è·ç¦»
+    * @return ç”±äºç¢°æ’ç­‰åŸå› ï¼Œå¯¹è±¡æœ€å¤šèƒ½èµ°çš„è·ç¦»
     */
     public float gotoDown(AbstractObject obj, float len) {
         float min = m_h - obj.getY() - obj.getH();
@@ -376,8 +376,8 @@ public class GameMap {
         return (min < len)? min : len;
     }
    /**
-    * ÎïÌåµ±Ç°ËùÔÚÎ»ÖÃÊÇ·ñ¿ÉÒÔÅÀÉÏÅÀÏÂ 
-    * @param obj ¶ÔÏó
+    * ç‰©ä½“å½“å‰æ‰€åœ¨ä½ç½®æ˜¯å¦å¯ä»¥çˆ¬ä¸Šçˆ¬ä¸‹ 
+    * @param obj å¯¹è±¡
     */
     public boolean canClimb(AbstractObject obj){
         float mid = obj.getX() + obj.getW() * 0.5f;
@@ -393,7 +393,7 @@ public class GameMap {
     }
 
    /**
-    * »­µØÍ¼ºÍÉÏÃæµÄÎïÌå
+    * ç”»åœ°å›¾å’Œä¸Šé¢çš„ç‰©ä½“
     */
    public void paint(Graphics g) {
         if (m_bkImg == null){
@@ -434,8 +434,8 @@ public class GameMap {
     }
 
     /**
-     * ¸üĞÂ¼ÆÊ±Æ÷
-     * @param passedTime ÉÏ´Îµ÷ÓÃµ½Õâ´ÎËùÓÃµÄºÁÃëÊı
+     * æ›´æ–°è®¡æ—¶å™¨
+     * @param passedTime ä¸Šæ¬¡è°ƒç”¨åˆ°è¿™æ¬¡æ‰€ç”¨çš„æ¯«ç§’æ•°
      */
     public void move(long passedTime){
         for (int i = 0; i < m_statics.size(); i++){
@@ -446,8 +446,8 @@ public class GameMap {
         }
     }
     /**
-     * ¸üĞÂ×´Ì¬
-     * @param passedTime ÉÏ´Îµ÷ÓÃµ½Õâ´ÎËùÓÃµÄºÁÃëÊı
+     * æ›´æ–°çŠ¶æ€
+     * @param passedTime ä¸Šæ¬¡è°ƒç”¨åˆ°è¿™æ¬¡æ‰€ç”¨çš„æ¯«ç§’æ•°
      */
 
     public void update(long passedTime){
@@ -463,8 +463,8 @@ public class GameMap {
         }
     }
     /**
-     * Ê¹ËùÓĞÈËÎï¶¯ÆğÀ´
-     * @param passedTime ÉÏ´Îµ÷ÓÃµ½Õâ´ÎËùÓÃµÄºÁÃëÊı
+     * ä½¿æ‰€æœ‰äººç‰©åŠ¨èµ·æ¥
+     * @param passedTime ä¸Šæ¬¡è°ƒç”¨åˆ°è¿™æ¬¡æ‰€ç”¨çš„æ¯«ç§’æ•°
      */
     public void moveActors(long passedTime){
         for (int i = 0; i < m_actors.size(); i++){

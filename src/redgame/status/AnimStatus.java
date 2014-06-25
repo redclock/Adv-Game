@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * AnimStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * AnimStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import redgame.engine.*;
@@ -10,10 +10,10 @@ public class AnimStatus extends AbstractStatus{
     AbstractParticleSystem m_p;
 
     /**
-     * ´´½¨Ò»¸öAnimStatus
-     * @param game ÓÎÏ·ÒıÓÃ
-     * @param x    Î»ÖÃ
-     * @param y    Î»ÖÃ
+     * åˆ›å»ºä¸€ä¸ªAnimStatus
+     * @param game æ¸¸æˆå¼•ç”¨
+     * @param x    ä½ç½®
+     * @param y    ä½ç½®
      */
     public AnimStatus(GameWorld game, int x, int y, String name, AbstractParticleSystem p){
         super(game);
@@ -21,9 +21,9 @@ public class AnimStatus extends AbstractStatus{
         m_anim = new FileAnimation(game, x, y, name);
     }
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         m_anim.paint(g);

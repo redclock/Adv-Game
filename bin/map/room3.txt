@@ -1,5 +1,5 @@
 MAP
-  name ½£Ê¦¼Ò
+  name å‰‘å¸ˆå®¶
   size 420 400
   backgroundSize 420 400
   background image/bk16.jpg

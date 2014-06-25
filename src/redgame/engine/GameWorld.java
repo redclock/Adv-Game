@@ -1,6 +1,6 @@
 package redgame.engine;
 /*
- * GameWorld.java ×÷Õß£ºÒ¦´ºêÍ
+ * GameWorld.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 
@@ -15,50 +15,50 @@ import redgame.util.*;
 
 import redgame.status.*;
 /**
- * GameWorldÀàÊÇÓÎÏ·×ÜÌåµÄ¹ÜÀíÀà£¬Ìá¹©¸÷¸ö×Ó¹¦ÄÜÖ®¼äµÄÁªÏµ£¬Í¬Ê±ËüÒ²ÊÇäÖÈ¾µÄÏß³Ì¡£
- * @author Ò¦´ºêÍ
+ * GameWorldç±»æ˜¯æ¸¸æˆæ€»ä½“çš„ç®¡ç†ç±»ï¼Œæä¾›å„ä¸ªå­åŠŸèƒ½ä¹‹é—´çš„è”ç³»ï¼ŒåŒæ—¶å®ƒä¹Ÿæ˜¯æ¸²æŸ“çš„çº¿ç¨‹ã€‚
+ * @author å§šæ˜¥æ™–
  */
 
 public class GameWorld implements Runnable{
-    //ÓÎÏ·Ïß³Ì
+    //æ¸¸æˆçº¿ç¨‹
     private Thread  gameThread;            
-    //Ïß³ÌÍ£Ö¹±êÖ¾
+    //çº¿ç¨‹åœæ­¢æ ‡å¿—
     private boolean isStopped = true;
-    //ÊÇ·ñÔİÍ£ 
+    //æ˜¯å¦æš‚åœ 
     private boolean isPaused = false;     
-    //Í¼Ïñ»º´æ
+    //å›¾åƒç¼“å­˜
     private BufferedImage backBuffer;  
-    //µ±Ç°Ê±¼ä      
+    //å½“å‰æ—¶é—´      
     private long currTime = 0; 
-    //¼ä¸ôÊ±¼ä         
+    //é—´éš”æ—¶é—´         
     public long passedTime = 0;
-    //ÍæµÄÊ±¼ä
+    //ç©çš„æ—¶é—´
     private long m_playTime;
-    //Í¼ĞÎÃæ°åµÄÒıÓÃ      
+    //å›¾å½¢é¢æ¿çš„å¼•ç”¨      
     private JPanel m_panel = null;
-    //IO½Ó¿ÚµÄÒıÓÃ      
+    //IOæ¥å£çš„å¼•ç”¨      
     private MyIO m_io = null;
-    //ÓÎÏ·µØÍ¼»ò»­ÃæµÄ´óĞ¡
+    //æ¸¸æˆåœ°å›¾æˆ–ç”»é¢çš„å¤§å°
     private Dimension m_size;
-    //ÓÎÏ·ÆÁÄ»ÔÚµØÍ¼ÉÏµÄÇøÓò
+    //æ¸¸æˆå±å¹•åœ¨åœ°å›¾ä¸Šçš„åŒºåŸŸ
     private Rectangle m_screenArea;
-    //×´Ì¬Õ»
+    //çŠ¶æ€æ ˆ
     private StatusStack m_sstack = new StatusStack(this);
-    //Í¼Ïñ¹ÜÀíÆ÷
+    //å›¾åƒç®¡ç†å™¨
     private ImageManager m_imgMgr = new ImageManager(this);
-    //µ±Ç°µØÍ¼
+    //å½“å‰åœ°å›¾
     private GameMap m_map;
-    //µØÍ¼ÁĞ±í
+    //åœ°å›¾åˆ—è¡¨
     private String[] m_maps;
-    //½Å±¾¹ÜÀíÆ÷
+    //è„šæœ¬ç®¡ç†å™¨
     private ScriptManager m_scripts = new ScriptManager(this);
-    //µ±Ç°¹ØºÅ
+    //å½“å‰å…³å·
     private int m_currLevel;
-    //Ëæ»úÊı,Ê¹ÓÃÊ±¼ä×öÖÖ×Ó
+    //éšæœºæ•°,ä½¿ç”¨æ—¶é—´åšç§å­
     private Random m_rand = new Random(new Date().getTime());
-    //ÊÇ·ñĞèÒª¸üĞÂÆÁÄ»
+    //æ˜¯å¦éœ€è¦æ›´æ–°å±å¹•
     private boolean m_needRefresh;
-    //ÊÇ·ñĞèÒª¸üĞÂÆÁÄ»
+    //æ˜¯å¦éœ€è¦æ›´æ–°å±å¹•
     private GameMouse m_mouse;
     
     private Graphics m_bufGraph;
@@ -84,10 +84,10 @@ public class GameWorld implements Runnable{
         return r;                                             
     }
 
-    //»­Ò»Ö¡
+    //ç”»ä¸€å¸§
     private void drawFrame(){
         Graphics g = m_panel.getGraphics();
-        //ÓĞÊ±gÎª¿Õ
+        //æœ‰æ—¶gä¸ºç©º
         if (g!=null && m_size.width > 0 && m_size.height > 0)
         {
             if (m_needRefresh){
@@ -103,12 +103,12 @@ public class GameWorld implements Runnable{
                 calcScreenArea();
                 Graphics g2 = backBuffer.getGraphics();
                 m_bufGraph = g2;
-                //ÏÈÓÃºÚÉ«ÇåÆÁÄ»
+                //å…ˆç”¨é»‘è‰²æ¸…å±å¹•
                 g2.setColor(Color.BLACK);
 //              g2.fillRect(0, 0, m_size.width, m_size.height);
-                //¼¤»î¶¥¶Ë×´Ì¬
+                //æ¿€æ´»é¡¶ç«¯çŠ¶æ€
                 m_sstack.updateStatus(passedTime, g2);
-                //Ğ´FPS
+                //å†™FPS
                 String FPS;
                 try{
                     FPS = "FPS:"+Float.toString(1000/(float)passedTime); 
@@ -129,7 +129,7 @@ public class GameWorld implements Runnable{
                 //m_mouse.paint(g2);
                 m_bufGraph = null;
                 g2.dispose();
-                //½«»º´æ»­µ½ÆÁÄ»ÉÏ
+                //å°†ç¼“å­˜ç”»åˆ°å±å¹•ä¸Š
 //                g.drawImage(backBuffer, 0, 0, 
 //                            m_screenArea.width,
 //                            m_screenArea.height,
@@ -153,7 +153,7 @@ public class GameWorld implements Runnable{
     }
     
     /**
-     * @param   panel   ÒªÏòÄÇÀï»­Í¼ÒıÓÃ¡£
+     * @param   panel   è¦å‘é‚£é‡Œç”»å›¾å¼•ç”¨ã€‚
      * @see     AppFrame
      */
     public GameWorld(JPanel panel, MyIO MyIO){
@@ -171,7 +171,7 @@ public class GameWorld implements Runnable{
         m_sstack.push(s);
     }
     /**
-     * ×°ÔØµØÍ¼
+     * è£…è½½åœ°å›¾
      * @see     GameMap 
      */
     public void loadMap(String filename){
@@ -182,17 +182,17 @@ public class GameWorld implements Runnable{
         m_player.setVisible(true);
         m_map.addPlayer(m_player);
         m_size = new Dimension(m_map.getWidth(), m_map.getHeight());
-        //½«µØÍ¼Ãû³ÆÏÔÊ¾³öÀ´
+        //å°†åœ°å›¾åç§°æ˜¾ç¤ºå‡ºæ¥
 //        m_frame.leftpane.txtName.setText(m_map.getName());
-        //³õÊ¼»¯
-        //½«ÆäËû×´Ì¬É¾³ı
+        //åˆå§‹åŒ–
+        //å°†å…¶ä»–çŠ¶æ€åˆ é™¤
         m_sstack.deleteUntil(2);
         KeyManager.clearKeyState();
         calcScreenArea();
         //m_sstack.push(new MapIntroStatus(this));
     }
     /**
-     * ÖØĞÂ¿ªÊ¼µ±Ç°µØÍ¼
+     * é‡æ–°å¼€å§‹å½“å‰åœ°å›¾
      * @see     GameMap 
      */
     public void reset(){
@@ -204,11 +204,11 @@ public class GameWorld implements Runnable{
     }
 
     /**
-     * ½øÈëÏÂÒ»¹Ø£¬Èç¹ûµ±Ç°Îª×îºóÒ»¹Ø£¬¾Í½øÈëµÚÒ»¹Ø
+     * è¿›å…¥ä¸‹ä¸€å…³ï¼Œå¦‚æœå½“å‰ä¸ºæœ€åä¸€å…³ï¼Œå°±è¿›å…¥ç¬¬ä¸€å…³
      */
     public void goNextLevel(){
-        m_currLevel++;              //¹ØºÅµİÔö
-        //Èç¹û´óÓÚ×î´ó¹Ø,´ÓµÚÒ»¹Ø¿ªÊ¼
+        m_currLevel++;              //å…³å·é€’å¢
+        //å¦‚æœå¤§äºæœ€å¤§å…³,ä»ç¬¬ä¸€å…³å¼€å§‹
         if (m_currLevel >= m_maps.length){
             pushStatus(new SwitchStatus(this, new CompleteAllStatus(this), 1));
         }else{
@@ -217,7 +217,7 @@ public class GameWorld implements Runnable{
     }
 
    /**
-     * ¿ªÆôÓÎÏ·Ïß³Ì
+     * å¼€å¯æ¸¸æˆçº¿ç¨‹
      * @see     #stop
      */
     public void start(){
@@ -227,7 +227,7 @@ public class GameWorld implements Runnable{
         gameThread.start();
     }
     /**
-     * Í£Ö¹ÓÎÏ·Ïß³Ì
+     * åœæ­¢æ¸¸æˆçº¿ç¨‹
      * @see     #start
      */
     public void stop(){
@@ -237,14 +237,14 @@ public class GameWorld implements Runnable{
         stopMusic();
     }
     /**
-     * ÔİÍ£ÓÎÏ·Ïß³Ì
+     * æš‚åœæ¸¸æˆçº¿ç¨‹
      * @see     #start
      */
     public void pause(){
         isPaused = true;
     }
     /**
-     * »Ø¸´ÓÎÏ·Ïß³Ì
+     * å›å¤æ¸¸æˆçº¿ç¨‹
      * @see     #start
      */
     public void resume(){
@@ -253,7 +253,7 @@ public class GameWorld implements Runnable{
     }
     
     /**
-     * Ê¹ÓÎÏ·×´Ì¬»Øµ½±êÌâ 
+     * ä½¿æ¸¸æˆçŠ¶æ€å›åˆ°æ ‡é¢˜ 
      */
      
     public void backToTitle(){
@@ -278,7 +278,7 @@ public class GameWorld implements Runnable{
         m_player = createPlayer();
     }
     /**
-     * ÔËĞĞÓÎÏ·Ïß³Ì
+     * è¿è¡Œæ¸¸æˆçº¿ç¨‹
      * @see     #start
      */ 
     public void run(){
@@ -288,7 +288,7 @@ public class GameWorld implements Runnable{
         startLogo();
         System.out.println("Game begin");
         passedTime = 0;
-        //ÓÎÏ·Ñ­»·
+        //æ¸¸æˆå¾ªç¯
         while( !isStopped ){
 //            if (KeyManager.isKeyDown(KeyEvent.VK_ALT) 
 //                        && KeyManager.isKeyJustDown(KeyEvent.VK_F)) {
@@ -313,7 +313,7 @@ public class GameWorld implements Runnable{
                 break;
             }
             passedTime = System.currentTimeMillis() - currTime;
-            //·ÀÖ¹¶¯×÷¹ı´ó
+            //é˜²æ­¢åŠ¨ä½œè¿‡å¤§
             if (passedTime > 100) passedTime = 100;
             
         }
@@ -322,21 +322,21 @@ public class GameWorld implements Runnable{
     }
 
     /**
-     * È¡µÃµ±Ç°µØÍ¼´óĞ¡
+     * å–å¾—å½“å‰åœ°å›¾å¤§å°
      */
     public Dimension getSize(){
         return m_size;
     }
     
     /**
-     * È¡µÃÆÁÄ»ÇøÓò
+     * å–å¾—å±å¹•åŒºåŸŸ
      */
     public Rectangle getScreenArea(){
         return m_screenArea;
     }
     
     /*
-     * ÓÉPANEL´óĞ¡£¬µØÍ¼´óĞ¡,ÈËÎïÎ»ÖÃ¼ÆËã³öÆÁÄ»ÇøÓò
+     * ç”±PANELå¤§å°ï¼Œåœ°å›¾å¤§å°,äººç‰©ä½ç½®è®¡ç®—å‡ºå±å¹•åŒºåŸŸ
      */    
     private void calcScreenArea(){
         Dimension psize = m_panel.getSize();
@@ -376,63 +376,63 @@ public class GameWorld implements Runnable{
         }            
     }    
     /**
-     * È¡µÃÃæ°å
+     * å–å¾—é¢æ¿
      */
     public JPanel getPanel(){
         return m_panel;
     }
     /**
-     * È¡µÃµ±Ç°µØÍ¼
+     * å–å¾—å½“å‰åœ°å›¾
      */
     public GameMap getMap(){
         return m_map;
     }
     /**
-     * È¡µÃÀëÆÁ»º³å
+     * å–å¾—ç¦»å±ç¼“å†²
      */
     public BufferedImage getBuffer(){
         return backBuffer;
     }
     /**
-     * È¡µÃ½Å±¾¹ÜÀíÆ÷
+     * å–å¾—è„šæœ¬ç®¡ç†å™¨
      */
     public ScriptManager getScript(){
         return m_scripts;
     }
     /**
-     * È¡µÃÍ¼Æ¬¹ÜÀíÆ÷
+     * å–å¾—å›¾ç‰‡ç®¡ç†å™¨
      */
     public ImageManager getImageManager(){
         return m_imgMgr;
     }
     /**
-     * È¡µÃËæ»úÊı£¬·¶Î§£º0~n-1
+     * å–å¾—éšæœºæ•°ï¼ŒèŒƒå›´ï¼š0~n-1
      */
     public int getRandom(int n){
         return m_rand.nextInt(n);
     }
     /**
-     * È¡µÃÍæ¼Ò½ÇÉ«
+     * å–å¾—ç©å®¶è§’è‰²
      */
     public Player getPlayer(){
         return m_player;
     }
     /**
-     * Ìí¼ÓÍæ¼ÒÈËÎï
+     * æ·»åŠ ç©å®¶äººç‰©
      */
     public void setPlayer(Player player){
         m_player = player;
     }
     /**
-     * ¸üĞÂÆÁÄ»
+     * æ›´æ–°å±å¹•
      */
     public synchronized void refreshScreen(){
-       //°Ñm_needRefreshÉèÎªtrue,ÏÂÒ»Ö¡Ê±¸üĞÂÆÁÄ»
+       //æŠŠm_needRefreshè®¾ä¸ºtrue,ä¸‹ä¸€å¸§æ—¶æ›´æ–°å±å¹•
        m_needRefresh = true; 
     }    
     /**
-     * Ïò×´Ì¬Õ»ÖĞÑ¹ÈëÒ»¸ö×´Ì¬
-     * @param s ÒªÑ¹ÈëµÄ×´Ì¬Ê¾ÀıµÄÒıÓÃ
+     * å‘çŠ¶æ€æ ˆä¸­å‹å…¥ä¸€ä¸ªçŠ¶æ€
+     * @param s è¦å‹å…¥çš„çŠ¶æ€ç¤ºä¾‹çš„å¼•ç”¨
      * @see #popStatus
      * @see StatusStack#push
      */
@@ -441,8 +441,8 @@ public class GameWorld implements Runnable{
     }
 
     /**
-     * ´Ó×´Ì¬Õ»ÖĞµ¯³öÒ»¸ö×´Ì¬
-     * @return ×´Ì¬Õ»±»µ¯³öµÄ×´Ì¬£¬Èç¹û×´Ì¬Õ»Îª¿Õ£¬·µ»Ønull
+     * ä»çŠ¶æ€æ ˆä¸­å¼¹å‡ºä¸€ä¸ªçŠ¶æ€
+     * @return çŠ¶æ€æ ˆè¢«å¼¹å‡ºçš„çŠ¶æ€ï¼Œå¦‚æœçŠ¶æ€æ ˆä¸ºç©ºï¼Œè¿”å›null
      * @see #pushStatus
      * @see StatusStack#pop
      */
@@ -450,9 +450,9 @@ public class GameWorld implements Runnable{
         return m_sstack.pop();
     }
     /**
-     * ²¥·ÅÖ¸¶¨ÒôÀÖÎÄ¼ş£¬²¢Í£Ö¹µ±Ç°ÒôÀÖ¡£¸ñÊ½Îªau£¬aiff£¬wav
-     * @param filename Òª²¥·ÅµÄÒôÀÖÎÄ¼ş
-     * @param looped ÊÇ·ñÑ­»·
+     * æ’­æ”¾æŒ‡å®šéŸ³ä¹æ–‡ä»¶ï¼Œå¹¶åœæ­¢å½“å‰éŸ³ä¹ã€‚æ ¼å¼ä¸ºauï¼Œaiffï¼Œwav
+     * @param filename è¦æ’­æ”¾çš„éŸ³ä¹æ–‡ä»¶
+     * @param looped æ˜¯å¦å¾ªç¯
      * @see #stopMusic
      * @see #playSound
      * @see MusicPlayer#play
@@ -464,8 +464,8 @@ public class GameWorld implements Runnable{
         }
     }
     /**
-     * ²¥·ÅÖ¸¶¨ÒôÀÖÎÄ¼ş£¬µ«²»Í£Ö¹µ±Ç°ÒôÀÖ¡£¸ñÊ½Îªau£¬aiff£¬wav
-     * @param filename Òª²¥·ÅµÄÒôÀÖÎÄ¼ş
+     * æ’­æ”¾æŒ‡å®šéŸ³ä¹æ–‡ä»¶ï¼Œä½†ä¸åœæ­¢å½“å‰éŸ³ä¹ã€‚æ ¼å¼ä¸ºauï¼Œaiffï¼Œwav
+     * @param filename è¦æ’­æ”¾çš„éŸ³ä¹æ–‡ä»¶
      * @see #playMusic
      * @see MusicPlayer#play
      */
@@ -475,23 +475,23 @@ public class GameWorld implements Runnable{
         }
     }
     /**
-     * Í£Ö¹µ±Ç°ÒôÀÖ
+     * åœæ­¢å½“å‰éŸ³ä¹
      * @see #playMusic
      */
     public void stopMusic(){
         m_io.stopMusic();
     }
     /**
-     * ×°ÔØÖ¸¶¨Í¼ÏñÎÄ¼ş¡£¸ñÊ½Îªpng£¬jpg£¬gif£¬bmp
-     * @param filename Òª×°ÔØµÄÍ¼ÏñÎÄ¼ş
-     * @return ×°ÔØºóµÄÍ¼Ïñ
+     * è£…è½½æŒ‡å®šå›¾åƒæ–‡ä»¶ã€‚æ ¼å¼ä¸ºpngï¼Œjpgï¼Œgifï¼Œbmp
+     * @param filename è¦è£…è½½çš„å›¾åƒæ–‡ä»¶
+     * @return è£…è½½åçš„å›¾åƒ
      * @see ImageManager#loadImage
      */
     public Image loadImage(String filename){
         return m_imgMgr.loadImage(filename);
     }
     /**
-     * ´ÓÄÚ´æÖĞÉ¾³ıÍ¼Ïñ
+     * ä»å†…å­˜ä¸­åˆ é™¤å›¾åƒ
      */
     public void deleteImage(Image img){
         m_imgMgr.delete(img);
@@ -513,20 +513,20 @@ public class GameWorld implements Runnable{
 	}
 
 	/**
-	 * @param mouse ÉèÖÃÊó±ê.
+	 * @param mouse è®¾ç½®é¼ æ ‡.
 	 */
 	public void setMouse(GameMouse mouse) {
 		m_mouse = mouse;
 	}
 
 	/**
-	 * @return È¡µÃÊó±ê.
+	 * @return å–å¾—é¼ æ ‡.
 	 */
 	public GameMouse getMouse() {
 		return m_mouse;
 	}   
     /**
-     * È¡µÃÍ¼ĞÎ»·¾³
+     * å–å¾—å›¾å½¢ç¯å¢ƒ
      */
     public Graphics getBufferGraphics() {
         return m_bufGraph;

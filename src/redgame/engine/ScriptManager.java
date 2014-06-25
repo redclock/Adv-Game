@@ -23,11 +23,11 @@ public class ScriptManager{
         }
     }
     /**
-     * °´ÀàÃûÌí¼Ó½Å±¾
+     * æŒ‰ç±»åæ·»åŠ è„šæœ¬
      */
     public boolean add(String name, ScriptSource source){
         Class c;
-        //·Ö½âÃû³ÆºÍ²ÎÊý
+        //åˆ†è§£åç§°å’Œå‚æ•°
         name = "redgame.scripts."+splitName(name);
         for (AbstractScript s: m_scripts){
             if(s.getClass().getName().equals(name)){
@@ -36,31 +36,31 @@ public class ScriptManager{
         }
         //if (! isEmpty() ) return false;
         try{
-            //²éÕÒÀà
+            //æŸ¥æ‰¾ç±»
             c = Class.forName(name);
         }catch(ClassNotFoundException e){
-            //Ã»ÓÐÕâ¸öÀà
+            //æ²¡æœ‰è¿™ä¸ªç±»
             e.printStackTrace();
             return false;
         }     
         Constructor con;
         try{
-            //²éÕÒ¹¹Ôì·½·¨
+            //æŸ¥æ‰¾æž„é€ æ–¹æ³•
             con = c.getConstructor(new Class[0]);
         }catch(NoSuchMethodException e){
-            //ÕÒ²»µ½¹¹Ôì·½·¨
+            //æ‰¾ä¸åˆ°æž„é€ æ–¹æ³•
             e.printStackTrace();
             return false;
         }
         AbstractScript script;          
-        //¹¹ÔìÐÂÊµÀý
+        //æž„é€ æ–°å®žä¾‹
         try{
             script = (AbstractScript)con.newInstance(new Object[0]);
         }catch(Exception e){
             e.printStackTrace();
             return false;
         }
-        //²ÎÊýÉèÖÃ
+        //å‚æ•°è®¾ç½®
         script.game = m_game;
         script.source = source;
         script.args = args;
@@ -77,11 +77,11 @@ public class ScriptManager{
         return m_scripts.isEmpty();    
     }
     /***
-     * Ö´ÐÐÒÑ×°ÔØµÄ½Å±¾
+     * æ‰§è¡Œå·²è£…è½½çš„è„šæœ¬
      */
     public void update(){
         if (m_scripts.isEmpty()) return;
-        //½«¸ÃÍ£Ö¹µÄÍ£Ö¹
+        //å°†è¯¥åœæ­¢çš„åœæ­¢
         int i = m_scripts.size() - 1;
         while (i >= 0){
             AbstractScript script = m_scripts.get(i);
@@ -92,13 +92,13 @@ public class ScriptManager{
             }  
             i--;  
         }
-        //¸üÐÂ½Å±¾
+        //æ›´æ–°è„šæœ¬
         for (AbstractScript script: m_scripts){
             script.update();
         }
     }
     /**
-     * Çå³ýËùÓÐ½Å±¾
+     * æ¸…é™¤æ‰€æœ‰è„šæœ¬
      */
     public void clear(){
         for (AbstractScript s: m_scripts){

@@ -27,13 +27,13 @@ public class TeachBomb extends SimpleScript {
         if ( x == 0){
             switch(m_counter){
                 case 1: a.say("\te0"); break;
-                case 2: a.say("ÄãÊÇÔõÃ´½øÀ´µÄ£¿"); break;
-                case 3: a.say("ÎÒ±»¹ØÔÚÕâÀïºÜ¾ÃÁË£¬\n´ÓÃ»ÓĞ¼ûÒ»¸öÈËÀ´¹ı"); break;
-                case 4: b.say("ÎÒÕÒµ½ÁË°ÑÔ¿³×£¬°ÑÃÅ´ò¿ªÁË¡£"); break;
-                case 5: a.say("ÕæµÄÂğ?\n\ts30\tcffff0088ÄÇÌ«ºÃÁË!\n"); break;
-                case 6: a.say("ÎªÁË±í´ïÎÒµÄĞ»Òâ£¬"); break;
-                case 7: a.say("ÎÒËÍ¸øÄãÕâ¸öÓÎÏ·ÖĞ×îÀ÷º¦µÄÎäÆ÷:"); break;
-                case 8: a.say("\ts40\tcff880088Õ¨µ¯!");
+                case 2: a.say("ä½ æ˜¯æ€ä¹ˆè¿›æ¥çš„ï¼Ÿ"); break;
+                case 3: a.say("æˆ‘è¢«å…³åœ¨è¿™é‡Œå¾ˆä¹…äº†ï¼Œ\nä»æ²¡æœ‰è§ä¸€ä¸ªäººæ¥è¿‡"); break;
+                case 4: b.say("æˆ‘æ‰¾åˆ°äº†æŠŠé’¥åŒ™ï¼ŒæŠŠé—¨æ‰“å¼€äº†ã€‚"); break;
+                case 5: a.say("çœŸçš„å—?\n\ts30\tcffff0088é‚£å¤ªå¥½äº†!\n"); break;
+                case 6: a.say("ä¸ºäº†è¡¨è¾¾æˆ‘çš„è°¢æ„ï¼Œ"); break;
+                case 7: a.say("æˆ‘é€ç»™ä½ è¿™ä¸ªæ¸¸æˆä¸­æœ€å‰å®³çš„æ­¦å™¨:"); break;
+                case 8: a.say("\ts40\tcff880088ç‚¸å¼¹!");
                         game.playSound("sound/explode.wav");
                         b.curItem = b.items[Player.ITEM_BOMB] = new BombItem(game); 
                         b.curItem.setCount(3);
@@ -41,7 +41,7 @@ public class TeachBomb extends SimpleScript {
                         setVar("meetteacherbomb", 2);
                         m_counter = 0;
                         break;
-                case 9: a.say("ÎÒÀ´¸æËßÄãÊ¹ÓÃµÄ·½·¨:"); break;
+                case 9: a.say("æˆ‘æ¥å‘Šè¯‰ä½ ä½¿ç”¨çš„æ–¹æ³•:"); break;
                 default: b.canControl = true; 
                         setVar("meetteacherbomb", 2);
                         stop();        
@@ -49,29 +49,29 @@ public class TeachBomb extends SimpleScript {
         }else if (x == 10){
             switch(m_counter){
                 case 1:
-                    a.say("Äã¿ÉÒÔÍ¨¹ı²Ëµ¥ÖĞ[Ñ¡ÔñÎäÆ÷]×°Åä\n" +
-                          "Õ¨µ¯£¬Ò²¿ÉÒÔ°´Êı×Ö¼ü3¿ìËÙ×°Åä"); 
+                    a.say("ä½ å¯ä»¥é€šè¿‡èœå•ä¸­[é€‰æ‹©æ­¦å™¨]è£…é…\n" +
+                          "ç‚¸å¼¹ï¼Œä¹Ÿå¯ä»¥æŒ‰æ•°å­—é”®3å¿«é€Ÿè£…é…"); 
                     break;      
                 case 2:
-                    a.say("µ±Äã×°ÅäºÃºó, ÓÒÏÂ½Ç»áÓĞÍ¼±êÖ¸Ê¾"); 
+                    a.say("å½“ä½ è£…é…å¥½å, å³ä¸‹è§’ä¼šæœ‰å›¾æ ‡æŒ‡ç¤º"); 
                     break;
                 case 3:
-                    a.say("Äã¿ÉÒÔ°´XÔÚÄãÏëÒªµÄµØ·½·ÅÕ¨µ¯¡£\n");
+                    a.say("ä½ å¯ä»¥æŒ‰Xåœ¨ä½ æƒ³è¦çš„åœ°æ–¹æ”¾ç‚¸å¼¹ã€‚\n");
                     break;
                 case 4:
-                    a.say("¹ıÒ»¶ÎÊ±¼äºó£¬Õ¨µ¯¾Í»á±¬Õ¨¡£\n");
+                    a.say("è¿‡ä¸€æ®µæ—¶é—´åï¼Œç‚¸å¼¹å°±ä¼šçˆ†ç‚¸ã€‚\n");
                     break;
                 case 5:
-                    a.say("Õ¨µ¯Ò²¿ÉÄÜÉËº¦Äã×Ô¼º£¬\nËùÒÔÒªĞ¡ĞÄÊ¹ÓÃ"); 
+                    a.say("ç‚¸å¼¹ä¹Ÿå¯èƒ½ä¼¤å®³ä½ è‡ªå·±ï¼Œ\næ‰€ä»¥è¦å°å¿ƒä½¿ç”¨"); 
                     break;
                 case 6:
-                    a.say("ÌáÊ¾Ò»µã£¬Õ¨µ¯µÄÍşÁ¦¿ÉÊÇºÜ´óµÄ\n²»½öÄÜÕ¨ÉËµĞÈË£¬ÓĞÊ±Á¬Ê¯Í·¶¼ÄÜÕ¨Ëé¡£"); 
+                    a.say("æç¤ºä¸€ç‚¹ï¼Œç‚¸å¼¹çš„å¨åŠ›å¯æ˜¯å¾ˆå¤§çš„\nä¸ä»…èƒ½ç‚¸ä¼¤æ•Œäººï¼Œæœ‰æ—¶è¿çŸ³å¤´éƒ½èƒ½ç‚¸ç¢ã€‚"); 
                     break;
                 case 7:
-                    a.say("µ«ÄãÒ»´Î×î¶àÄÜÄÃ3¸öÕ¨µ¯¡£"); 
+                    a.say("ä½†ä½ ä¸€æ¬¡æœ€å¤šèƒ½æ‹¿3ä¸ªç‚¸å¼¹ã€‚"); 
                     break;
                 case 8:
-                    a.say("Õ¨µ¯²»¹»Ê±¿ÉÒÔÔÙÀ´ÕÒÎÒ¡£"); 
+                    a.say("ç‚¸å¼¹ä¸å¤Ÿæ—¶å¯ä»¥å†æ¥æ‰¾æˆ‘ã€‚"); 
                     break;
                 default:
                     b.canControl = true; 
@@ -84,22 +84,22 @@ public class TeachBomb extends SimpleScript {
                     if (b.items[Player.ITEM_BOMB] != null 
                         && b.items[Player.ITEM_BOMB].getCount() < 3) {
 
-                        a.say("Õ¨µ¯²»¹»ÁËÂğ£¿"); 
+                        a.say("ç‚¸å¼¹ä¸å¤Ÿäº†å—ï¼Ÿ"); 
                     }else {
                         m_counter = 99;
                     }
                     break;
                 case 2:
                     b.items[Player.ITEM_BOMB].setCount(3);
-                    a.say("ºÃÁË£¬ÎÒ¸øÄã×°ÂúÁË");        
+                    a.say("å¥½äº†ï¼Œæˆ‘ç»™ä½ è£…æ»¡äº†");        
                     break;
                 case 3:
-                    a.say("¼Ç×¡£¬ÄãÒ»´ÎÖ»ÄÜ×°3¸öÕ¨µ¯");
+                    a.say("è®°ä½ï¼Œä½ ä¸€æ¬¡åªèƒ½è£…3ä¸ªç‚¸å¼¹");
                     break;    
-                case 100: a.say("ÄãÒªÌıÕ¨µ¯µÄÊ¹ÓÃ·½·¨Âğ£¿");
+                case 100: a.say("ä½ è¦å¬ç‚¸å¼¹çš„ä½¿ç”¨æ–¹æ³•å—ï¼Ÿ");
                         break;
                 case 101:
-                    m = new TextMenu(game, new String[]{ "ÎÒÌıÒ»Ìı", "²»±ØÁË"});
+                    m = new TextMenu(game, new String[]{ "æˆ‘å¬ä¸€å¬", "ä¸å¿…äº†"});
                     game.pushStatus(new ShowMenuStatus(game, 100, 60, m));
                     break;
                 case 102:    

@@ -1,7 +1,7 @@
 package redgame.util;
 /*
  * MusicPlayer.java
- * ´ËÎÄ¼şµÄºËĞÄËã·¨Õª×Ô: http://www.gameres.com/bbs/showthread.asp?threadid=19304
+ * æ­¤æ–‡ä»¶çš„æ ¸å¿ƒç®—æ³•æ‘˜è‡ª: http://www.gameres.com/bbs/showthread.asp?threadid=19304
  */
 
 import java.io.*;
@@ -9,29 +9,29 @@ import javax.sound.sampled.*;
 
 
 /**
- * MusicPlayerÀàÊÇ²¥·ÅÉùÒôµÄÀà.
- * ÄÜ×Ô¶¯ÓĞÎÄ¼şÀ©Õ¹ÃûÅĞ¶ÏÊÇwav»¹ÊÇmidi
+ * MusicPlayerç±»æ˜¯æ’­æ”¾å£°éŸ³çš„ç±».
+ * èƒ½è‡ªåŠ¨æœ‰æ–‡ä»¶æ‰©å±•ååˆ¤æ–­æ˜¯wavè¿˜æ˜¯midi
  * @see MidiPlayer
  */
 
 public class MusicPlayer implements Runnable {
-    //ÒôÀÖÏß³Ì
+    //éŸ³ä¹çº¿ç¨‹
     private Thread musicThread;
-    //midi²¥·ÅÆ÷
+    //midiæ’­æ”¾å™¨
     private MidiPlayer m_midi = null;           
-    //ÊÇ·ñÑ­»·
+    //æ˜¯å¦å¾ªç¯
     private boolean m_looped = false;   
-    //ÊÇ·ñÒÑ¾­Í£Ö¹        
+    //æ˜¯å¦å·²ç»åœæ­¢        
     private boolean m_stopped = false; 
-    //ÎÄ¼şÃû         
+    //æ–‡ä»¶å         
     private String m_filename;
-    //¹¤¾ßº¯Êı:»ñµÃÀ©Õ¹Ãû
+    //å·¥å…·å‡½æ•°:è·å¾—æ‰©å±•å
     private String getExt(String filename){
         int i = filename.lastIndexOf('.');
         if (i<0) return "";
         else return filename.substring(i+1);
     }
-    //È¡µÃÒôÆµÑù±¾
+    //å–å¾—éŸ³é¢‘æ ·æœ¬
     private byte[] getAudioSamples( AudioInputStream MusicStream, AudioFormat format )
     {
         int AudioSampleLengh = ( int )( MusicStream.getFrameLength() *
@@ -48,7 +48,7 @@ public class MusicPlayer implements Runnable {
         return aAudioSamples;
     }
   
-    //²¥·Åau,aiff,wavÒôÀÖÁ÷, Õâ¸öº¯Êı»ù±¾ÍêÈ«ÎªÌû×ÓÉÏµÄ´úÂë
+    //æ’­æ”¾au,aiff,wavéŸ³ä¹æµ, è¿™ä¸ªå‡½æ•°åŸºæœ¬å®Œå…¨ä¸ºå¸–å­ä¸Šçš„ä»£ç 
     private synchronized void play()
     {
           ByteArrayInputStream aMusicInputStream;
@@ -60,9 +60,9 @@ public class MusicPlayer implements Runnable {
               File MusicFile = new File(m_filename);
       
               musicInputStream
-                 = AudioSystem.getAudioInputStream( MusicFile ); //È¡µÃÎÄ¼şµÄÒôÆµÊäÈëÁ÷
-              format = musicInputStream.getFormat(); //È¡µÃÒôÆµÊäÈëÁ÷µÄ¸ñÊ½
-              audioSamples = getAudioSamples( musicInputStream, format );//È¡µÃÒôÆµÑù±¾
+                 = AudioSystem.getAudioInputStream( MusicFile ); //å–å¾—æ–‡ä»¶çš„éŸ³é¢‘è¾“å…¥æµ
+              format = musicInputStream.getFormat(); //å–å¾—éŸ³é¢‘è¾“å…¥æµçš„æ ¼å¼
+              audioSamples = getAudioSamples( musicInputStream, format );//å–å¾—éŸ³é¢‘æ ·æœ¬
       
               aMusicInputStream
                        = new ByteArrayInputStream( audioSamples );
@@ -101,24 +101,24 @@ public class MusicPlayer implements Runnable {
     }
 
     /**
-     * ¹¹ÔìÒ»¸öMusicPlayer
-     * @param filename ÎÄ¼şÃû
-     * @param looped ÊÇ·ñÑ­»·
+     * æ„é€ ä¸€ä¸ªMusicPlayer
+     * @param filename æ–‡ä»¶å
+     * @param looped æ˜¯å¦å¾ªç¯
      */
     public MusicPlayer(String filename, boolean looped){  
           m_looped = looped;                          
           m_stopped = false;  
           m_filename = filename;  
-          //Èç¹ûÀ©Õ¹ÃûÎªmidµÄ»°...                      
+          //å¦‚æœæ‰©å±•åä¸ºmidçš„è¯...                      
           if (getExt(filename).equalsIgnoreCase("mid")){
               m_midi = new MidiPlayer();
           }
     }
     /**
-     * ¿ªÊ¼ÒôÀÖÏß³Ì
+     * å¼€å§‹éŸ³ä¹çº¿ç¨‹
      */
     public void start(){
-        //midiºÍwavĞèÒª²»Í¬µÄ·½·¨
+        //midiå’Œwavéœ€è¦ä¸åŒçš„æ–¹æ³•
         if (m_midi == null){
             musicThread = new Thread(this);
             musicThread.start();
@@ -129,7 +129,7 @@ public class MusicPlayer implements Runnable {
         }    
     }
     /**
-     * ½áÊøÒôÀÖÏß³Ì
+     * ç»“æŸéŸ³ä¹çº¿ç¨‹
      */
     public void stop(){
         if (m_midi == null){
@@ -142,10 +142,10 @@ public class MusicPlayer implements Runnable {
         }    
     }
     /**
-     * ÔËĞĞÒôÀÖÏß³Ì
+     * è¿è¡ŒéŸ³ä¹çº¿ç¨‹
      */
     public void run(){
-        //²»Í£²¥·Å
+        //ä¸åœæ’­æ”¾
         do{
             play();
         }while(m_looped && !m_stopped);       

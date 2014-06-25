@@ -62,7 +62,7 @@ public class Bomb extends MovableObject {
     public void move(long passedTime){
     }
     public void paint(Graphics g){
-        //如果不可见就不画
+        //濡傛灉涓嶅彲瑙佸氨涓嶇敾
         if (!m_visible || !inScreen()) return;
         super.paint(g);
         if (m_exploded){

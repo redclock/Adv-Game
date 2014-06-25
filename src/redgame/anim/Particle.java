@@ -1,6 +1,6 @@
 package redgame.anim;
 /*
- * Particle.java ×÷Õß£ºÒ¦´ºêÍ
+ * Particle.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -9,27 +9,27 @@ import java.awt.geom.AffineTransform;
 
 import redgame.engine.GameWorld;
 /**
- * ParticleÀàÊÇÓÎÏ·ÖĞÁ£×ÓÏµÍ³µÄÁ£×ÓÀà
- * @author Ò¦´ºêÍ
+ * Particleç±»æ˜¯æ¸¸æˆä¸­ç²’å­ç³»ç»Ÿçš„ç²’å­ç±»
+ * @author å§šæ˜¥æ™–
  */
 
 public class Particle {
 	private Animation m_anim;
-	//Î»ÖÃ
+	//ä½ç½®
 	public float x, y;
-	//ËÙ¶È
+	//é€Ÿåº¦
 	public float vx, vy;
-	//¼ÓËÙ¶È
+	//åŠ é€Ÿåº¦
 	public float accx, accy;
-	//Í¸Ã÷
+	//é€æ˜
 	public float alpha;
-    //Í¸Ã÷Ïû¼õËÙ¶È
+    //é€æ˜æ¶ˆå‡é€Ÿåº¦
 	public float alphasp; 
-	//ÉúÃüÁ¦	
+	//ç”Ÿå‘½åŠ›	
     public float life;
-	//Ğı×ª½Ç
+	//æ—‹è½¬è§’
 	public float rotate_angle;
-    //Ğı×ª½ÇËÙ¶È
+    //æ—‹è½¬è§’é€Ÿåº¦
     public float rotate_angle_sp;
     
     public boolean active = true;

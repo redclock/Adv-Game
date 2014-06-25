@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * SayStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * SayStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.image.*;
@@ -11,9 +11,9 @@ import redgame.engine.*;
 import redgame.obj.*;
 import redgame.util.*;
 /**
- * SayStatusÀàÊÇÏÔÊ¾¸ß·Ö°ñµÄÓÎÏ·×´Ì¬.
+ * SayStatusç±»æ˜¯æ˜¾ç¤ºé«˜åˆ†æ¦œçš„æ¸¸æˆçŠ¶æ€.
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class SayStatus extends AbstractStatus {
     private Image m_bk_img;
@@ -30,16 +30,16 @@ public class SayStatus extends AbstractStatus {
     public static Color DefaultColor1 = Color.WHITE; 
     public static Color DefaultColor2 = new Color(128, 128, 255); 
     /**
-     * ´´½¨Ò»¸öSayStatus
-     * @param game  ÓÎÏ·ÒýÓÃ
-     * @param owner Ëµ»°µÄÈË
-     * @param text  ÒªËµµÄ»°
+     * åˆ›å»ºä¸€ä¸ªSayStatus
+     * @param game  æ¸¸æˆå¼•ç”¨
+     * @param owner è¯´è¯çš„äºº
+     * @param text  è¦è¯´çš„è¯
      */
     public SayStatus(GameWorld game, AbstractObject owner, String text) {
         super(game);
         Image emotion = m_game.loadImage("image/emotion.png");
 
-        Font font = new Font("ËÎÌå", Font.PLAIN, 16);
+        Font font = new Font("å®‹ä½“", Font.PLAIN, 16);
         m_bk_img = new BufferedImage(MAXW + sleft + sright + ssleft + ssright,
                                      MAXH + stop + sbottom + sstop + ssbottom,
                                      BufferedImage.TYPE_INT_ARGB);
@@ -60,7 +60,7 @@ public class SayStatus extends AbstractStatus {
         int[] px;
         int[] py;
         Rectangle sc = new Rectangle(m_game.getScreenArea());    
-        //¾ö¶¨Î»ÖÃ
+        //å†³å®šä½ç½®
         if (owner.getY() - d.height > 10){
             //top
             m_y = (int)owner.getY() - m_imgh;
@@ -120,7 +120,7 @@ public class SayStatus extends AbstractStatus {
     }
 
     /**
-     * °´¼üÍË³ö
+     * æŒ‰é”®é€€å‡º
      */
      public int update(long passedTime){
         if ( KeyManager.isKeyJustDown(KeyEvent.VK_SPACE)
@@ -131,9 +131,9 @@ public class SayStatus extends AbstractStatus {
         return 0;
     }
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒýÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»Žä¸Šä¸€æ¬¡è°ƒç”¨åˆ°çŽ°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         if (m_counter > 300)

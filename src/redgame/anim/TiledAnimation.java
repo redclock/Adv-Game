@@ -1,27 +1,27 @@
 package redgame.anim;
 /*
- * TiledAnimtion.java ×÷Õß£ºÒ¦´ºêÍ
+ * TiledAnimtion.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.image.*;
 
 import redgame.engine.*;
 /**
- * TiledAnimationÀàÊÇ¹ÜÀíºÍÏÔÊ¾Æ½ÆÌ¶¯»­µÄÀà.
- * µ±ÎïÌå±ÈÍ¼Æ¬´óÊ±, »­ÃæÆ½ÆÌÏÔÊ¾
- * @author Ò¦´ºêÍ
+ * TiledAnimationç±»æ˜¯ç®¡ç†å’Œæ˜¾ç¤ºå¹³é“ºåŠ¨ç”»çš„ç±».
+ * å½“ç‰©ä½“æ¯”å›¾ç‰‡å¤§æ—¶, ç”»é¢å¹³é“ºæ˜¾ç¤º
+ * @author å§šæ˜¥æ™–
  */
 
 public class TiledAnimation extends Animation {
     private int m_frame;
     /**
-     * ¹¹ÔìTiledAnimtion
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img Í¼Ïñ
-     * @param w ÎïÌå¿í
-     * @param h ÎïÌå¸ß
-     * @param tilew Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param tileh Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ TiledAnimtion
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img å›¾åƒ
+     * @param w ç‰©ä½“å®½
+     * @param h ç‰©ä½“é«˜
+     * @param tilew å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param tileh å›¾åƒä¸€æ ¼çš„é«˜åº¦
      */
     public TiledAnimation(GameWorld game, Image img, int w, 
 							int h, int tilew, int tileh){

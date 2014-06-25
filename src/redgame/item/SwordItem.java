@@ -8,7 +8,7 @@ public class SwordItem extends AbstractItem {
     private Image m_state;
     public float power;
     public SwordItem(GameWorld game){
-        super(game, "铁剑", null );
+        super(game, "閾佸墤", null );
         m_sicon = game.loadImage("image/icon3.png");
         m_state = game.loadImage("image/icon4.png");
         count = 1;
@@ -32,7 +32,7 @@ public class SwordItem extends AbstractItem {
      *
      */
     public String getDescription() {
-        return "一剑在手\n\ts26走遍天下!";
+        return "涓�鍓戝湪鎵媆n\ts26璧伴亶澶╀笅!";
     }
     
     public void drawStateIcon( Graphics2D g2d, int x, int y ){

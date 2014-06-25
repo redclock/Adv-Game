@@ -1,9 +1,9 @@
 MAP
-  name Îİ×Ó
+  name å±‹å­
   size 420 200
   backgroundSize 420 200
   background image/bk17.jpg
-  music music/»¶¿ìµÄĞ¡°æ.mid
+  music music/æ¬¢å¿«çš„å°ç‰ˆ.mid
   MaxScore 0
   Introduction
   end

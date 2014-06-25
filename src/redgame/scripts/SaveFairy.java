@@ -12,7 +12,7 @@ import redgame.anim.*;
 public class SaveFairy extends SimpleScript {
 
     private AbstractMenu m;
-    private String[] s = { "ÎÒÒª±£´æ", "²»±£´æ"};
+    private String[] s = { "æˆ‘è¦ä¿å­˜", "ä¸ä¿å­˜"};
     AbstractObject a; 
 
     public void start(){
@@ -36,61 +36,61 @@ public class SaveFairy extends SimpleScript {
         }
         switch(m_counter){
             case 1:  
-            	a.say("»¶Ó­À´µ½Ä§·¨Îİ£¡");   
+            	a.say("æ¬¢è¿æ¥åˆ°é­”æ³•å±‹ï¼");   
         	case 2: if (meet == 0){
 					m_counter = 199;
         		}
         		break;	
-            case 3: a.say("ÄãÒªÔÚÕâÀï¼ÇÂ¼Äãµ±Ç°µÄÂÃÍ¾Âğ?"); break;
+            case 3: a.say("ä½ è¦åœ¨è¿™é‡Œè®°å½•ä½ å½“å‰çš„æ—…é€”å—?"); break;
             case 4: game.pushStatus(new ShowMenuStatus(game, 450, 150, m)); break;
             case 5: if (m.getIndex() == 0) m_counter = 99; 
-                   else a.say("×£ÄãÒ»Â·Æ½°²ÁË..."); 
+                   else a.say("ç¥ä½ ä¸€è·¯å¹³å®‰äº†..."); 
                    if (meet == 0) m_counter = 149;
                    
                    break;
                    
             //if select yes        
-            case 100: game.pushStatus(new InputStatus(game, 400, 150, "ÇëÊäÈëÒª´æÅÌµÄÃû³Æ:"));
+            case 100: game.pushStatus(new InputStatus(game, 400, 150, "è¯·è¾“å…¥è¦å­˜ç›˜çš„åç§°:"));
                     break;
             case 101: 
                 if (InputStatus.result.equals("")){
-                    a.say("Äã²»ÊäÈëÃû×ÖÊÇ²»ÄÜ±£´æµÄ");
+                    a.say("ä½ ä¸è¾“å…¥åå­—æ˜¯ä¸èƒ½ä¿å­˜çš„");
                 }else{
                     GameSaveLoad gsl = new GameSaveLoad(game, InputStatus.result);
                     if ( gsl.saveGame("map/magicroom.txt") ){
 						m_counter = 299;
                     }else{
-                    	a.say("±£´æÊ§°ÜÁË¡£\n\tbÄã¾¿¾¹ÊäÈëÁËÊ²Ã´£¿");
+                    	a.say("ä¿å­˜å¤±è´¥äº†ã€‚\n\tbä½ ç©¶ç«Ÿè¾“å…¥äº†ä»€ä¹ˆï¼Ÿ");
                     }
                 }
 
                 break;
             //first meet fairy    
             case 200:  
-            	b.say("ÍÛ£¬Äã¸¡ÔÚÉÏÃæ²»¾õµÃÍ·ÔÎÂğ£¿");   
+            	b.say("å“‡ï¼Œä½ æµ®åœ¨ä¸Šé¢ä¸è§‰å¾—å¤´æ™•å—ï¼Ÿ");   
             	break;
             case 201:  
             	a.say("......");  
             	break;
             case 202:  
-            	a.say("ºÇºÇ£¬ÎÒ¿ÉÊÇÏÉÅ®");   
+            	a.say("å‘µå‘µï¼Œæˆ‘å¯æ˜¯ä»™å¥³");   
             	break;
             case 203:  
-            	a.say("Ğ¡»ï×Ó, Äã×öºÃÌ¤ÈëÃ°ÏÕÕ÷³ÌµÄ×¼±¸ÁËÂğ?");   
+            	a.say("å°ä¼™å­, ä½ åšå¥½è¸å…¥å†’é™©å¾ç¨‹çš„å‡†å¤‡äº†å—?");   
             	break;
             case 204:
-            	a.say("Ç°ÃæµÄÂ·Í¾¿ÉÊÇ³äÂú¿²¿ÀµÄßÏ.");   
+            	a.say("å‰é¢çš„è·¯é€”å¯æ˜¯å……æ»¡åå·çš„å‘¦.");   
             	break;
             case 205:
-            	b.say("àŞ£¬ÌıÄãËµµÄÂùÓĞÈ¤µÄ¡£\nÄÇÎÒÒ»¶¨Òª³öÈ¥¿´¿´ÁË");   
+            	b.say("å™¢ï¼Œå¬ä½ è¯´çš„è›®æœ‰è¶£çš„ã€‚\né‚£æˆ‘ä¸€å®šè¦å‡ºå»çœ‹çœ‹äº†");   
             	break;
             case 206:
-            	a.say("Ì«ºÃÁË£¬Èç¹ûÄãµÄÂÃ³ÌÓĞÁË½øÕ¹£¬\n±ğÍüÁËµ½ÎÒÕâÀïÀ´£¬ÎÒ»á¼ÇÂ¼ÏÂÄãµÄ¹ÊÊÂ");   
+            	a.say("å¤ªå¥½äº†ï¼Œå¦‚æœä½ çš„æ—…ç¨‹æœ‰äº†è¿›å±•ï¼Œ\nåˆ«å¿˜äº†åˆ°æˆ‘è¿™é‡Œæ¥ï¼Œæˆ‘ä¼šè®°å½•ä¸‹ä½ çš„æ•…äº‹");   
             	break;
             case 207:
-                a.say("ÔÚÎÒÕâÀï¼ÇÂ¼ºó,Äã¿ÉÒÔÔÚESC\n" + 
-                          "ºô³öµÄ²Ëµ¥ÖĞÑ¡Ôñ[ÔØÈëÓÎÏ·],\n" +
-                          "Ñ¡Ôñ¼ÇÂ¼À´¼ÌĞøÕâ´ÎÃ°ÏÕ");
+                a.say("åœ¨æˆ‘è¿™é‡Œè®°å½•å,ä½ å¯ä»¥åœ¨ESC\n" + 
+                          "å‘¼å‡ºçš„èœå•ä¸­é€‰æ‹©[è½½å…¥æ¸¸æˆ],\n" +
+                          "é€‰æ‹©è®°å½•æ¥ç»§ç»­è¿™æ¬¡å†’é™©");
                 m_counter = 2;
                 AbstractScript.setVar("meetFairy", 1);    
                 break;
@@ -106,7 +106,7 @@ public class SaveFairy extends SimpleScript {
                 game.pushStatus(s);                     
 				break;
            	case 301:
-				a.say("¹ş¹ş,Íê³ÉÁË!");	
+				a.say("å“ˆå“ˆ,å®Œæˆäº†!");	
             default: 
                 stop();
         }

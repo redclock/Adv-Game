@@ -1,25 +1,25 @@
 package redgame.obj;
 /*
- * Wall.java ×÷Õß£ºÒ¦´ºêÍ
+ * Wall.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
  import java.awt.*;
  import redgame.engine.*;
 /**
- * WallÀàÊÇµØÍ¼ÔªËØÇ½£¬Ëü¿ÉÒÔÅö×²£¬²»ÄÜÅÀ
- * @author Ò¦´ºêÍ
+ * Wallç±»æ˜¯åœ°å›¾å…ƒç´ å¢™ï¼Œå®ƒå¯ä»¥ç¢°æ’ï¼Œä¸èƒ½çˆ¬
+ * @author å§šæ˜¥æ™–
  */
  public class Wall extends MapObject {
     private boolean m_bad;
     /**
-     * ¹¹ÔìÇ½
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w ÔªËØ¿í¶È
-     * @param h ÔªËØ¸ß¶È
-     * @param tilew Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param tileh Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ å¢™
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å…ƒç´ å®½åº¦
+     * @param h å…ƒç´ é«˜åº¦
+     * @param tilew å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param tileh å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Animation
      * @see GameWorld
      * @see MapObject#MapObject
@@ -32,7 +32,7 @@ package redgame.obj;
 		m_blocked = true;
 	}
     /**
-     * ·µ»Ø¼Ù
+     * è¿”å›å‡
      */
 	public boolean isClimbable(){
 		return false;
@@ -45,7 +45,7 @@ package redgame.obj;
                 return true;
             }
         }
-        //Ö´ĞĞ½Å±¾
+        //æ‰§è¡Œè„šæœ¬
         if (m_script != null && obj instanceof Player){
             m_game.getScript().add(m_script, 
                                     new ScriptSource(this, obj, direction));

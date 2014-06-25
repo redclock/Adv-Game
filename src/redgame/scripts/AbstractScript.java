@@ -3,7 +3,7 @@ import redgame.engine.*;
 import java.util.*;
 /**
  *
- * ½Å±¾
+ * è„šæœ¬
  * 
  */
 public abstract class AbstractScript{
@@ -49,18 +49,18 @@ public abstract class AbstractScript{
     public static Map getVars(){
         return vars;
     }    
-    //ÊÇ·ñÕıÔÚÔËĞĞ
+    //æ˜¯å¦æ­£åœ¨è¿è¡Œ
     protected boolean m_running = false;
     /**
-     * ÓÎÏ·ÒıÓÃ
+     * æ¸¸æˆå¼•ç”¨
      */
     public GameWorld game;
     /**
-     * ½Å±¾À´Ô´ĞÅÏ¢
+     * è„šæœ¬æ¥æºä¿¡æ¯
      */
     public ScriptSource source;
     /**
-     * ½Å±¾²ÎÊı
+     * è„šæœ¬å‚æ•°
      */
     public String[] args;
     
@@ -68,22 +68,22 @@ public abstract class AbstractScript{
         game = null;
     }
     /**
-     * ÊÇ·ñÕıÔÚÔËĞĞ
+     * æ˜¯å¦æ­£åœ¨è¿è¡Œ
      */
     public boolean isRunning(){
         return m_running;
     }
     
     /**
-     * ¿ªÊ¼½Å±¾
+     * å¼€å§‹è„šæœ¬
      */
     public abstract void start();
     /**
-     * Ç¿ÖÆÍ£Ö¹
+     * å¼ºåˆ¶åœæ­¢
      */
     public abstract void stop();
     /**
-     * Ö´ĞĞ½Å±¾
+     * æ‰§è¡Œè„šæœ¬
      */
     public abstract int update();
 

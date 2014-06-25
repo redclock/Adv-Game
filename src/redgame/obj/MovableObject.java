@@ -1,36 +1,36 @@
 package redgame.obj;
 /*
- * MovableObject.java ×÷Õß£ºÒ¦´ºêÍ
+ * MovableObject.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
 import redgame.engine.*;
 /**
- * MovableObjectÀàÊÇ¿ÉÒÔÒÆ¶¯µÄÎïÌå£¬Ëü¾ßÓĞÖØÁ¦
- * ÕâÊÇÒ»¸ö³éÏóÀà£¬ÒªÊ¹ÓÃËüµÄÅÉÉúÀà¡£
- * @author Ò¦´ºêÍ
+ * MovableObjectç±»æ˜¯å¯ä»¥ç§»åŠ¨çš„ç‰©ä½“ï¼Œå®ƒå…·æœ‰é‡åŠ›
+ * è¿™æ˜¯ä¸€ä¸ªæŠ½è±¡ç±»ï¼Œè¦ä½¿ç”¨å®ƒçš„æ´¾ç”Ÿç±»ã€‚
+ * @author å§šæ˜¥æ™–
  */
 abstract public class MovableObject extends AbstractObject {
     /**
-     *y·½ÏòµÄ·ÖËÙ¶È
+     *yæ–¹å‘çš„åˆ†é€Ÿåº¦
      */
 	protected float m_vy = 0.0f;
     /**
-     *x·½ÏòµÄ·ÖËÙ¶È
+     *xæ–¹å‘çš„åˆ†é€Ÿåº¦
      */
     protected float m_vx = 0.0f;
     /**
-     * ÊÇ·ñ¾ßÓĞÖØÁ¦
+     * æ˜¯å¦å…·æœ‰é‡åŠ›
      */
     protected boolean m_gravity = true; 
     /**
-     * ¹¹ÔìÎïÌå£¬²¢¿ªÆô¶¯»­
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param h Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ ç‰©ä½“ï¼Œå¹¶å¼€å¯åŠ¨ç”»
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param h å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Animation
      * @see GameWorld
      */
@@ -40,17 +40,17 @@ abstract public class MovableObject extends AbstractObject {
 		m_anim.start();
 	}
     /**
-     * ÓÉÓÚÖØÁ¦¶øÏÂÂä
+     * ç”±äºé‡åŠ›è€Œä¸‹è½
      */
     public void moveDown(long passedTime){
 		if (! m_gravity ) return;
 		float dy = 0;
 		if (m_vy < 0){
 			dy = - m_game.getMap().gotoUp(this, -passedTime*m_vy);
-			//Èç¹ûÅöµ½¶«Î÷£¬²¢ÇÒ²»ÊÇµ¯»É£¬¾ÍÈÃm_vy=0
+			//å¦‚æœç¢°åˆ°ä¸œè¥¿ï¼Œå¹¶ä¸”ä¸æ˜¯å¼¹ç°§ï¼Œå°±è®©m_vy=0
 			if (m_vy < 0 && dy > passedTime*m_vy) m_vy = 0;
 		}else{
-            if (m_vy == 0) m_game.getMap().gotoDown(this, 0.01f); //Èç¹ûÔÚµØÉÏ,Ì½²âÒ»ÏÂ
+            if (m_vy == 0) m_game.getMap().gotoDown(this, 0.01f); //å¦‚æœåœ¨åœ°ä¸Š,æ¢æµ‹ä¸€ä¸‹
 			else dy = m_game.getMap().gotoDown(this, passedTime*m_vy);
 		}
 		y += dy;
@@ -61,25 +61,25 @@ abstract public class MovableObject extends AbstractObject {
 		}
 	}
 	/*
-	 * µÃµ½X·½Ïò·ÖËÙ¶È
+	 * å¾—åˆ°Xæ–¹å‘åˆ†é€Ÿåº¦
 	 */
 	public float getVX(){
 	   return m_vx;
 	}
     /*
-     * µÃµ½Y·½Ïò·ÖËÙ¶È
+     * å¾—åˆ°Yæ–¹å‘åˆ†é€Ÿåº¦
      */
     public float getVY(){
        return m_vy;
     }
     /*
-     * ÉèÖÃY·½Ïò·ÖËÙ¶È
+     * è®¾ç½®Yæ–¹å‘åˆ†é€Ÿåº¦
      */
     public void setVY(float vy){
        m_vy = vy;
     }
     /*
-     * ÉèÖÃX·½Ïò·ÖËÙ¶È
+     * è®¾ç½®Xæ–¹å‘åˆ†é€Ÿåº¦
      */
     public void setVX(float vx){
        m_vx = vx;

@@ -8,12 +8,12 @@ public class TestScript extends ThreadScript{
         
         if (source.direction == Actor.G_DOWN){
             game.playSound("sound/voice/wei.wav");
-            a.say("\ts20\tbÎ¹£¡£¡\n\ts14\tBÄã²»Òª²ÈÎÒµÄÍ·£¡");
+            a.say("\ts20\tbå–‚ï¼ï¼\n\ts14\tBä½ ä¸è¦è¸©æˆ‘çš„å¤´ï¼");
             unlock();
             b.setVY(-0.4f);
         }else{
             game.playSound("sound/voice/nihao.wav");
-            a.say("ÄãºÃ¡£");
+            a.say("ä½ å¥½ã€‚");
             unlock();
         }
         waitTime(1500);

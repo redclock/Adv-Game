@@ -14,13 +14,13 @@ class CloseAdapter extends WindowAdapter{
 }
 
 /**
- * AppFrameÊÇÖ÷´°Ìå
- * @author Ò¦´ºêÍ
+ * AppFrameæ˜¯ä¸»çª—ä½“
+ * @author å§šæ˜¥æ™–
  */
 public class AppFrame extends JFrame implements MyIO{
     private GamePanel  picpane = new GamePanel();
     
-    //±³¾°ÒôÀÖ²¥·ÅÆ÷,Í¬Ò»Ê±¼äÖ»ÓĞÒ»¸ö±³¾°ÒôÀÖ
+    //èƒŒæ™¯éŸ³ä¹æ’­æ”¾å™¨,åŒä¸€æ—¶é—´åªæœ‰ä¸€ä¸ªèƒŒæ™¯éŸ³ä¹
     private MusicPlayer m_music = null;
     
     private static boolean isFirst = true;
@@ -61,7 +61,7 @@ public class AppFrame extends JFrame implements MyIO{
     }
 
     /**
-     * ½«´°ÌåÒÆ¶¯µ½ÆÁÄ»ÖĞ¼ä
+     * å°†çª—ä½“ç§»åŠ¨åˆ°å±å¹•ä¸­é—´
      */ 
     public void moveCenter(){
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
@@ -102,13 +102,13 @@ public class AppFrame extends JFrame implements MyIO{
     }   
      
     /**
-     * ¿ªÆôÓÎÏ·
+     * å¼€å¯æ¸¸æˆ
      */
     public void startGame(){
         picpane.startGame(this);
     }
     /**
-     * Í£Ö¹ÓÎÏ·
+     * åœæ­¢æ¸¸æˆ
      */
     
     public void stopGame(){
@@ -129,7 +129,7 @@ public class AppFrame extends JFrame implements MyIO{
         cp.add(picpane, BorderLayout.CENTER);
         addWindowListener(new CloseAdapter());
         setVisible(true);
-        //ÎªÁËÈ¥³ı±êÌâÀ¸ºÍ±ß¿òµÄ¿í¶È£¬¾«È·¶¨´°¿Ú´óĞ¡
+        //ä¸ºäº†å»é™¤æ ‡é¢˜æ å’Œè¾¹æ¡†çš„å®½åº¦ï¼Œç²¾ç¡®å®šçª—å£å¤§å°
         Insets insets = getInsets();
         setSize(insets.left+insets.right+640,insets.top+insets.bottom+480);
 
@@ -162,7 +162,7 @@ public class AppFrame extends JFrame implements MyIO{
     }
     
     /**
-     * @param s ±êÌâ
+     * @param s æ ‡é¢˜
      */
     public AppFrame(String s){
         super(s);

@@ -15,16 +15,16 @@ public class BlockOut extends SimpleScript {
         Player b = (Player)source.cause; 
         switch(m_counter){
             case 1:  
-            	a.say("ß×,ÄãÒªµ½ÍâÃæÈ¥Âğ?");   
+            	a.say("å’¦,ä½ è¦åˆ°å¤–é¢å»å—?");   
         		break;	
         	case 2:
-            	a.say("µ«¿´ÄãµÄ×°±¸,ºÃÏñ²»È«Ñ½.");   
+            	a.say("ä½†çœ‹ä½ çš„è£…å¤‡,å¥½åƒä¸å…¨å‘€.");   
         		break;	
         	case 3:
-            	a.say("ÍâÃæºÜÎ£ÏÕ,ÄãÃ»ÓĞ×ã¹»µÄ×°±¸ÊÇ²»ÄÜ³öÈ¥µÄ.");   
+            	a.say("å¤–é¢å¾ˆå±é™©,ä½ æ²¡æœ‰è¶³å¤Ÿçš„è£…å¤‡æ˜¯ä¸èƒ½å‡ºå»çš„.");   
         		break;	
         	case 4:
-            	a.say("¶àÔÚ´å×ÓÀï×ªÒ»×ª°É.");   
+            	a.say("å¤šåœ¨æ‘å­é‡Œè½¬ä¸€è½¬å§.");   
         		break;	
             default: 
                 stop();

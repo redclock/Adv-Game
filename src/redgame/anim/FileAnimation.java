@@ -1,6 +1,6 @@
 package redgame.anim;
 /*
- * AnimStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * AnimStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.io.*;
@@ -157,10 +157,10 @@ public class FileAnimation{
         }
     }
     /**
-     * ´´½¨Ò»¸öFileAnimation
-     * @param game ÓÎÏ·ÒıÓÃ
-     * @param x    Î»ÖÃ
-     * @param y    Î»ÖÃ
+     * åˆ›å»ºä¸€ä¸ªFileAnimation
+     * @param game æ¸¸æˆå¼•ç”¨
+     * @param x    ä½ç½®
+     * @param y    ä½ç½®
      */
     public FileAnimation(GameWorld game, int x, int y, String filename) {
         m_game = game;
@@ -174,9 +174,9 @@ public class FileAnimation{
         m_counter = 0;
     }
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public void paint(Graphics g){
         if (m_stop) return;

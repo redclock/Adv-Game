@@ -8,7 +8,7 @@ import redgame.util.*;
 
 public class SaveService extends SimpleScript {
     private AbstractMenu m;
-    private String[] s = { "ÎÒÒª±£´æ", "²»±£´æ"};
+    private String[] s = { "æˆ‘è¦ä¿å­˜", "ä¸ä¿å­˜"};
     NPC a; 
 
     public void start(){
@@ -26,25 +26,25 @@ public class SaveService extends SimpleScript {
             }    
         }
         switch(m_counter){
-            case 1: a.say("ÄãÒªÔÚ¼ÇÂ¼Äãµ±Ç°µÄÂÃÍ¾Âğ?"); break;
+            case 1: a.say("ä½ è¦åœ¨è®°å½•ä½ å½“å‰çš„æ—…é€”å—?"); break;
             case 2: game.pushStatus(new ShowMenuStatus(game, 100, 130, m)); break;
             case 3:if (m.getIndex() == 0) m_counter = 99; 
-                   else a.say("ÕâÃ´Ëµ..."); 
+                   else a.say("è¿™ä¹ˆè¯´..."); 
                    break;
-            case 4: a.say("ÄãÒªÎÒÀ´ËãÒ»ØÔ?\n\ts20Ì«ºÃÁË!"); break;
-            case 5: b.say("²», ²»ÊÇ...\nÎÒËæ±ã×ª×ª"); break;
+            case 4: a.say("ä½ è¦æˆ‘æ¥ç®—ä¸€å¦?\n\ts20å¤ªå¥½äº†!"); break;
+            case 5: b.say("ä¸, ä¸æ˜¯...\næˆ‘éšä¾¿è½¬è½¬"); break;
             //if select yes        
-            case 100: game.pushStatus(new InputStatus(game, 100, 130, "ÇëÊäÈëÒª´æÅÌµÄÃû³Æ:"));
+            case 100: game.pushStatus(new InputStatus(game, 100, 130, "è¯·è¾“å…¥è¦å­˜ç›˜çš„åç§°:"));
                     break;
             case 101: 
                 if (InputStatus.result.equals("")){
-                    a.say("Äã²»ÊäÈëÃû×ÖÊÇ²»ÄÜ±£´æµÄ");
+                    a.say("ä½ ä¸è¾“å…¥åå­—æ˜¯ä¸èƒ½ä¿å­˜çš„");
                 }else{
                     GameSaveLoad gsl = new GameSaveLoad(game, InputStatus.result);
                     if ( gsl.saveGame("map/saveroom.txt") ){
-                    	a.say("¹ş¹ş,Íê³ÉÁË!");	
+                    	a.say("å“ˆå“ˆ,å®Œæˆäº†!");	
                     }else{
-                    	a.say("±£´æÊ§°ÜÁË¡£\n\tbÄã¾¿¾¹ÊäÈëÁËÊ²Ã´£¿");
+                    	a.say("ä¿å­˜å¤±è´¥äº†ã€‚\n\tbä½ ç©¶ç«Ÿè¾“å…¥äº†ä»€ä¹ˆï¼Ÿ");
                     }
                     break;
                 }

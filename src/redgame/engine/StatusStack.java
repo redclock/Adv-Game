@@ -1,33 +1,33 @@
 package redgame.engine;
 /*
- * StatusStack.java ×÷Õß£ºÒ¦´ºêÍ
+ * StatusStack.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 
 import java.awt.*;
 import java.util.*;
 import redgame.status.*;
 /**
- * AbstractStatusÀàÊÇÊ¢·ÅÓÎÏ·×´Ì¬µÄÕ».
- * ËùÓĞ×´Ì¬¶¼ÔÚÓÎÏ·×´Ì¬Õ»ÖĞ,Õ»¶¥×´Ì¬Îªµ±Ç°»î¶¯×´Ì¬.
+ * AbstractStatusç±»æ˜¯ç››æ”¾æ¸¸æˆçŠ¶æ€çš„æ ˆ.
+ * æ‰€æœ‰çŠ¶æ€éƒ½åœ¨æ¸¸æˆçŠ¶æ€æ ˆä¸­,æ ˆé¡¶çŠ¶æ€ä¸ºå½“å‰æ´»åŠ¨çŠ¶æ€.
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 
 public class StatusStack{
-	//ÓÎÏ·ÒıÓÃ
+	//æ¸¸æˆå¼•ç”¨
 	private GameWorld m_game = null;
-	//ÏµÍ³Õ»
+	//ç³»ç»Ÿæ ˆ
     private Stack<AbstractStatus> m_stack = new Stack<AbstractStatus>();
 	
     /**
-     * ´´½¨Ò»¸ö×´Ì¬Õ»
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªçŠ¶æ€æ ˆ
+     * @param game æ¸¸æˆå¼•ç”¨
      */
     public StatusStack(GameWorld game){
 		m_game = game;
 	}
 	/**
-	 * µÃµ½µ±Ç°×´Ì¬
+	 * å¾—åˆ°å½“å‰çŠ¶æ€
 	 */
     public AbstractStatus getCurrStatus(){
 		if (m_stack.isEmpty())
@@ -36,13 +36,13 @@ public class StatusStack{
 			return m_stack.peek();
 	}
 	/**
-	 * Çå¿ÕÕ»
+	 * æ¸…ç©ºæ ˆ
 	 */
 	public void clear(){
 		m_stack.clear();
 	}
     /**
-     * Ñ¹ÈëÒ»¸ö×´Ì¬
+     * å‹å…¥ä¸€ä¸ªçŠ¶æ€
      */
 	public int push(AbstractStatus s){
 		s.setPrior(getCurrStatus());
@@ -51,7 +51,7 @@ public class StatusStack{
 		return m_stack.size() - 1;
 	} 
 	/**
-	 * µ¯³ö×´Ì¬
+	 * å¼¹å‡ºçŠ¶æ€
 	 */
 	public AbstractStatus pop(){
         System.out.println("pop "+m_stack.size());
@@ -62,7 +62,7 @@ public class StatusStack{
 	}
 	
 	/**
-	 * ¸üĞÂ×´Ì¬, Èç¹ûÕ»¶¥µÄdraw, move, update·µ»ØÖµµÄºÍ²»Îª0,Ôòµ¯³ö¸Ã×´Ì¬
+	 * æ›´æ–°çŠ¶æ€, å¦‚æœæ ˆé¡¶çš„draw, move, updateè¿”å›å€¼çš„å’Œä¸ä¸º0,åˆ™å¼¹å‡ºè¯¥çŠ¶æ€
 	 */
 	public void updateStatus(long passedTime, Graphics g){
 		AbstractStatus s = getCurrStatus();
@@ -77,7 +77,7 @@ public class StatusStack{
 		}
 	}
 	/**
-	 * Ö»±£Áô×î¶¥¶Ën¸ö,ÆäÓàÉ¾³ı
+	 * åªä¿ç•™æœ€é¡¶ç«¯nä¸ª,å…¶ä½™åˆ é™¤
 	 */
 	public void deleteUntil(int n){
 	   while ( m_stack.size() > n ){

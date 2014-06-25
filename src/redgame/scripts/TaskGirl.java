@@ -20,42 +20,42 @@ public class TaskGirl extends SimpleScript {
                 a.say("......");
                 break;
             case 2:
-                a.say("ÔõÃ´°ìÄØ£¿");
+                a.say("æ€ä¹ˆåŠå‘¢ï¼Ÿ");
                 break;
             case 3:
                 a.say("\te4");
                 break;
             case 4:
-                b.say("Î¹£¬ÄãÊÇº¦ÅÂ¹ÖÎï²»¸Ò»ØÈ¥ÁË°É¡£");
+                b.say("å–‚ï¼Œä½ æ˜¯å®³æ€•æ€ªç‰©ä¸æ•¢å›å»äº†å§ã€‚");
                 break;
             case 5:
                 a.setFace(Actor.G_LEFT);
-                a.say("°¡£¡\nÄã...ÄãÔõÃ´ÔÚÕâ¶ù£¿");
+                a.say("å•Šï¼\nä½ ...ä½ æ€ä¹ˆåœ¨è¿™å„¿ï¼Ÿ");
                 break;
             case 6:
-                b.say("ÄãÂèÂèµ£ĞÄÄã»Ø²»È¥£¬½ĞÎÒÀ´½ÓÄã");
+                b.say("ä½ å¦ˆå¦ˆæ‹…å¿ƒä½ å›ä¸å»ï¼Œå«æˆ‘æ¥æ¥ä½ ");
                 break;
             case 7:
-                a.say("½ÓÎÒ£¿ÄÑµÀÎÒ×Ô¼º²»»á»ØÈ¥Âğ£¿");
+                a.say("æ¥æˆ‘ï¼Ÿéš¾é“æˆ‘è‡ªå·±ä¸ä¼šå›å»å—ï¼Ÿ");
                 break;
             case 8:
-                b.say("\te2\nÊ²Ã´Ì¬¶ÈÂï¡£");
+                b.say("\te2\nä»€ä¹ˆæ€åº¦å˜›ã€‚");
                 break;
             case 9:
-                b.say("ºÃÁË£¬ÄãÂèÂè»¹ÔÚµÈÄãÄØ¡£\n¸Ï¿ì»Ø¼Ò°É¡£");
+                b.say("å¥½äº†ï¼Œä½ å¦ˆå¦ˆè¿˜åœ¨ç­‰ä½ å‘¢ã€‚\nèµ¶å¿«å›å®¶å§ã€‚");
                 break;
             case 10:
-                a.say("Æ¾Ê²Ã´ÄãËµ×ß¾Í×ß£¿\nÎÒ»¹ÒªÏÈÍæÒ»»á¶ùÄØ");
+                a.say("å‡­ä»€ä¹ˆä½ è¯´èµ°å°±èµ°ï¼Ÿ\næˆ‘è¿˜è¦å…ˆç©ä¸€ä¼šå„¿å‘¢");
                 break;
             case 11:
                 b.say("\te2");
                 break;
             case 12:
-                b.say("ÄÇºÃ£¬ÎÒÏÈ»ØÈ¥ÁË¡£");
+                b.say("é‚£å¥½ï¼Œæˆ‘å…ˆå›å»äº†ã€‚");
                 b.setDest(2750, 10);
                 break;
             case 13:
-                a.say("°¡\te5......");
+                a.say("å•Š\te5......");
                 break;
             case 14:
                 a.setFace(Actor.G_DOWN);
@@ -63,7 +63,7 @@ public class TaskGirl extends SimpleScript {
                 break;
             case 15:
                 a.setFace(Actor.G_LEFT);
-                a.say("µÈµÈÎÒ......");
+                a.say("ç­‰ç­‰æˆ‘......");
                 game.playSound("sound/voice/wei.wav");
                 a.setDest(2750, 10);
                 break;

@@ -1,31 +1,31 @@
 package redgame.util;
 /*
- * HighScoreManager.java ×÷Õß£ºÒ¦´ºêÍ
+ * HighScoreManager.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.io.*;
 /**
- * HighScoreManagerÀàÊÇ¸ß·Ö°ñ¹ÜÀíÆ÷
- * @author Ò¦´ºêÍ
+ * HighScoreManagerç±»æ˜¯é«˜åˆ†æ¦œç®¡ç†å™¨
+ * @author å§šæ˜¥æ™–
  */
 
 public class HighScoreManager {
     
     private String m_filename;
-    //×î´ó7Ìõ
+    //æœ€å¤§7æ¡
     final private int MAX = 7;
     /**
-     * Ã¿ÏîµÄĞÕÃû
+     * æ¯é¡¹çš„å§“å
      */
     public String[] names = new String[MAX + 1];
     /**
-     * Ã¿Ïî·ÖÊı
+     * æ¯é¡¹åˆ†æ•°
      */
     public int[] scores = new int[MAX + 1];
     /**
-     * ¸ß·Ö°ñÖĞ¹²ÓĞ¼¸¸ö
+     * é«˜åˆ†æ¦œä¸­å…±æœ‰å‡ ä¸ª
      */
     public int count;
-    //´ÓÎÄ¼ş¶ÁÈë
+    //ä»æ–‡ä»¶è¯»å…¥
     private void readData(){
         count = 0;
         String s;
@@ -41,7 +41,7 @@ public class HighScoreManager {
             e.printStackTrace();
         }    
     }
-    //Ğ´Èëµ½¸ß·Ö°ñ
+    //å†™å…¥åˆ°é«˜åˆ†æ¦œ
     private void writeData(){
         try{
             PrintWriter writer = new PrintWriter(new FileWriter(m_filename));
@@ -56,32 +56,32 @@ public class HighScoreManager {
         }    
     }
     /**
-     * ¹¹Ôì¸ß·Ö°ñ
-     * @param filename ¸ß·Ö°ñÎÄ¼şÃû
+     * æ„é€ é«˜åˆ†æ¦œ
+     * @param filename é«˜åˆ†æ¦œæ–‡ä»¶å
      */
     public HighScoreManager(String filename) {
         m_filename = filename;
         readData();
     }
     /**
-     * ÅĞ¶ÏscoreÊÇ·ñ¹»µÄÉÏ¸ß·Ö
+     * åˆ¤æ–­scoreæ˜¯å¦å¤Ÿçš„ä¸Šé«˜åˆ†
      */
     public boolean isHighScore(int score){
-        //Èç¹û»¹Ã»µ½×î´óÊı, µ±È»¿ÉÒÔ
+        //å¦‚æœè¿˜æ²¡åˆ°æœ€å¤§æ•°, å½“ç„¶å¯ä»¥
         if (count < MAX) return true;
-        //·ñÔòÖ»¿´×îºóÒ»¸ö
+        //å¦åˆ™åªçœ‹æœ€åä¸€ä¸ª
         return scores[count - 1] < score;
     }
 
     /**
-     * Ïò¸ß·Ö°ñÌí¼ÓÈëµ±Ç°·ÖÊı
-     * ²¢ÅÅĞò
-     * @param name Íæ¼ÒĞÕÃû
+     * å‘é«˜åˆ†æ¦œæ·»åŠ å…¥å½“å‰åˆ†æ•°
+     * å¹¶æ’åº
+     * @param name ç©å®¶å§“å
      */
     
     public void addHighScore(int score, String name){
         int i;
-        //ÕÒÒ»¸öºÏÊÊµÄµØ·½²å½øÈ¥
+        //æ‰¾ä¸€ä¸ªåˆé€‚çš„åœ°æ–¹æ’è¿›å»
         for (i = count - 1; i >=0; i--){
             if (scores[i] < score) {
                 scores[i+1] = scores[i];

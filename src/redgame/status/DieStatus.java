@@ -6,9 +6,9 @@ import redgame.engine.*;
 import redgame.anim.*;
 import redgame.util.*;
 /*
- * DieStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * DieStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
-//ÏÂÂäµÄĞÇĞÇÁ£×ÓÏµÍ³
+//ä¸‹è½çš„æ˜Ÿæ˜Ÿç²’å­ç³»ç»Ÿ
 class MoveParticleSystem extends AbstractParticleSystem{
 	private int line;
 	private boolean isfirst;
@@ -51,21 +51,21 @@ class MoveParticleSystem extends AbstractParticleSystem{
 
 }
 /**
- * DieStatusÀàÊÇÓÎÏ·ÖĞGAME OVERµÄÓÎÏ·×´Ì¬.
+ * DieStatusç±»æ˜¯æ¸¸æˆä¸­GAME OVERçš„æ¸¸æˆçŠ¶æ€.
  * 
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */ 
 public class DieStatus extends AbstractStatus {
-	//Ô²×¶²Ã¼õÇø
+	//åœ†é”¥è£å‡åŒº
 	private Area m_clip;
-    //È¥³ıÔ²×¶µÄ²Ã¼õÇø
+    //å»é™¤åœ†é”¥çš„è£å‡åŒº
     private Area m_nclip;
 	private Image m_img;
 	private MoveParticleSystem m_mps;
     /**
-     * ´´½¨Ò»¸öDieStatus
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªDieStatus
+     * @param game æ¸¸æˆå¼•ç”¨
      */
     public DieStatus(GameWorld game) {
 		super(game);
@@ -93,7 +93,7 @@ public class DieStatus extends AbstractStatus {
 	}
 	
     /**
-     * ¶ÔÓÚÇ°¸ö×´Ì¬:Ö»ÔÊĞíÔÚÔ²×¶²Ã¼õÇøÏÔÊ¾
+     * å¯¹äºå‰ä¸ªçŠ¶æ€:åªå…è®¸åœ¨åœ†é”¥è£å‡åŒºæ˜¾ç¤º
      */
     public void updatePrior(long passedTime, Graphics g){
 		
@@ -108,7 +108,7 @@ public class DieStatus extends AbstractStatus {
 		
 	}
     /**
-     * °´¼üÍË³ö
+     * æŒ‰é”®é€€å‡º
      */
     
 	public int update(long passedTime){
@@ -122,9 +122,9 @@ public class DieStatus extends AbstractStatus {
 	}
 
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         g.setClip(m_nclip);
@@ -159,8 +159,8 @@ public class DieStatus extends AbstractStatus {
 	    return 0;
 	}
     /**
-     * ¸üĞÂ¼ÆÊ±Æ÷
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°è®¡æ—¶å™¨
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
 	public int move(long passedTime) {
 		m_mps.move(passedTime);

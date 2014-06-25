@@ -9,22 +9,22 @@ public class TestGoTo extends SimpleScript {
             Friend a = (Friend) source.owner;
             
             if (!a.isMoving()){
-                a.say("µ½ÁË");
+                a.say("åˆ°äº†");
                 stop();
             }
             return;
         }
         Friend a = (Friend) source.owner;
         if (source.direction == Actor.G_UP){
-            //a.say("Ìø!");
+            //a.say("è·³!");
             a.setVY(-0.4f);
             stop();
         }else{
             if (a.getX() < 200){
-                a.say("Ïò\tbÓÒ\tB×ß!");
+                a.say("å‘\tbå³\tBèµ°!");
                 a.setDest(300, 10);
             }else{
-                a.say("Ïò\tb×ó\tB×ß!");
+                a.say("å‘\tbå·¦\tBèµ°!");
                 a.setDest(100, 10);
             }
            

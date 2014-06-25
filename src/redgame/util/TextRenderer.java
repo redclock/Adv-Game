@@ -1,6 +1,6 @@
 package redgame.util;
 /*
- * TextRenderer.java ×÷Õß£ºÒ¦´ºêÍ
+ * TextRenderer.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 
 
@@ -9,30 +9,30 @@ import java.applet.*;
 import java.awt.geom.*;
 import java.awt.font.*;
 /**
- * TextRendererÀàÊÇ¸ñÊ½×ÖÌåäÖÈ¾Àà
- * ¸ñÊ½:<code>\n  »»ĞĞ</code><br>
- *      <code>\tb ´ÖÌå</code><br>   
- *      <code>\ti Ğ±Ìå</code><br>   
- *      <code>\tB È¡Ïû´ÖÌå</code><br>   
- *      <code>\tI È¡ÏûĞ±Ìå</code><br>   
- *      <code>\tc######## ÑÕÉ«</code><br>   
+ * TextRendererç±»æ˜¯æ ¼å¼å­—ä½“æ¸²æŸ“ç±»
+ * æ ¼å¼:<code>\n  æ¢è¡Œ</code><br>
+ *      <code>\tb ç²—ä½“</code><br>   
+ *      <code>\ti æ–œä½“</code><br>   
+ *      <code>\tB å–æ¶ˆç²—ä½“</code><br>   
+ *      <code>\tI å–æ¶ˆæ–œä½“</code><br>   
+ *      <code>\tc######## é¢œè‰²</code><br>   
  * 
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 
 public class TextRenderer {
-    //µ±Ç°»­µÄÎ»ÖÃ
+    //å½“å‰ç”»çš„ä½ç½®
     private int m_curx;
     private int m_cury;
-    //µ±Ç°ÑÕÉ«
+    //å½“å‰é¢œè‰²
     private Color m_color;
-    //µ±Ç°×ÖÌå
+    //å½“å‰å­—ä½“
     private Font m_font;
-    //×ÖÌåÉÏÏÂÎÄ
+    //å­—ä½“ä¸Šä¸‹æ–‡
     private FontRenderContext m_frc;
-    //ÎÄ×Ö»º´æ
+    //æ–‡å­—ç¼“å­˜
     private String ls;
-    //Ò»ĞĞµÄ¸ß¶È
+    //ä¸€è¡Œçš„é«˜åº¦
     private int lh;
 
     private static int getNumEndPos(String s, int i){
@@ -65,7 +65,7 @@ public class TextRenderer {
     }
     
     public Dimension drawText(int x, int y, Graphics2D g2d, String s, Image emotion){
-        //ÎÄ×Ö×ÜÕ¼µÄ´óĞ¡
+        //æ–‡å­—æ€»å çš„å¤§å°
         int maxw = 0;
         int maxh = 0;
         
@@ -80,7 +80,7 @@ public class TextRenderer {
         while (index < s.length()){
             char c = s.charAt(index++);
             switch(c){
-                //»»ĞĞ
+                //æ¢è¡Œ
                 case '\n':
                     drawIt(g2d);
                     if (maxw < m_curx - x ) maxw = m_curx - x;
@@ -90,7 +90,7 @@ public class TextRenderer {
                     }
                     m_curx = x; 
                     break;
-                //Ö¸¶¨¸ñÊ½    
+                //æŒ‡å®šæ ¼å¼    
                 case '\t':
                     c = s.charAt(index++);
                     switch(c){
@@ -123,7 +123,7 @@ public class TextRenderer {
                             drawIt(g2d);
                             try{
                                 int rgb = 0;
-                                //¶ÁÈ¡8Î»16½øÖÆÊı×Ö
+                                //è¯»å–8ä½16è¿›åˆ¶æ•°å­—
                                 for (int i = 0; i < 8; i++){
                                     int cc = s.charAt(i+index);
                                     if (cc >= '0' && cc <= '9'){
@@ -143,7 +143,7 @@ public class TextRenderer {
                             }
                             break;
                         case 'e':
-                            //»­Í¼
+                            //ç”»å›¾
                             drawIt(g2d);
                             int i = s.charAt(index++) - '0';
                             g2d.drawImage(emotion, m_curx - 3, m_cury - 4, 

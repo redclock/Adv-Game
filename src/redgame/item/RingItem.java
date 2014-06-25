@@ -7,7 +7,7 @@ import redgame.anim.*;
 public class RingItem extends AbstractItem {
     Animation m_anim;
     public RingItem(GameWorld game){
-        super(game, "Ãæ°üÈ¦", null );
+        super(game, "é¢åŒ…åœˆ", null );
         m_sicon = game.loadImage("image/icon1.png");
         m_anim = new Animation(m_game, m_game.loadImage("image/icon2.png"), 32 , 29);
         m_anim.setRange(0, 3, 300);  
@@ -19,7 +19,7 @@ public class RingItem extends AbstractItem {
     }
 
     public String getDescription() {
-        return "Ãæ°üÈ¦£¡\te3";
+        return "é¢åŒ…åœˆï¼\te3";
     }
     
     public void drawStateIcon( Graphics2D g2d, int x, int y )

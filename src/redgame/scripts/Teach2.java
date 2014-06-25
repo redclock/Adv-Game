@@ -24,34 +24,34 @@ public class Teach2 extends SimpleScript {
         //first meet
         if ( x == 0){
             switch(m_counter){
-                case 1: a.say("ÄêÇáÈË, ÄãÔ¸²»Ô¸Òâ½ÓÊÜÎÒµÄ²âÊÔ?"); break;
-                case 2: a.say("Õâ¸ö²âÊÔ¿ÉÒÔÑµÁ·Äã´³µ´½­ºşµÄÄÜÁ¦."); break;
-                case 3: a.say("²¢ÇÒ,Í¨¹ı²âÊÔºóÎÒ»á¸øÄãÒ»¼şÉñÃØÀñÎï."); break;
-                case 4: a.say("µ«ÊÇ"); break;
-                case 5: a.say("Èç¹ûÄãÊ§°ÜÁË,Äã¿ÉÄÜÊ§È¥ÉúÃü."); break;
-                case 6: a.say("ÄãÓĞÓÂÆø½ÓÊÕÕâ¸öÌôÕ½Âğ?"); break;
-                case 7: b.say("ÌıÄãËµµÄÄÇÃ´ÉñÃØ...\nÎÒµÃ¿¼ÂÇ¿¼ÂÇ"); break;
-                case 8: b.say("Ô¸²»Ô¸ÒâÄØ?"); break;
+                case 1: a.say("å¹´è½»äºº, ä½ æ„¿ä¸æ„¿æ„æ¥å—æˆ‘çš„æµ‹è¯•?"); break;
+                case 2: a.say("è¿™ä¸ªæµ‹è¯•å¯ä»¥è®­ç»ƒä½ é—¯è¡æ±Ÿæ¹–çš„èƒ½åŠ›."); break;
+                case 3: a.say("å¹¶ä¸”,é€šè¿‡æµ‹è¯•åæˆ‘ä¼šç»™ä½ ä¸€ä»¶ç¥ç§˜ç¤¼ç‰©."); break;
+                case 4: a.say("ä½†æ˜¯"); break;
+                case 5: a.say("å¦‚æœä½ å¤±è´¥äº†,ä½ å¯èƒ½å¤±å»ç”Ÿå‘½."); break;
+                case 6: a.say("ä½ æœ‰å‹‡æ°”æ¥æ”¶è¿™ä¸ªæŒ‘æˆ˜å—?"); break;
+                case 7: b.say("å¬ä½ è¯´çš„é‚£ä¹ˆç¥ç§˜...\næˆ‘å¾—è€ƒè™‘è€ƒè™‘"); break;
+                case 8: b.say("æ„¿ä¸æ„¿æ„å‘¢?"); break;
                 case 9:   
-                    m = new TextMenu(game, new String[]{ "Í¬Òâ²âÊÔ", "²»Ô¸Òâ"});
+                    m = new TextMenu(game, new String[]{ "åŒæ„æµ‹è¯•", "ä¸æ„¿æ„"});
 
                     game.pushStatus(new ShowMenuStatus(game, 70, 150, m));break;
                 case 10: 
                         if (m.getIndex() == 1){
-                            a.say("²»Ô¸ÒâÂğ?\nÎÒ»¹ÒÔÎªÄãÊÇ¸öÓĞµ¨Á¿µÄÈËÄØ.");
+                            a.say("ä¸æ„¿æ„å—?\næˆ‘è¿˜ä»¥ä¸ºä½ æ˜¯ä¸ªæœ‰èƒ†é‡çš„äººå‘¢.");
                             b.canControl = true;
                             stop();
                         }else{
-                            a.say("ÄÇºÃ, ÎÒÃÇ¿ªÊ¼");
+                            a.say("é‚£å¥½, æˆ‘ä»¬å¼€å§‹");
                         }
                         break;
                 case 11: game.gotoMap("map/trains1.txt", 17, 150);
                         
                         break;
-                case 12: a.say("ÄãÒªÍ¨¹ıÕâÌõÂ·, ²»ÒªÈÃ×ÏÒÂÈËÅöµ½Äã.\nµ«Äã¿ÉÒÔ²Èµ½ËûÃÇÉíÉÏ"); 
+                case 12: a.say("ä½ è¦é€šè¿‡è¿™æ¡è·¯, ä¸è¦è®©ç´«è¡£äººç¢°åˆ°ä½ .\nä½†ä½ å¯ä»¥è¸©åˆ°ä»–ä»¬èº«ä¸Š"); 
                         b.setFace(Actor.G_RIGHT);
                         break;
-                case 13: a.say("ÎÒÔÚÏÂÃæµÈ×ÅÄã."); 
+                case 13: a.say("æˆ‘åœ¨ä¸‹é¢ç­‰ç€ä½ ."); 
                         a.setFace(Actor.G_LEFT);
                         break;
                 case 14: a.setPosition(6, 240); 
@@ -64,24 +64,24 @@ public class Teach2 extends SimpleScript {
         //finish train    
         }else if (x == 1){
             switch(m_counter){
-                case 1: a.say("ÄêÇáÈË, ¸ÉµÄ²»´í!"); break;
-                case 2: b.say("ÕâÌ«¼òµ¥ÁË!"); break;
+                case 1: a.say("å¹´è½»äºº, å¹²çš„ä¸é”™!"); break;
+                case 2: b.say("è¿™å¤ªç®€å•äº†!"); break;
                 case 3: game.gotoMap("map/room3.txt", 33, 110);
                         break;
-                case 4: a.say("ÄêÇáÈË, ×öÎª½±Àø, ¸øÄãÒ»°Ñ±¦½£");
+                case 4: a.say("å¹´è½»äºº, åšä¸ºå¥–åŠ±, ç»™ä½ ä¸€æŠŠå®å‰‘");
                         b.curItem = b.items[Player.ITEM_SWORD] = new SwordItem(game); 
                         break;
-                case 5: a.say("ÄãÒªÌıÎÒ¸øÄã½²½£µÄÊ¹ÓÃ·½·¨Âğ£¿");
+                case 5: a.say("ä½ è¦å¬æˆ‘ç»™ä½ è®²å‰‘çš„ä½¿ç”¨æ–¹æ³•å—ï¼Ÿ");
                     
                         break;
                 case 6:
-                    m = new TextMenu(game, new String[]{ "ÎÒÌıÒ»Ìı", "²»±ØÁË"});
+                    m = new TextMenu(game, new String[]{ "æˆ‘å¬ä¸€å¬", "ä¸å¿…äº†"});
                     game.pushStatus(new ShowMenuStatus(game, 70, 150, m));
                     break;
                 case 7:    
                     if (m.getIndex() == 1){
                         setVar("meetteacher", 2);
-                        a.say("ºÃ°É£¬ÎÒÏàĞÅÄãµÄÁìÎòÄÜÁ¦");
+                        a.say("å¥½å§ï¼Œæˆ‘ç›¸ä¿¡ä½ çš„é¢†æ‚Ÿèƒ½åŠ›");
                         b.canControl = true;
                         stop();
                     }else{
@@ -97,26 +97,26 @@ public class Teach2 extends SimpleScript {
         }else if (x == 10){
             switch(m_counter){
                 case 1:
-                    a.say("Äã¿ÉÒÔÍ¨¹ı²Ëµ¥ÖĞ[Ñ¡ÔñÎäÆ÷]×°Åä\n" +
-                          "ÄãµÄ½££¬Ò²¿ÉÒÔ°´Êı×Ö¼ü1¿ìËÙ×°Åä"); 
+                    a.say("ä½ å¯ä»¥é€šè¿‡èœå•ä¸­[é€‰æ‹©æ­¦å™¨]è£…é…\n" +
+                          "ä½ çš„å‰‘ï¼Œä¹Ÿå¯ä»¥æŒ‰æ•°å­—é”®1å¿«é€Ÿè£…é…"); 
                     break;      
                 case 2:
-                    a.say("µ±Äã×°ÅäºÃºó, ÓÒÏÂ½Ç»áÓĞÍ¼±êÖ¸Ê¾"); 
+                    a.say("å½“ä½ è£…é…å¥½å, å³ä¸‹è§’ä¼šæœ‰å›¾æ ‡æŒ‡ç¤º"); 
                     break;
                 case 3:
-                    a.say("Ê¹ÓÃÕâ°Ñ½£ĞèÒªÄÜÁ¿µÄ»ıĞî¡£\n" +
-                          "ÄãÔÚÎÕ×Å½£Ê±£¬½£µÄÄÜÁ¿¾Í»áÂúÂúÉÏÉı"); 
+                    a.say("ä½¿ç”¨è¿™æŠŠå‰‘éœ€è¦èƒ½é‡çš„ç§¯è“„ã€‚\n" +
+                          "ä½ åœ¨æ¡ç€å‰‘æ—¶ï¼Œå‰‘çš„èƒ½é‡å°±ä¼šæ»¡æ»¡ä¸Šå‡"); 
                     break;
                 case 4:
-                    a.say("µ±Äã»ıĞîÁËÒ»¶¨ÄÜÁ¿Ê±£¬Äã¿ÉÒÔ°´X¼ü»Ó½£¡£\n" +
-                          "½£Æø»á½«ÄãÉËº¦¸½½üµÄµĞÈË¡£"); 
+                    a.say("å½“ä½ ç§¯è“„äº†ä¸€å®šèƒ½é‡æ—¶ï¼Œä½ å¯ä»¥æŒ‰Xé”®æŒ¥å‰‘ã€‚\n" +
+                          "å‰‘æ°”ä¼šå°†ä½ ä¼¤å®³é™„è¿‘çš„æ•Œäººã€‚"); 
                     break;
                 case 5:
-                    a.say("ÄãÒ²¿ÉÒÔµÈ»ıĞîÁËÂúÄÜÁ¿Ê±£¬°´C¼ü»Ó½£¡£\n" +
-                          "Äã¿ÉÒÔ»ñµÃ¸ü´óµÄ¹¥»÷Á¦ºÍ¹¥»÷·¶Î§¡£"); 
+                    a.say("ä½ ä¹Ÿå¯ä»¥ç­‰ç§¯è“„äº†æ»¡èƒ½é‡æ—¶ï¼ŒæŒ‰Cé”®æŒ¥å‰‘ã€‚\n" +
+                          "ä½ å¯ä»¥è·å¾—æ›´å¤§çš„æ”»å‡»åŠ›å’Œæ”»å‡»èŒƒå›´ã€‚"); 
                     break;
                 case 6:
-                    a.say("ÎÒ½Ì¸øÄãµÄ¾ÍÕâÃ´¶àÁË¡£\nÊ£ÏÂµÄ¾ÍÒª¿¿Äã×Ô¼ºÊµ¼ùÁË¡£"); 
+                    a.say("æˆ‘æ•™ç»™ä½ çš„å°±è¿™ä¹ˆå¤šäº†ã€‚\nå‰©ä¸‹çš„å°±è¦é ä½ è‡ªå·±å®è·µäº†ã€‚"); 
                     break;
                 default:
                     b.canControl = true; 
@@ -126,8 +126,8 @@ public class Teach2 extends SimpleScript {
         //default        
         }else if (x == 3){
             switch(m_counter){
-                case 1: a.say("ÄêÇáÈË, ¸ÉµÄ²»´í!"); break;
-                case 2: b.say("ÕâÌ«¼òµ¥ÁË!"); break;
+                case 1: a.say("å¹´è½»äºº, å¹²çš„ä¸é”™!"); break;
+                case 2: b.say("è¿™å¤ªç®€å•äº†!"); break;
                 case 3: game.gotoMap("map/room3.txt", 33, 110);
                         break;
                 default: b.canControl = true; 
@@ -137,10 +137,10 @@ public class Teach2 extends SimpleScript {
         }else {
             switch(m_counter){
                 case 1:
-                    a.say("Äã»¹Ïë×öÊ²Ã´£¿"); 
+                    a.say("ä½ è¿˜æƒ³åšä»€ä¹ˆï¼Ÿ"); 
                     break;
                 case 2:
-                    m = new TextMenu(game, new String[]{ "ÎÒÏëÑ§Ï°½£µÄÊ¹ÓÃ·½·¨", "ÎÒÏëÔÙ´Î½ÓÊÜ²âÊÔ", "ÎÒËæ±ã×ª×ª"});
+                    m = new TextMenu(game, new String[]{ "æˆ‘æƒ³å­¦ä¹ å‰‘çš„ä½¿ç”¨æ–¹æ³•", "æˆ‘æƒ³å†æ¬¡æ¥å—æµ‹è¯•", "æˆ‘éšä¾¿è½¬è½¬"});
                     game.pushStatus(new ShowMenuStatus(game, 70, 150, m));
                     break;
                 case 3:    
@@ -153,18 +153,18 @@ public class Teach2 extends SimpleScript {
                     }    
                     break;
                 case 4:
-                    a.say("¿´À´Äã»¹ÒâÓÌÎ´¾¡ÄØ¡£"); 
+                    a.say("çœ‹æ¥ä½ è¿˜æ„çŠ¹æœªå°½å‘¢ã€‚"); 
                     break;
                 case 5:
-                    a.say("ºÃµÄ£¬Õâ´ÎÄã¿ÉÒÔÊÔÊÔÊ¹ÓÃÄãµÄ\tcffff0000\tb½£"); 
+                    a.say("å¥½çš„ï¼Œè¿™æ¬¡ä½ å¯ä»¥è¯•è¯•ä½¿ç”¨ä½ çš„\tcffff0000\tbå‰‘"); 
                     break;
                 case 6: game.gotoMap("map/trains1.txt", 17, 150);
                         
                         break;
-                case 7: a.say("ºÍÉÏ´ÎÒ»Ñù£¬ÄãÒªÍ¨¹ıÕâÌõÂ·¡£"); 
+                case 7: a.say("å’Œä¸Šæ¬¡ä¸€æ ·ï¼Œä½ è¦é€šè¿‡è¿™æ¡è·¯ã€‚"); 
                         b.setFace(Actor.G_RIGHT);
                         break;
-                case 8: a.say("ÎÒÔÚÏÂÃæµÈ×ÅÄã."); 
+                case 8: a.say("æˆ‘åœ¨ä¸‹é¢ç­‰ç€ä½ ."); 
                         a.setFace(Actor.G_LEFT);
                         break;
                 case 9: a.setPosition(6, 240); 

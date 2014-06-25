@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * LoadGameStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * LoadGameStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import redgame.scripts.*; 
 import java.awt.*;
@@ -15,10 +15,10 @@ import redgame.anim.*;
 import redgame.item.*;
 
 /**
- * LoadGameStatusÀàÊÇÓÎÏ·ÖĞÏÔÊ¾ÔØÈëÓÎÏ·µÄÓÎÏ·×´Ì¬.
- * ÔÚÕâÊ±»áÏÔÊ¾Ò»¸öÊäÈë¿ò,¹©Íæ¼ÒÑ¡Ôñ
+ * LoadGameStatusç±»æ˜¯æ¸¸æˆä¸­æ˜¾ç¤ºè½½å…¥æ¸¸æˆçš„æ¸¸æˆçŠ¶æ€.
+ * åœ¨è¿™æ—¶ä¼šæ˜¾ç¤ºä¸€ä¸ªè¾“å…¥æ¡†,ä¾›ç©å®¶é€‰æ‹©
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class LoadGameStatus extends AbstractStatus{
 
@@ -34,7 +34,7 @@ public class LoadGameStatus extends AbstractStatus{
     private Animation m_arrow_down;
     private Animation m_arrow_up;
 
-    private Font font = new Font("ËÎÌå", Font.PLAIN, 16);
+    private Font font = new Font("å®‹ä½“", Font.PLAIN, 16);
 
     private ScrollMenu m_menu;
     
@@ -184,7 +184,7 @@ public class LoadGameStatus extends AbstractStatus{
 
 //        switch((int)m_counter){
 //        case 1: 
-//            m_game.pushStatus(new InputStatus(m_game, m_x, m_y, "ÊäÈëÒª×°ÔØµÄÃû³Æ"));
+//            m_game.pushStatus(new InputStatus(m_game, m_x, m_y, "è¾“å…¥è¦è£…è½½çš„åç§°"));
 //            break;
 //        case 2:
 //            if (! load(InputStatus.result)) return -1;
@@ -199,7 +199,7 @@ public class LoadGameStatus extends AbstractStatus{
         m_box_top.paint(g, m_game.getPanel());
         g2d.setFont(font);
         g2d.setColor(Color.YELLOW);                 
-        g2d.drawString("ÇëÑ¡ÔñÎÄ¼şÃû", (int)m_box_top.x + 100, (int)m_box_top.y + 30);
+        g2d.drawString("è¯·é€‰æ‹©æ–‡ä»¶å", (int)m_box_top.x + 100, (int)m_box_top.y + 30);
         m_menu.paint(g2d, (int)m_box.x + 20, (int)m_box.y + 30);
         if (m_menu.canScrollDown()){
         	m_arrow_down.paint(g, (int) m_box.x + m_box.bw - 40, 

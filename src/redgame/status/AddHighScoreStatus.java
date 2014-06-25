@@ -1,13 +1,13 @@
 package redgame.status;
 /*
- * AddHighScoreStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * AddHighScoreStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import redgame.engine.*;
 
 import java.awt.*;
 import javax.swing.*;
 
-//ÏÔÊ¾¶Ô»°¿ò·ÅÔÚÁíÒ»¸öÏß³ÌÀï.(µ«Êµ¼ÊÉÏºÃÏñ²¢²»Æğ×÷ÓÃ?)
+//æ˜¾ç¤ºå¯¹è¯æ¡†æ”¾åœ¨å¦ä¸€ä¸ªçº¿ç¨‹é‡Œ.(ä½†å®é™…ä¸Šå¥½åƒå¹¶ä¸èµ·ä½œç”¨?)
 class DialogThread extends Thread{
     private boolean m_done = false;
     public String result;
@@ -25,33 +25,33 @@ class DialogThread extends Thread{
 }
 
 /**
- * AddHighScoreStatusÀàÊÇÌí¼Ó¸ß·Ö°ñµÄÓÎÏ·×´Ì¬.
- * ÔÚÕâÊ±»áÏÔÊ¾Ò»¸ö¶Ô»°¿ò,ÒªÇóÍæ¼ÒÊäÈëĞÕÃû
+ * AddHighScoreStatusç±»æ˜¯æ·»åŠ é«˜åˆ†æ¦œçš„æ¸¸æˆçŠ¶æ€.
+ * åœ¨è¿™æ—¶ä¼šæ˜¾ç¤ºä¸€ä¸ªå¯¹è¯æ¡†,è¦æ±‚ç©å®¶è¾“å…¥å§“å
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 
 public class AddHighScoreStatus extends AbstractStatus {
-    //¶Ô»°¿òÏß³Ì
+    //å¯¹è¯æ¡†çº¿ç¨‹
     private DialogThread m_dlg;
-    //ÒªÌí¼ÓµÄ¸ß·Ö
+    //è¦æ·»åŠ çš„é«˜åˆ†
     private int m_score;
 
     /**
-     * ´´½¨Ò»¸öAddHighScoreStatus
-     * @param game ÓÎÏ·ÒıÓÃ
-     * @param score µÃ·Ö
+     * åˆ›å»ºä¸€ä¸ªAddHighScoreStatus
+     * @param game æ¸¸æˆå¼•ç”¨
+     * @param score å¾—åˆ†
      */
 
     public AddHighScoreStatus(GameWorld game, int score) {
         super(game);
         m_score = score;
-        m_dlg = new DialogThread("ÄãµÃÁË"+score+"·Ö,¿ÉÒÔ½øÈë¸ß·Ö°ñ.\nÇëÁôÏÂ´óÃû:");
+        m_dlg = new DialogThread("ä½ å¾—äº†"+score+"åˆ†,å¯ä»¥è¿›å…¥é«˜åˆ†æ¦œ.\nè¯·ç•™ä¸‹å¤§å:");
         m_dlg.start();
     }
     /**
-     * ¸üĞÂ×´Ì¬, ÊäÈëÍê±ÏÔòÍ£Ö¹
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°çŠ¶æ€, è¾“å…¥å®Œæ¯•åˆ™åœæ­¢
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
 
     public int update(long passedTime){
@@ -64,9 +64,9 @@ public class AddHighScoreStatus extends AbstractStatus {
         return 0;
     }
     /**
-     * »­Í¼´úÂë:Ê²Ã´Ò²²»»­
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç :ä»€ä¹ˆä¹Ÿä¸ç”»
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     
     public  int draw(long passedTime, Graphics g){

@@ -1,25 +1,25 @@
 package redgame.status;
 /*
- * ShowMenuStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * ShowMenuStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 
 import redgame.engine.*;
 import redgame.ui.*;
 /**
- * ShowMenuStatusÀàÊÇÓÎÏ·ÖĞÏÔÊ¾²Ëµ¥µÄÓÎÏ·×´Ì¬.
- * ÔÚÕâÊ±»áÏÔÊ¾Ò»¸ö²Ëµ¥,¹©Íæ¼ÒÑ¡Ôñ
+ * ShowMenuStatusç±»æ˜¯æ¸¸æˆä¸­æ˜¾ç¤ºèœå•çš„æ¸¸æˆçŠ¶æ€.
+ * åœ¨è¿™æ—¶ä¼šæ˜¾ç¤ºä¸€ä¸ªèœå•,ä¾›ç©å®¶é€‰æ‹©
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class ShowMenuStatus extends AbstractStatus{
-    //²Ëµ¥
+    //èœå•
     private AbstractMenu m_menu;
-    //²Ëµ¥Î»ÖÃ
+    //èœå•ä½ç½®
     private int mx = 200, my = 200;
     /**
-     * ´´½¨Ò»¸öShowMenuStatus
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªShowMenuStatus
+     * @param game æ¸¸æˆå¼•ç”¨
      */
     public ShowMenuStatus(GameWorld game, int x, int y, AbstractMenu menu) {
         super(game);
@@ -28,9 +28,9 @@ public class ShowMenuStatus extends AbstractStatus{
         my = y;
     }
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         m_menu.paint((Graphics2D)g, mx, my);
@@ -38,8 +38,8 @@ public class ShowMenuStatus extends AbstractStatus{
     }
 
     /**
-     * ¸üĞÂ×´Ì¬, ÊäÈëÉÏÏÂ¼üÑ¡Ôñ,¿Õ¸ñ¼üÈ·¶¨
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°çŠ¶æ€, è¾“å…¥ä¸Šä¸‹é”®é€‰æ‹©,ç©ºæ ¼é”®ç¡®å®š
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
     
     public int update(long passedTime){

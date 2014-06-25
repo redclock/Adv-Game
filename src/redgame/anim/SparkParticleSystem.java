@@ -31,7 +31,7 @@ public class SparkParticleSystem extends AbstractParticleSystem {
         left = count;
     }
 	/**
-	 * ÖØÖÃµÚiºÅÁ£×Ó
+	 * é‡ç½®ç¬¬iå·ç²’å­
 	 */
 	protected void reset(int i)
 	{
@@ -54,7 +54,7 @@ public class SparkParticleSystem extends AbstractParticleSystem {
 		}
 	}
 	/**
-	 * ¸üĞÂÁ£×Ó
+	 * æ›´æ–°ç²’å­
 	 */
 	public void move(long passedTime){
 		for (int i = 0; i < m_p.size(); i++){

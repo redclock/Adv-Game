@@ -10,7 +10,7 @@ public class Grandma extends SimpleScript {
 
         if (source.direction == Actor.G_DOWN){
             game.playSound("sound/voice/wei.wav");
-            a.say("Ğ¡ÍÃáÌ×Ó, Äã¸ÉÊ²Ã´ÄØ\te2");
+            a.say("å°å…”å´½å­, ä½ å¹²ä»€ä¹ˆå‘¢\te2");
             b.setVY(-0.4f);
             stop();
             return;
@@ -21,19 +21,19 @@ public class Grandma extends SimpleScript {
             if (m == 0){
                 switch(m_counter){
                     case 1: 
-                            b.say("ÄÌÄÌ,Äú×î½üÆøÉ«ÊÇÔ½À´Ô½ºÃÁË."); break;
-                    case 2: a.say("ÄÑµÃÄãÕâÑù¿äÈË\nÊÇ²»ÊÇÓĞÊ²Ã´ÊÂÇé?"); break;
-                    case 3: b.say("àÅ...½ñÌìÌìÆøºÜ²»´í."); break;
-                    case 4: a.say("ÊÇÂğ?\nµ«ÊÇÄã½ñÌì²»Ğí³öÈ¥ÁË."); break;
-                    case 5: b.say("\te5\ts20\tcffff00ffÎªÊ²Ã´?"); break;
-                    case 6: a.say("ÄãÒ²ÖªµÀÏÖÔÚÍâÃæÓĞºÃ¶à¹ÖÎï¡£"); break;
-                    case 7: a.say("ÄãÒ»¸öÈË³öÈ¥£¬Ì«Î£ÏÕÁË¡£"); break;
+                            b.say("å¥¶å¥¶,æ‚¨æœ€è¿‘æ°”è‰²æ˜¯è¶Šæ¥è¶Šå¥½äº†."); break;
+                    case 2: a.say("éš¾å¾—ä½ è¿™æ ·å¤¸äºº\næ˜¯ä¸æ˜¯æœ‰ä»€ä¹ˆäº‹æƒ…?"); break;
+                    case 3: b.say("å—¯...ä»Šå¤©å¤©æ°”å¾ˆä¸é”™."); break;
+                    case 4: a.say("æ˜¯å—?\nä½†æ˜¯ä½ ä»Šå¤©ä¸è®¸å‡ºå»äº†."); break;
+                    case 5: b.say("\te5\ts20\tcffff00ffä¸ºä»€ä¹ˆ?"); break;
+                    case 6: a.say("ä½ ä¹ŸçŸ¥é“ç°åœ¨å¤–é¢æœ‰å¥½å¤šæ€ªç‰©ã€‚"); break;
+                    case 7: a.say("ä½ ä¸€ä¸ªäººå‡ºå»ï¼Œå¤ªå±é™©äº†ã€‚"); break;
                     case 8: b.say("\te2"); 
                             b.setDest(110, 10);
                             b.canControl = false;
                             break;
                     case 9: if (b.isMoving()){ m_counter --; break; }
-                            b.say("¿´À´µÃÏë¸ö°ì·¨"); 
+                            b.say("çœ‹æ¥å¾—æƒ³ä¸ªåŠæ³•"); 
                             b.noDest();
                             b.canControl = true;
                             break;
@@ -42,19 +42,19 @@ public class Grandma extends SimpleScript {
             }else if (m == 1){
                 b.canControl = false;
                 switch(m_counter){
-                    case 1: b.say("\ts20\tb¶ÔÁË!"); break;
-                    case 2: a.say("Ê²Ã´ÊÂ?"); break;
-                    case 3: b.say("°¡..ÄÇ¸ö..."); break;
-                    case 4: b.say("°¡,¸Õ²Å´å¶«Í·Âí´óÉô½ĞÄã´òÂé½«È¥!"); break;
+                    case 1: b.say("\ts20\tbå¯¹äº†!"); break;
+                    case 2: a.say("ä»€ä¹ˆäº‹?"); break;
+                    case 3: b.say("å•Š..é‚£ä¸ª..."); break;
+                    case 4: b.say("å•Š,åˆšæ‰æ‘ä¸œå¤´é©¬å¤§å©¶å«ä½ æ‰“éº»å°†å»!"); break;
                     case 5: game.playSound("sound/voice/wa.wav");
-                            a.say("\ts26\tcffff0000ÕæµÄÑ½!!\n\ts16\tcff000000ÎÒ¾Í°®´òÂé½«");
+                            a.say("\ts26\tcffff0000çœŸçš„å‘€!!\n\ts16\tcff000000æˆ‘å°±çˆ±æ‰“éº»å°†");
                             
                             a.setVY(-0.3f);
                             a.setFace(3 - source.direction);                            
                             break;
                     case 6: if (a.getVY() != 0) m_counter --;  break;      
-                    case 7: b.say("ÊÇÑ½ÊÇÑ½¿ìÈ¥°É!"); break;
-                    case 8: a.say("ÄÇÎÒ×ßÁË!"); 
+                    case 7: b.say("æ˜¯å‘€æ˜¯å‘€å¿«å»å§!"); break;
+                    case 8: a.say("é‚£æˆ‘èµ°äº†!"); 
                             a.setVY(-0.3f);
                             a.setDest(155, 10);
                             break;
@@ -68,74 +68,74 @@ public class Grandma extends SimpleScript {
                             }
                             break;
                             
-                    case 10: a.say("\ts20µÈµÈ..."); b.setFace(Actor.G_RIGHT); break; 
+                    case 10: a.say("\ts20ç­‰ç­‰..."); b.setFace(Actor.G_RIGHT); break; 
                     case 11: a.setFace(Actor.G_LEFT);
-                             a.say("Âí´óÉô²»ÊÇÉÏ¸öÔÂÈ¥ÊÅÁËÂğ.");
+                             a.say("é©¬å¤§å©¶ä¸æ˜¯ä¸Šä¸ªæœˆå»é€äº†å—.");
                              break; 
  
-                    case 12: b.say("°¡...Õâ¸ö...\tcff009900-_-!");
+                    case 12: b.say("å•Š...è¿™ä¸ª...\tcff009900-_-!");
                              break;
-                    case 13: b.say("ºÃÏñ²»ÊÇÂí´óÉô...ÊÇÕÔ´óÉô!");
+                    case 13: b.say("å¥½åƒä¸æ˜¯é©¬å¤§å©¶...æ˜¯èµµå¤§å©¶!");
                              break; 
                     case 14: game.playSound("sound/voice/heng.wav");
-                             a.say("ÄãÉÙÆ­ÎÒ,\te2Äã±ğÏë³öÈ¥ÁË!");
+                             a.say("ä½ å°‘éª—æˆ‘,\te2ä½ åˆ«æƒ³å‡ºå»äº†!");
                              
                              break; 
-                    case 15: b.say("ÓÖÊ§°ÜÁË...");
+                    case 15: b.say("åˆå¤±è´¥äº†...");
                              break; 
                     default: b.canControl = true;
                              setVar("meetgrandma", m+1); stop();
                 }
             }else if (m == 2){
                 switch(m_counter){
-                    case 1: b.say("ÄÌÄÌ~~~"); break;
-                    case 2: a.say("ÄãÇóÇéÒ²Ã»ÓÃ.ÎÒÊÇÎªÄãºÃ¡£\nÎÒÒÑ¾­°Ñ¿ªÃÅµÄÔ¿³×·ÅÔÚÄã\nÄÃ²»µ½µÄµØ·½ÁË."); break;
+                    case 1: b.say("å¥¶å¥¶~~~"); break;
+                    case 2: a.say("ä½ æ±‚æƒ…ä¹Ÿæ²¡ç”¨.æˆ‘æ˜¯ä¸ºä½ å¥½ã€‚\næˆ‘å·²ç»æŠŠå¼€é—¨çš„é’¥åŒ™æ”¾åœ¨ä½ \næ‹¿ä¸åˆ°çš„åœ°æ–¹äº†."); break;
                     case 3: b.say("......"); 
                             b.setDest(50, 10);
                             b.canControl = false;
                             break;
                     case 4: if (b.isMoving()){ m_counter --; break; }
-                            b.say("¿´À´µÃ×Ô¼ºÕÒµ½Ô¿³×¿ªÃÅÁË\n\tb\tc00990000¿ÉÊÇ·ÅÔ¿³×µÄµØ·½Ì«¸ßÁË");
+                            b.say("çœ‹æ¥å¾—è‡ªå·±æ‰¾åˆ°é’¥åŒ™å¼€é—¨äº†\n\tb\tc00990000å¯æ˜¯æ”¾é’¥åŒ™çš„åœ°æ–¹å¤ªé«˜äº†");
                             b.noDest();
                             b.canControl = true;
                             break;
-                    case 5: b.say("ÔõÃ´°ì?"); break;
+                    case 5: b.say("æ€ä¹ˆåŠ?"); break;
                     
                     default: setVar("meetgrandma", m+1); stop();
                 }
             }else if (m == 3){
                 switch(m_counter){
-                    case 1: b.say("ÄÌÄÌ, ÃÅ¿ÚÓĞ¶«Î÷!"); break;
-                    case 2: a.say("ÊÇÂğ, ÎÒÈ¥¿´¿´"); 
+                    case 1: b.say("å¥¶å¥¶, é—¨å£æœ‰ä¸œè¥¿!"); break;
+                    case 2: a.say("æ˜¯å—, æˆ‘å»çœ‹çœ‹"); 
                             a.setDest(375, 5);
                             break;
                     case 3: if (a.isMoving()){ m_counter --; break; }
-                            a.say("Ê²Ã´Ò²Ã»ÓĞÑ½"); 
+                            a.say("ä»€ä¹ˆä¹Ÿæ²¡æœ‰å‘€"); 
                             a.noDest();
                             break;
-                    case 4: b.say("Ê±»úµ½ÁË!"); break;
+                    case 4: b.say("æ—¶æœºåˆ°äº†!"); break;
                     default: setVar("meetgrandma", m+1); stop();
                 }
             }else if (m == 4){
                 switch(m_counter){
                     case 1: a.setFace(3 - source.direction);
-                            a.say("ÄãËµÓĞÊ²Ã´¶«Î÷?"); break;
-                    case 2: b.say("Äú¿´²»µ½Âğ?¾ÍÔÚÕâÀï!"); break;
+                            a.say("ä½ è¯´æœ‰ä»€ä¹ˆä¸œè¥¿?"); break;
+                    case 2: b.say("æ‚¨çœ‹ä¸åˆ°å—?å°±åœ¨è¿™é‡Œ!"); break;
                     default: stop();
                 }
             }else if (m == 5){
                 switch(m_counter){
                     case 1: a.setFace(3 - source.direction);
-                            a.say("¾¹È»ÉÏÄãµÄµ±ÁË¡£"); break;
-                    case 2: b.say("¶Ô²»ÆğÄÌÄÌ£¬ÎÒ³öÈ¥Ò»»á¶ù¾Í»ØÀ´¡£"); break;
-                    case 3: a.say("ÕæÄÃÄãÃ»°ì·¨£¬\n¿´À´ÎÒÊÇ¹Ü²»ÁËÄãÁË"); break;
-                    case 4: a.say("ÄÇºÃ°É¡£µ«Äã¿É²»ÄÜÀë¿ª´å×Ó¡£"); break;
+                            a.say("ç«Ÿç„¶ä¸Šä½ çš„å½“äº†ã€‚"); break;
+                    case 2: b.say("å¯¹ä¸èµ·å¥¶å¥¶ï¼Œæˆ‘å‡ºå»ä¸€ä¼šå„¿å°±å›æ¥ã€‚"); break;
+                    case 3: a.say("çœŸæ‹¿ä½ æ²¡åŠæ³•ï¼Œ\nçœ‹æ¥æˆ‘æ˜¯ç®¡ä¸äº†ä½ äº†"); break;
+                    case 4: a.say("é‚£å¥½å§ã€‚ä½†ä½ å¯ä¸èƒ½ç¦»å¼€æ‘å­ã€‚"); break;
                     default: setVar("meetgrandma", m+1); stop();
                 }
             }else if (m >= 6){
                 switch(m_counter){
                     case 1: a.setFace(3 - source.direction);
-                            a.say("Ò»¶¨ÒªĞ¡ĞÄ¡£"); break;
+                            a.say("ä¸€å®šè¦å°å¿ƒã€‚"); break;
                     default:stop();
                 }
             }    

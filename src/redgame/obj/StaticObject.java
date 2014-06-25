@@ -1,33 +1,33 @@
 package redgame.obj;
 /*
- * StaticObject.java ×÷Õß£ºÒ¦´ºêÍ
+ * StaticObject.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import redgame.engine.*;
 /**
- * StaticObjectÀàÊÇ¾²Ö¹ÎïÌå.
- * ËüÄ¬ÈÏÎª±¦Îï
- * @author Ò¦´ºêÍ
+ * StaticObjectç±»æ˜¯é™æ­¢ç‰©ä½“.
+ * å®ƒé»˜è®¤ä¸ºå®ç‰©
+ * @author å§šæ˜¥æ™–
  */
 public class StaticObject extends AbstractObject {
     /*
-     * ÊÇ·ñÒÑËÀ
+     * æ˜¯å¦å·²æ­»
      */
     protected boolean   m_dead;
     /*
-     * ËÀÊ±¶¯»­µÄ¼ÆÊ±Æ÷
+     * æ­»æ—¶åŠ¨ç”»çš„è®¡æ—¶å™¨
      */
     protected long   m_deadCounter;
     /**
-     * ¹¹ÔìStaticObject
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w ÔªËØ¿í¶È
-     * @param h ÔªËØ¸ß¶È
-     * @param begin Í¼Ïñ¿ªÊ¼¸ñË÷Òı
-     * @param end Í¼Ïñ½áÊø¸ñË÷Òı
+     * æ„é€ StaticObject
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å…ƒç´ å®½åº¦
+     * @param h å…ƒç´ é«˜åº¦
+     * @param begin å›¾åƒå¼€å§‹æ ¼ç´¢å¼•
+     * @param end å›¾åƒç»“æŸæ ¼ç´¢å¼•
      */
 
 	public StaticObject(GameWorld game, Image img, 
@@ -40,13 +40,13 @@ public class StaticObject extends AbstractObject {
 	}
 
 	/**
-	 * ¸üĞÂ¶¯»­
+	 * æ›´æ–°åŠ¨ç”»
 	 */
 	public void move(long passedTime){
 		m_anim.update(passedTime);
 	}
     /**
-     * ÊÇ·ñÒÑËÀ
+     * æ˜¯å¦å·²æ­»
      */
     public boolean isdead(){
         return m_dead;

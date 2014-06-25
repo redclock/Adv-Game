@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * MsgStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * MsgStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.event.*;
@@ -8,20 +8,20 @@ import redgame.engine.*;
 import redgame.util.*;
 
 /**
- * MsgStatusÀàÊÇÏÔÊ¾ÏûÏ¢µÄÓÎÏ·×´Ì¬.
+ * MsgStatusç±»æ˜¯æ˜¾ç¤ºæ¶ˆæ¯çš„æ¸¸æˆçŠ¶æ€.
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 
 public class MsgStatus extends AbstractStatus{
 	private String m_text;
 	private int m_x, m_y;
     /**
-     * ´´½¨Ò»¸öMsgStatus
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªMsgStatus
+     * @param game æ¸¸æˆå¼•ç”¨
      * @param x
-     * @param y ÏÔÊ¾µÄÎ»ÖÃ
-     * @param text ÏûÏ¢ÎÄ×Ö
+     * @param y æ˜¾ç¤ºçš„ä½ç½®
+     * @param text æ¶ˆæ¯æ–‡å­—
      */
     public MsgStatus(GameWorld game, int x, int y, String text) {
 		super(game);
@@ -30,7 +30,7 @@ public class MsgStatus extends AbstractStatus{
 		m_y = y;
 	}	
 	/**
-     * °´¼üÍË³ö
+     * æŒ‰é”®é€€å‡º
 	 */
 	public int update(long passedTime){
 		if ( KeyManager.isKeyJustDown(KeyEvent.VK_SPACE)
@@ -40,14 +40,14 @@ public class MsgStatus extends AbstractStatus{
 		return 0;
 	}
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
 
 	public int draw(long passedTime, Graphics g){
 		Font f = g.getFont();
-		Font msgf = new Font("ºÚÌå", 0, 18);
+		Font msgf = new Font("é»‘ä½“", 0, 18);
 		g.setFont(msgf);
 		g.setColor(Color.BLACK);
 		g.drawString(m_text, m_x + 1, m_y + 1);

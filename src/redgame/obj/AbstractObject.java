@@ -1,6 +1,6 @@
 package redgame.obj;
 /*
- * AbstractObject.java ×÷Õß£ºÒ¦´ºêÍ
+ * AbstractObject.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
  import java.awt.*;
@@ -9,87 +9,87 @@ package redgame.obj;
  import redgame.status.*;
  
 /**
- * AbstractObjectÀàÊÇÓÎÏ·ÖĞËùÓĞÎïÌåµÄ¸¸Àà£¬¶¨Òå»ù±¾¹¦ÄÜ¡£
- * ÕâÊÇÒ»¸ö³éÏóÀà£¬ÒªÊ¹ÓÃËüµÄÅÉÉúÀà¡£
- * @author Ò¦´ºêÍ
+ * AbstractObjectç±»æ˜¯æ¸¸æˆä¸­æ‰€æœ‰ç‰©ä½“çš„çˆ¶ç±»ï¼Œå®šä¹‰åŸºæœ¬åŠŸèƒ½ã€‚
+ * è¿™æ˜¯ä¸€ä¸ªæŠ½è±¡ç±»ï¼Œè¦ä½¿ç”¨å®ƒçš„æ´¾ç”Ÿç±»ã€‚
+ * @author å§šæ˜¥æ™–
  */
 
 abstract public class AbstractObject{
     /**
-     * ³¯ÏòÏÂ
+     * æœå‘ä¸‹
      */	
 	final static public int G_DOWN	= 0;
     /**
-     * ³¯Ïò×ó
+     * æœå‘å·¦
      */ 
     final static public int G_LEFT  = 1;
     /**
-     * ³¯ÏòÓÒ
+     * æœå‘å³
      */ 
     final static public int G_RIGHT = 2;
     /**
-     * ³¯ÏòÉÏ
+     * æœå‘ä¸Š
      */ 
     final static public int G_UP    = 3;
 
     /**
-     * Í¼Æ¬x×ø±ê
+     * å›¾ç‰‡xåæ ‡
      */ 
     protected float x;
     /**
-     * Í¼Æ¬y×ø±ê
+     * å›¾ç‰‡yåæ ‡
      */ 
     protected float y;
     /**
-     * Í¼Æ¬Ò»Ö¡¿í¶È
+     * å›¾ç‰‡ä¸€å¸§å®½åº¦
      */ 
     protected int w;
     /**
-     * Í¼Æ¬Ò»Ö¡¸ß¶È
+     * å›¾ç‰‡ä¸€å¸§é«˜åº¦
      */ 
     protected int h;
     /**
-     * ÓÎÏ·µÄÒıÓÃ
+     * æ¸¸æˆçš„å¼•ç”¨
      */ 
     protected GameWorld m_game;
     /**
-     * ¶¯»­Àà
+     * åŠ¨ç”»ç±»
      */ 
     protected Animation m_anim;
 	/*
-	 * Åö×²¾ØĞÎ
+	 * ç¢°æ’çŸ©å½¢
 	 */
 	protected Rectangle m_block;
     /*
-     * Í¼Æ¬Ã¿Ò»Ö¡µÄÑÓ³Ù
+     * å›¾ç‰‡æ¯ä¸€å¸§çš„å»¶è¿Ÿ
      */
     protected int       m_delay; 
     /*
-     * ÊÇ·ñ¿É¼û
+     * æ˜¯å¦å¯è§
      */
     protected boolean   m_visible;
     
     /*
-     * ÊÇ·ñ¿ÉÅö×²
+     * æ˜¯å¦å¯ç¢°æ’
      */
     protected boolean   m_blocked = true; 
     /**
-     *  Ãû×Ö
+     *  åå­—
      */
     protected String m_name; 
     /**
-     *  ¶ÔÓ¦µÄ½Å±¾
+     *  å¯¹åº”çš„è„šæœ¬
      */
     protected String m_script;
       
     /**
-     * ¹¹ÔìÎïÌå
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param h Í¼ÏñÒ»¸ñµÄ¸ß¶È
+     * æ„é€ ç‰©ä½“
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param h å›¾åƒä¸€æ ¼çš„é«˜åº¦
      * @see Animation
      * @see GameWorld
      */
@@ -105,56 +105,56 @@ abstract public class AbstractObject{
 			m_anim = new Animation(game, img, w, h);
 	}
 	/**
-	 * µÃµ½XÎ»ÖÃ
+	 * å¾—åˆ°Xä½ç½®
 	 */
 	public float getX(){
 		return x;
 	} 
     /**
-     * µÃµ½YÎ»ÖÃ
+     * å¾—åˆ°Yä½ç½®
      */
     public float getY(){
 		return y;
 	} 
     /**
-     * µÃµ½Åö×²¿í¶È
+     * å¾—åˆ°ç¢°æ’å®½åº¦
      */
     public int getW(){
 		return m_block.width;
 	}
 	/**
-	 * µÃµ½Í¼Ïñ¿í¶È
+	 * å¾—åˆ°å›¾åƒå®½åº¦
 	 */ 
 	public int getImgW(){
 	   return m_anim.getWidth();
 	} 
     /**
-     * µÃµ½Í¼Ïñ¸ß¶È
+     * å¾—åˆ°å›¾åƒé«˜åº¦
      */ 
     public int getImgH(){
        return m_anim.getHeight();
     } 
     /**
-     * µÃµ½Åö×²¸ß¶È
+     * å¾—åˆ°ç¢°æ’é«˜åº¦
      */
     public int getH(){
 		return m_block.height;
 	} 
     /**
-     * ÉèÖÃÎ»ÖÃ
+     * è®¾ç½®ä½ç½®
      */
     public void setPosition(float ax, float ay){
 		x = ax; y = ay;
 	} 
     /**
-     * ÉèÖÃ´óĞ¡
+     * è®¾ç½®å¤§å°
      */
     public void setSize(int aw, int ah){
 		w = aw; y = ah;
 	}
     /**
-     * ¼ì²âÊÇ·ñÓëÆäËû¶ÔÏóÅö×²
-     * @param obj Òª¼ì²âµÄÁíÒ»¸ö¶ÔÏó
+     * æ£€æµ‹æ˜¯å¦ä¸å…¶ä»–å¯¹è±¡ç¢°æ’
+     * @param obj è¦æ£€æµ‹çš„å¦ä¸€ä¸ªå¯¹è±¡
      */
     
 	public boolean checkCollision(AbstractObject obj){
@@ -164,8 +164,8 @@ abstract public class AbstractObject{
 		        obj.getY() < getY() + getH());
 	}
     /**
-     * ¼ì²âÊÇ·ñÓë¾ØĞÎÅö×²
-     * @param rect Òª¼ì²âµÄ¾ØĞÎ
+     * æ£€æµ‹æ˜¯å¦ä¸çŸ©å½¢ç¢°æ’
+     * @param rect è¦æ£€æµ‹çš„çŸ©å½¢
      */
     
     public boolean checkCollision(Rectangle rect){
@@ -175,7 +175,7 @@ abstract public class AbstractObject{
                 rect.y < getY() + getH());
     }
     /**
-	 * ÊÇ·ñÔÚÆÁÄ»ÖĞ
+	 * æ˜¯å¦åœ¨å±å¹•ä¸­
 	 *
 	 */
     public boolean inScreen(){
@@ -195,10 +195,10 @@ abstract public class AbstractObject{
     }
 
     /**
-     * Í¨ÖªÄ³¸ö¶ÔÏó×²µ½×Ô¼º£¬¸÷¸ö×ÓÀà¿ÉÒÔ¸²¸ÇÕâ¸ö·½·¨£¬½øĞĞÅö×²´¦Àí¡£
-     * @param obj ×²À´µÄ¶ÔÏó
-     * @param direction ·½Ïò 
-     * @return ÊÇ·ñÒÑ´¦Àí
+     * é€šçŸ¥æŸä¸ªå¯¹è±¡æ’åˆ°è‡ªå·±ï¼Œå„ä¸ªå­ç±»å¯ä»¥è¦†ç›–è¿™ä¸ªæ–¹æ³•ï¼Œè¿›è¡Œç¢°æ’å¤„ç†ã€‚
+     * @param obj æ’æ¥çš„å¯¹è±¡
+     * @param direction æ–¹å‘ 
+     * @return æ˜¯å¦å·²å¤„ç†
      */
     public boolean collision(AbstractObject obj, int direction){
 		//System.out.println(this.getClass()+" meets "+obj.getClass()
@@ -206,8 +206,8 @@ abstract public class AbstractObject{
 		return false;
 	} 
     /**
-     * ÉèÖÃÅö×²¾ØĞÎÇø£¬¼´Í¼ÏñÖĞÄÜ½øĞĞÅö×²¼ì²âµÄÄÇÒ»¸ö²¿·Ö¡£
-     * @param block ĞÂµÄÅö×²¾ØĞÎ
+     * è®¾ç½®ç¢°æ’çŸ©å½¢åŒºï¼Œå³å›¾åƒä¸­èƒ½è¿›è¡Œç¢°æ’æ£€æµ‹çš„é‚£ä¸€ä¸ªéƒ¨åˆ†ã€‚
+     * @param block æ–°çš„ç¢°æ’çŸ©å½¢
      */
     
 	public void setBlockRect(Rectangle block){
@@ -215,85 +215,85 @@ abstract public class AbstractObject{
 	}
 	
     /**
-     * »­ÎïÌå¡£Èç¹ûÍ¼Ïñ¿ÉÓÃÔò»­³öµ±Ç°Ö¡£¬·ñÔò»­Ò»¸ö·½¿ò
-     * @param g Òª»­µ½µÄµØ·½
+     * ç”»ç‰©ä½“ã€‚å¦‚æœå›¾åƒå¯ç”¨åˆ™ç”»å‡ºå½“å‰å¸§ï¼Œå¦åˆ™ç”»ä¸€ä¸ªæ–¹æ¡†
+     * @param g è¦ç”»åˆ°çš„åœ°æ–¹
      */
     public void paint(Graphics g){
-        //Èç¹û²»¿É¼û¾Í²»»­
+        //å¦‚æœä¸å¯è§å°±ä¸ç”»
 		if (!m_visible || !inScreen()) return;
-		//Èç¹û¶¯»­Îª¿Õ,¼òµ¥»­Ò»¸ö¾ØĞÎ
+		//å¦‚æœåŠ¨ç”»ä¸ºç©º,ç®€å•ç”»ä¸€ä¸ªçŸ©å½¢
 		if (m_anim == null){
 			g.setColor(new Color(100,100,100,100));
             g.fillRect((int)x - m_block.x,(int)y  - m_block.y, m_block.width, m_block.height);
 		}else{
-		  //·ñÔò»­¶¯»­Í¼ĞÎ
+		  //å¦åˆ™ç”»åŠ¨ç”»å›¾å½¢
             m_anim.paint(g, (int)x - m_block.x, (int)y - m_block.y);
         }
 	}
     /**
-     * ·µ»ØÊÇ·ñ¿É¼û
+     * è¿”å›æ˜¯å¦å¯è§
      */
     public boolean getVisible(){
 		return m_visible;
 	}
     /**
-     * ÉèÖÃÊÇ·ñ¿É¼û
+     * è®¾ç½®æ˜¯å¦å¯è§
      */
     public void setVisible(boolean visible){
 		m_visible = visible;
 	}
 
     /**
-     * ÉèÖÃÊÇ·ñ»á½øĞĞÅö×²
+     * è®¾ç½®æ˜¯å¦ä¼šè¿›è¡Œç¢°æ’
      */
     public void setBlocked(boolean b){
         m_blocked = b;
     }
     /**
-     * ÊÇ·ñ»á½øĞĞÅö×²
+     * æ˜¯å¦ä¼šè¿›è¡Œç¢°æ’
      */
     public boolean isBlocked(){
 	   return m_blocked && m_visible;
 	};
 	/**
-	 * Ëµ»°
+	 * è¯´è¯
 	 */
 	public void say(String text){
         m_game.pushStatus(new SayStatus(m_game, this, text));
 	}
 	/**
-	 * µÃµ½Ãû×Ö
+	 * å¾—åˆ°åå­—
 	 */
 	public String getName(){
 	   return m_name;
 	}
 	/**
-	 * ÉèÖÃÃû×Ö
+	 * è®¾ç½®åå­—
 	 */
 	public void setName(String name){
 	   m_name = name;
 	}  
     /**
-     * µÃµ½½Å±¾
+     * å¾—åˆ°è„šæœ¬
      */
     public String getScript(){
        return m_script;
     }
     /**
-     * ÉèÖÃ½Å±¾
+     * è®¾ç½®è„šæœ¬
      */
     public void setScript(String script){
        m_script = script;
     }
     /**
-     * ÉèÖÃÑÓÊ±
+     * è®¾ç½®å»¶æ—¶
      */
     public void setDelay(int delay){
         m_delay = delay;
         setAnimDelay(delay);
     }  
     /**
-     * ÉèÖÃ¶¯»­Ã¿Ö¡ÑÓÊ±
+     * è®¾ç½®åŠ¨ç”»æ¯å¸§å»¶æ—¶
      */
     public void setAnimDelay(int delay){
         m_anim.setDelay(delay);

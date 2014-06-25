@@ -14,7 +14,7 @@ public class Bonus extends StaticObject {
     final static public int RING    = 5;
     public int kind;
     /*
-     * ËÀÊ±¶¯»­µÄÁ£×ÓÏµÍ³
+     * æ­»æ—¶åŠ¨ç”»çš„ç²’å­ç³»ç»Ÿ
      */
     protected SparkParticleSystem m_spark;    
     static public Bonus getStandardBonus(GameWorld game, int x, int y, int kind) {
@@ -75,27 +75,27 @@ public class Bonus extends StaticObject {
 	       case HEAL: 
 	            a.addHP(1);
 	            if (AbstractScript.getIntVar("MeetBonusHeal") == 0){
-                   say("Äã³Ôµ½ÁËÒ»¸öĞ¡»Ø¸´¼Á, \nËüÄÜ»Ø¸´ÄãËÄ·ÖÖ®Ò»ĞÄµÄÉúÃü");
+                   say("ä½ åƒåˆ°äº†ä¸€ä¸ªå°å›å¤å‰‚, \nå®ƒèƒ½å›å¤ä½ å››åˆ†ä¹‹ä¸€å¿ƒçš„ç”Ÿå‘½");
                    AbstractScript.setVar("MeetBonusHeal", 1);
 	            } 
 	            break;
            case HEAL2: a.addHP(2); 
                 if (AbstractScript.getIntVar("MeetBonusHeal2") == 0){
-                   say("Äã³Ôµ½ÁËÒ»¸ö»Ø¸´¼Á, \nËüÄÜ»Ø¸´¶ş·ÖÖ®Ò»ĞÄµÄÉúÃü");
+                   say("ä½ åƒåˆ°äº†ä¸€ä¸ªå›å¤å‰‚, \nå®ƒèƒ½å›å¤äºŒåˆ†ä¹‹ä¸€å¿ƒçš„ç”Ÿå‘½");
                    AbstractScript.setVar("MeetBonusHeal2", 1);
                 } 
                 break;
            case HEAL4:
                 a.addHP(4);  
                 if (AbstractScript.getIntVar("MeetBonusHeal4") == 0){
-                   say("Äã³Ôµ½ÁËÒ»¸ö´ó»Ø¸´¼Á, \nËüÄÜ»Ø¸´ÄãÒ»¿ÅĞÄµÄÉúÃü");
+                   say("ä½ åƒåˆ°äº†ä¸€ä¸ªå¤§å›å¤å‰‚, \nå®ƒèƒ½å›å¤ä½ ä¸€é¢—å¿ƒçš„ç”Ÿå‘½");
                    AbstractScript.setVar("MeetBonusHeal4", 1);
                 } 
                 break;
            case CORDIAL: a.startCordial(10000); 
                 if (AbstractScript.getIntVar("MeetBonusCordial") == 0){
-                   say("Äã³Ôµ½ÁËÒ»¸öĞË·Ü¼Á, \nËüÄÜ×î´óÏŞ¶È´Ì¼¤ÄãµÄÔË¶¯Éñ¾­\n"+
-                       "µ«ĞË·Ü¼Á¶ÔÉíÌåºÜ²»ºÃ,»áÊ¹ÄãÉúÃüÁ¦½µµÍ");
+                   say("ä½ åƒåˆ°äº†ä¸€ä¸ªå…´å¥‹å‰‚, \nå®ƒèƒ½æœ€å¤§é™åº¦åˆºæ¿€ä½ çš„è¿åŠ¨ç¥ç»\n"+
+                       "ä½†å…´å¥‹å‰‚å¯¹èº«ä½“å¾ˆä¸å¥½,ä¼šä½¿ä½ ç”Ÿå‘½åŠ›é™ä½");
                    AbstractScript.setVar("MeetBonusCordial", 1);
                 } 
                 break;
@@ -105,7 +105,7 @@ public class Bonus extends StaticObject {
                         p.addBullet();
                     }
                     if (AbstractScript.getIntVar("MeetBonusRing") == 0){
-                       say("Äã³Ôµ½ÁËÒ»¸öÃæ°üÈ¦");
+                       say("ä½ åƒåˆ°äº†ä¸€ä¸ªé¢åŒ…åœˆ");
                        AbstractScript.setVar("MeetBonusRing", 1);
                     } 
                     break;
@@ -113,7 +113,7 @@ public class Bonus extends StaticObject {
     }
 
 	/**
-	 * ¸üĞÂ¶¯»­
+	 * æ›´æ–°åŠ¨ç”»
 	 */
 	public void move(long passedTime){
 		super.move(passedTime);

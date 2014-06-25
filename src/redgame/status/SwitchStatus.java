@@ -1,42 +1,42 @@
 /////////////////////////////////////////
 //SwitchStatus extends AbstractStatus
-//´Ó"µ±Ç°×´Ì¬"ÇĞ»»µ½"ÆäËû×´Ì¬"µÄ×´Ì¬
+//ä»"å½“å‰çŠ¶æ€"åˆ‡æ¢åˆ°"å…¶ä»–çŠ¶æ€"çš„çŠ¶æ€
 ////////////////////////////////////////
 package redgame.status;
 /*
- * SwitchStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * SwitchStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 
 import java.awt.*;
 import redgame.engine.*;
 /**
- * SwitchStatusÀàÊÇ´Ó"µ±Ç°×´Ì¬"ÇĞ»»µ½"ÆäËû×´Ì¬"µÄ×´Ì¬.
- * Ëü¿ÉÒÔÊ¹Á½¸ö×´Ì¬µÄ¹ı¶É¸üÆ½»¬.ËüÊÇÕâÑù¹¤×÷µÄ:
+ * SwitchStatusç±»æ˜¯ä»"å½“å‰çŠ¶æ€"åˆ‡æ¢åˆ°"å…¶ä»–çŠ¶æ€"çš„çŠ¶æ€.
+ * å®ƒå¯ä»¥ä½¿ä¸¤ä¸ªçŠ¶æ€çš„è¿‡æ¸¡æ›´å¹³æ»‘.å®ƒæ˜¯è¿™æ ·å·¥ä½œçš„:
  * 
- * Òª´Ó×´Ì¬A¹ı¶Éµ½B,´ËÊ±×´Ì¬Õ»Îª:<br>
+ * è¦ä»çŠ¶æ€Aè¿‡æ¸¡åˆ°B,æ­¤æ—¶çŠ¶æ€æ ˆä¸º:<br>
  * ..., A <br>
- * ÉèSÎªSwitchStatus,¿ªÊ¼¹ı¶ÉÊ±,½øÈëÏûÒş½×¶Î: <br>
+ * è®¾Sä¸ºSwitchStatus,å¼€å§‹è¿‡æ¸¡æ—¶,è¿›å…¥æ¶ˆéšé˜¶æ®µ: <br>
  * ..., A, S <br>
- * ÏûÒş½áÊøºó, ½«SºÍAµ¯³ö, ÔÚÑ¹ÈëBºÍS, ½øÈë½¥Èë½×¶Î: <br>
+ * æ¶ˆéšç»“æŸå, å°†Så’ŒAå¼¹å‡º, åœ¨å‹å…¥Bå’ŒS, è¿›å…¥æ¸å…¥é˜¶æ®µ: <br>
  * ..., B, S <br>
- * ×îºó: <br>
+ * æœ€å: <br>
  * ..., B <br>
  * 
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class SwitchStatus extends AbstractStatus {
-	private AbstractStatus m_next;   //ÇĞ»»Ö®ºóµÄ×´Ì¬
-	private boolean isBack = false;	 //ÊÇ·ñÒÑ¾­Íê³ÉÒ»°ë£¬ÕıÔÚÍË»Øµ½ÏÂÒ»×´Ì¬
-	public long MaxCounter;        //°ë¸ö¹ı³Ì½øĞĞÊ±¼äµÄºÁÃë
-	private int m_index;			//ÇĞ»»ĞÎÊ½ 0 - Ö±½Ó
-									//1-µ­Èëµ­³ö 2-·½¿ò
+	private AbstractStatus m_next;   //åˆ‡æ¢ä¹‹åçš„çŠ¶æ€
+	private boolean isBack = false;	 //æ˜¯å¦å·²ç»å®Œæˆä¸€åŠï¼Œæ­£åœ¨é€€å›åˆ°ä¸‹ä¸€çŠ¶æ€
+	public long MaxCounter;        //åŠä¸ªè¿‡ç¨‹è¿›è¡Œæ—¶é—´çš„æ¯«ç§’
+	private int m_index;			//åˆ‡æ¢å½¢å¼ 0 - ç›´æ¥
+									//1-æ·¡å…¥æ·¡å‡º 2-æ–¹æ¡†
     public boolean needRepaint = false;
     /**
-     * ´´½¨Ò»¸öSwitchStatus
-     * @param game ÓÎÏ·ÒıÓÃ
-     * @param nextStatus ÏÂÒ»¸ö×´Ì¬
-     * @param index ÇĞ»»·½Ê½: 0 - Ö±½Ó 1-µ­Èëµ­³ö 2-·½¿ò
+     * åˆ›å»ºä¸€ä¸ªSwitchStatus
+     * @param game æ¸¸æˆå¼•ç”¨
+     * @param nextStatus ä¸‹ä¸€ä¸ªçŠ¶æ€
+     * @param index åˆ‡æ¢æ–¹å¼: 0 - ç›´æ¥ 1-æ·¡å…¥æ·¡å‡º 2-æ–¹æ¡†
      */
 	public SwitchStatus(GameWorld game, AbstractStatus nextStatus, int index) {
 		super(game);
@@ -52,8 +52,8 @@ public class SwitchStatus extends AbstractStatus {
 		}
 	}
     /**
-     * ¸üĞÂ×´Ì¬, Ê²Ã´Ò²²»×÷
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°çŠ¶æ€, ä»€ä¹ˆä¹Ÿä¸ä½œ
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
     
 	public int update(long passedTime){
@@ -61,7 +61,7 @@ public class SwitchStatus extends AbstractStatus {
 		return 0;
 	}
 
-	//»­ÇĞ»»ĞÎÊ½:µ­Èëµ­³ö
+	//ç”»åˆ‡æ¢å½¢å¼:æ·¡å…¥æ·¡å‡º
 	private void draw_fade(long passedTime, Graphics g){
         Rectangle sc = m_game.getScreenArea();
         int x = sc.x;
@@ -78,7 +78,7 @@ public class SwitchStatus extends AbstractStatus {
 		g.fillRect(x, y, w, h);
 	}
 	
-    //»­ÇĞ»»ĞÎÊ½:·½¿ò
+    //ç”»åˆ‡æ¢å½¢å¼:æ–¹æ¡†
 	private void draw_rect(long passedTime, Graphics g){
         Rectangle sc = m_game.getScreenArea();
         int x = sc.x;
@@ -96,9 +96,9 @@ public class SwitchStatus extends AbstractStatus {
 	}
 
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
 		switch(m_index){
@@ -109,8 +109,8 @@ public class SwitchStatus extends AbstractStatus {
 	}
 
     /**
-     * ¸üĞÂ¼ÆÊ±Æ÷
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
+     * æ›´æ–°è®¡æ—¶å™¨
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
      */
 
     public int move(long passedTime) {

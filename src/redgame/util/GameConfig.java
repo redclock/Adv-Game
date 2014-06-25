@@ -4,7 +4,7 @@ import java.io.*;
 
 public class GameConfig {
     
-    //Êı¾İ½á¹¹
+    //æ•°æ®ç»“æ„
     private Map<String, String> m_map;
     
     public static GameConfig defaultConfig = new GameConfig();
@@ -20,9 +20,9 @@ public class GameConfig {
 
     /**
      * Method load
-     * ×°ÔØÅäÖÃÎÄ¼ş
+     * è£…è½½é…ç½®æ–‡ä»¶
      *
-     * @param filename Òª±£´æµÄÎÄ¼şÃû
+     * @param filename è¦ä¿å­˜çš„æ–‡ä»¶å
      */
     public boolean load(String filename, MyIO io) {
         try{

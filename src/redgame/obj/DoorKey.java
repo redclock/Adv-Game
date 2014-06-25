@@ -4,19 +4,19 @@ import redgame.engine.*;
 
 public class DoorKey extends StaticObject {
     /**
-     * Ô¿³×µÄÀàĞÍ
+     * é’¥åŒ™çš„ç±»å‹
      */
     public int id;
     /**
-     * ¹¹ÔìDoorKey
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w ÔªËØ¿í¶È
-     * @param h ÔªËØ¸ß¶È
-     * @param begin Í¼Ïñ¿ªÊ¼¸ñË÷Òı
-     * @param end Í¼Ïñ½áÊø¸ñË÷Òı
+     * æ„é€ DoorKey
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å…ƒç´ å®½åº¦
+     * @param h å…ƒç´ é«˜åº¦
+     * @param begin å›¾åƒå¼€å§‹æ ¼ç´¢å¼•
+     * @param end å›¾åƒç»“æŸæ ¼ç´¢å¼•
      */
 
     public DoorKey(GameWorld game, Image img, 
@@ -26,7 +26,7 @@ public class DoorKey extends StaticObject {
         this.id = id;
 		Player p = game.getPlayer();
 		if (p != null){
-			//Èç¹ûÒÑ¾­ÄÃµ½ÁË,¾ÍÒş²Ø
+			//å¦‚æœå·²ç»æ‹¿åˆ°äº†,å°±éšè—
 			if (p.hasKey[id])
 			{
 				m_dead = true;

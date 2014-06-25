@@ -7,8 +7,8 @@ public class FirstKey extends SimpleScript {
         Player b = (Player) source.cause;
         
         switch(m_counter){
-            case 1: b.say("¹ş¹ş,×ÜËãÄÃµ½ÁË!"); game.playSound("sound/voice/haha.wav"); break;
-            case 2: b.say("\tb\tc00990000µ½ÃÅÇ°°´ÉÏ¼ü¿ªÃÅ\nÃÅ¿ªÖ®ºó°´ÉÏ¼ü½øÃÅ"); 
+            case 1: b.say("å“ˆå“ˆ,æ€»ç®—æ‹¿åˆ°äº†!"); game.playSound("sound/voice/haha.wav"); break;
+            case 2: b.say("\tb\tc00990000åˆ°é—¨å‰æŒ‰ä¸Šé”®å¼€é—¨\né—¨å¼€ä¹‹åæŒ‰ä¸Šé”®è¿›é—¨"); 
                     break;
             default: 
                 AbstractScript.setVar("meetgrandma", 5);

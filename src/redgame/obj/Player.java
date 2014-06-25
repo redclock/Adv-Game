@@ -1,6 +1,6 @@
 package redgame.obj;
 /*
- * Player.java ×÷Õß£ºÒ¦´ºêÍ
+ * Player.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
@@ -12,16 +12,16 @@ import redgame.item.*;
 import redgame.anim.*;
 
 /**
- * PlayerÀàÊÇÍæ¼ÒµÄ½ÇÉ«£¬¿ÉÒÔÌø£¬¿ÉÒÔÓÃ¼üÅÌ¿ØÖÆ¡£ÓÎÏ·ÖĞÒ»°ãÖ»ÓĞÒ»¸öÊµÀı
- * @author Ò¦´ºêÍ
+ * Playerç±»æ˜¯ç©å®¶çš„è§’è‰²ï¼Œå¯ä»¥è·³ï¼Œå¯ä»¥ç”¨é”®ç›˜æ§åˆ¶ã€‚æ¸¸æˆä¸­ä¸€èˆ¬åªæœ‰ä¸€ä¸ªå®ä¾‹
+ * @author å§šæ˜¥æ™–
  */
 final public class Player extends NPC{
     final public static int ITEM_SWORD = 0;
     final public static int ITEM_RING = 1;
     final public static int ITEM_BOMB = 2;
      
-    private float m_shootAngle = 0.0f;   //Ãé×¼Ê±µÄ½Ç¶È
-    //ÊÇ·ñÔÚÃé×¼
+    private float m_shootAngle = 0.0f;   //ç„å‡†æ—¶çš„è§’åº¦
+    //æ˜¯å¦åœ¨ç„å‡†
     private boolean m_isShooting = false;  
 
     private Animation m_power;
@@ -31,15 +31,15 @@ final public class Player extends NPC{
     public AbstractItem[] items = new AbstractItem[4];
      
     /**
-     * ÓµÓĞidµÄÔ¿³×
+     * æ‹¥æœ‰idçš„é’¥åŒ™
      */
     public boolean hasKey[] = new boolean[256];
     /**
-     * ÒÑ¾­¿ªµÄÃÅid
+     * å·²ç»å¼€çš„é—¨id
      */
     public boolean openedDoor[] = new boolean[256];
     /**
-     * ÊÇ·ñ¿É¿ØÖÆ
+     * æ˜¯å¦å¯æ§åˆ¶
      */
     public boolean canControl = true;
     
@@ -71,7 +71,7 @@ final public class Player extends NPC{
       //  items[ITEM_BOMB].setCount(30);
     }
     
-    //´¦Àí¼üÅÌÊäÈë
+    //å¤„ç†é”®ç›˜è¾“å…¥
     private void doInput(long passedTime){
         if (KeyManager.isKeyJustDown(KeyEvent.VK_1)) {
             curItem = items[ITEM_SWORD];
@@ -85,7 +85,7 @@ final public class Player extends NPC{
         if (curItem == null){
             
         }else if (curItem == items[ITEM_SWORD]){
-            //X¼ü»Ó½£
+            //Xé”®æŒ¥å‰‘
             if (canSword() && !m_isClimbing && 
                 !m_isShooting && 
                 !m_isSwording ){
@@ -106,7 +106,7 @@ final public class Player extends NPC{
             } 
             m_isShooting = false;
         }else if (curItem == items[ITEM_RING]){
-            //°´ÏÂX¼ü£¬ÏÔÊ¾Ãé×¼¾µ
+            //æŒ‰ä¸‹Xé”®ï¼Œæ˜¾ç¤ºç„å‡†é•œ
             if (canShoot() &&
                 !m_isShooting && !m_isSwording && 
                 KeyManager.isKeyJustDown(KeyEvent.VK_X)){
@@ -118,7 +118,7 @@ final public class Player extends NPC{
                     }    
                     m_isShooting = true;
             }else if (m_isShooting && ! KeyManager.isKeyDown(KeyEvent.VK_X)){
-                //Ì§ÆğX¼ü£¬·Å³öÃæ°üÈ¦
+                //æŠ¬èµ·Xé”®ï¼Œæ”¾å‡ºé¢åŒ…åœˆ
                 doShoot(m_shootAngle, 10, 0.3f);
                 if (items[ITEM_RING] != null){
                     items[ITEM_RING].setCount(items[ITEM_RING].getCount() - 1);
@@ -127,7 +127,7 @@ final public class Player extends NPC{
                 m_isShooting = false;
             }
             if (m_isShooting){
-                //Ãé×¼Ê±°´×óÓÒ¼ü
+                //ç„å‡†æ—¶æŒ‰å·¦å³é”®
                 if (KeyManager.isKeyDown(KeyEvent.VK_LEFT)){
                     m_shootAngle -= 0.001 * passedTime;
                 }if (KeyManager.isKeyDown(KeyEvent.VK_RIGHT)){
@@ -135,7 +135,7 @@ final public class Player extends NPC{
                 }
             }    
         } else if (curItem == items[ITEM_BOMB]){
-            //X¼üÈÓÕ¨µ¯
+            //Xé”®æ‰”ç‚¸å¼¹
             if (canBomb() && !m_isClimbing && 
                 !m_isShooting && 
                 !m_isSwording && 
@@ -148,13 +148,13 @@ final public class Player extends NPC{
         }
         
         if (! m_isShooting){
-            //ÒÆ¶¯
+            //ç§»åŠ¨
             if (KeyManager.isKeyDown(KeyEvent.VK_LEFT)){
                 new_face = G_LEFT;
             }if (KeyManager.isKeyDown(KeyEvent.VK_RIGHT)){
                 new_face = G_RIGHT;
             }if (KeyManager.isKeyDown(KeyEvent.VK_UP)){
-                //ÅÀÌİ×Ó
+                //çˆ¬æ¢¯å­
                 if (m_isClimbing || m_game.getMap().canClimb(this)){
                     new_face = G_UP;
                     m_isClimbing = true;
@@ -166,7 +166,7 @@ final public class Player extends NPC{
                 m_isClimbing = true;
                 m_vy = 0.0f;
             }
-            //ÌøÔ¾
+            //è·³è·ƒ
             if (KeyManager.isKeyDown(KeyEvent.VK_Z)){
                 if (m_vy == 0.0f && !m_isClimbing){
                     m_vy = - 0.4f;
@@ -177,17 +177,17 @@ final public class Player extends NPC{
     }
     
     /**
-     * ¸üĞÂ×´Ì¬
+     * æ›´æ–°çŠ¶æ€
      */
     public void update(long passedTime){
         super.update(passedTime);
-        //ËÀµô¾ÍÍË³ö
+        //æ­»æ‰å°±é€€å‡º
         if (m_dead && !m_visible){
             m_game.pushStatus(new DieStatus(m_game));
         }
         if (m_dead || m_lull || m_isSwording) return;
         super.update(passedTime);
-        //ÊäÈë          
+        //è¾“å…¥          
         if (canControl) doInput(passedTime);
         
         if (curItem != null && curItem instanceof SwordItem) {
@@ -198,7 +198,7 @@ final public class Player extends NPC{
         
         StaticObject obj = m_game.getMap().reachStatic(this);
         if (obj != null && !obj.isdead()){
-            //È¡µÃ±¦Îï
+            //å–å¾—å®ç‰©
             if(obj instanceof Bonus){
                 Bonus b = (Bonus) obj;
                 obj.die();
@@ -208,7 +208,7 @@ final public class Player extends NPC{
                 }   
                 m_game.playSound("sound/success.wav");
             }else if (obj instanceof DoorKey){
-                //Ô¿³×
+                //é’¥åŒ™
                 obj.die();
                 DoorKey key = (DoorKey)obj;
                 m_game.playSound("sound/key.wav");
@@ -216,7 +216,7 @@ final public class Player extends NPC{
                 if (key.getScript() != null)
                     m_game.getScript().add(key.getScript(), new ScriptSource(key, this, 0));
             }else if (obj instanceof Door){
-                //ÃÅ
+                //é—¨
                 Door d = (Door) obj;
                 if (canControl){
                     if (KeyManager.isKeyJustDown(KeyEvent.VK_UP)){
@@ -229,7 +229,7 @@ final public class Player extends NPC{
                             //m_game.pushStatus(new SwitchStatus(m_game, new CompleteStatus(m_game), 0));   
                         }else{
                             m_game.pushStatus(new SayStatus(m_game, 
-                                            d, "ÃÅ±»ËøÉÏÁË£¬\nÄã±ØĞëÏÈÕÒµ½Ô¿³×\n^_^"));   
+                                            d, "é—¨è¢«é”ä¸Šäº†ï¼Œ\nä½ å¿…é¡»å…ˆæ‰¾åˆ°é’¥åŒ™\n^_^"));   
                         }
                     }
                 }
@@ -248,7 +248,7 @@ final public class Player extends NPC{
             }    
             //m_swordAnim.paint(g, (int)getX()-5, (int)getY());
         }else if (m_isShooting){
-            //»­×¼ĞÇ
+            //ç”»å‡†æ˜Ÿ
             int ox = (int)(getX()+ getW()/2 + 50 * Math.cos(m_shootAngle));
             int oy = (int)(getY()+ 10 + 50 * Math.sin(m_shootAngle));
             g.setColor(Color.GREEN);
@@ -277,7 +277,7 @@ final public class Player extends NPC{
     }
     
     /**
-     * ¸²¸Çcollision
+     * è¦†ç›–collision
      * @see NPC#collision
      */
     public boolean collision(AbstractObject obj, int direction){
@@ -299,7 +299,7 @@ final public class Player extends NPC{
     } 
 
     /**
-     * ÁîÆäËÀÍö
+     * ä»¤å…¶æ­»äº¡
      */    
     public void die(){
         super.die();

@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * CompleteStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * CompleteStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
@@ -9,10 +9,10 @@ import redgame.engine.*;
 import redgame.util.*;
 
 /**
- * CompleteStatusÀàÊÇ¹ıÍêÒ»¹ØµÄÓÎÏ·×´Ì¬.
+ * CompleteStatusç±»æ˜¯è¿‡å®Œä¸€å…³çš„æ¸¸æˆçŠ¶æ€.
  * 
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class CompleteStatus extends AbstractStatus {
     private Image m_img;
@@ -28,12 +28,12 @@ public class CompleteStatus extends AbstractStatus {
         m_game.playMusic("sound/win2.mid", false);
 
 
-        msgs = "ÄãÒ»¹²ÓÃÁË: "+ m_game.getMap().getCounter()/1000+" Ãë£¬";
-        msgs += "Äã±¾¹ØµÄµÃ·ÖÎª£º"+score;
+        msgs = "ä½ ä¸€å…±ç”¨äº†: "+ m_game.getMap().getCounter()/1000+" ç§’ï¼Œ";
+        msgs += "ä½ æœ¬å…³çš„å¾—åˆ†ä¸ºï¼š"+score;
 
     }
     /**
-     * °´¼üÍË³ö
+     * æŒ‰é”®é€€å‡º
      */
     
     public int update(long passedTime){
@@ -44,9 +44,9 @@ public class CompleteStatus extends AbstractStatus {
         return 0;
     }
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     public int draw(long passedTime, Graphics g){
         Rectangle sc = m_game.getScreenArea();
@@ -58,7 +58,7 @@ public class CompleteStatus extends AbstractStatus {
         int h = sc.height;
         g.drawImage(m_img, x+(w - m_imgw)/2, y+(h - m_imgh)/2, m_game.getPanel());
         Font f = g.getFont();
-        Font bigf = new Font("ËÎÌå", 0, 14);
+        Font bigf = new Font("å®‹ä½“", 0, 14);
         g.setFont(bigf);
         g.setColor(Color.BLACK);
         g.drawString(msgs, x+(w - m_imgw)/2+1, y+50+1);

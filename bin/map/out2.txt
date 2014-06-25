@@ -1,5 +1,5 @@
 MAP
-  name Ò°Íâ
+  name é‡Žå¤–
   size 320 500
   backgroundSize 320 500
   background image/bk5.jpg

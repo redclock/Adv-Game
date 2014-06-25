@@ -1,14 +1,14 @@
 package redgame.util;
 /*
- * KeyManager.java ×÷Õß£ºÒ¦´ºêÍ
+ * KeyManager.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 
 import java.awt.event.*;
 
 /**
- * KeyManagerÀàÊÇÍ¼Ïñ¹ÜÀíÆ÷
- * Ëü¹ÜÀí°´¼üĞÅÏ¢, ÆäÀ´Ô´ÊÇ´°ÌåµÄ¼üÅÌÊÂ¼ş
- * @author Ò¦´ºêÍ
+ * KeyManagerç±»æ˜¯å›¾åƒç®¡ç†å™¨
+ * å®ƒç®¡ç†æŒ‰é”®ä¿¡æ¯, å…¶æ¥æºæ˜¯çª—ä½“çš„é”®ç›˜äº‹ä»¶
+ * @author å§šæ˜¥æ™–
  */
 
 public class KeyManager implements KeyListener{
@@ -28,15 +28,15 @@ public class KeyManager implements KeyListener{
         addText(evt.getKeyChar());
     }
 
-    //ÉÏÒ»´ÎµÄĞÅÏ¢
+    //ä¸Šä¸€æ¬¡çš„ä¿¡æ¯
 	private static boolean m_lastKeys[] = new boolean[256];
-    //ÕâÒ»´ÎµÄĞÅÏ¢
+    //è¿™ä¸€æ¬¡çš„ä¿¡æ¯
     private static boolean m_currKeys[] = new boolean[256];
 	
 	/**
-	 * ÉèÖÃÄ³¸ö¼üµÄ×´Ì¬
-	 * @param key ¼üID
-	 * @param down ÊÇ°´ÏÂ»¹ÊÇÌ§Æğ
+	 * è®¾ç½®æŸä¸ªé”®çš„çŠ¶æ€
+	 * @param key é”®ID
+	 * @param down æ˜¯æŒ‰ä¸‹è¿˜æ˜¯æŠ¬èµ·
 	 */
 	public synchronized static void setKeyState(int key, boolean down) {
 		if (key < 256){
@@ -45,7 +45,7 @@ public class KeyManager implements KeyListener{
 		}
 	}
     /**
-     * Çå¿ÕËùÓĞ¼üµÄ×´Ì¬
+     * æ¸…ç©ºæ‰€æœ‰é”®çš„çŠ¶æ€
      */
     public synchronized static void clearKeyState() {
 		for (int key = 0; key < 256; key ++){
@@ -54,7 +54,7 @@ public class KeyManager implements KeyListener{
 		}
 	}
 	/**
-	 * ÊÇ·ñÉÏÒ»´ÎÎ´Ì§Æğ¶øÕâÒ»´ÎÎª°´ÏÂ
+	 * æ˜¯å¦ä¸Šä¸€æ¬¡æœªæŠ¬èµ·è€Œè¿™ä¸€æ¬¡ä¸ºæŒ‰ä¸‹
 	 */
 	public synchronized static boolean isKeyJustDown(int key) {
 		if (key < 256){
@@ -66,7 +66,7 @@ public class KeyManager implements KeyListener{
 		return false;
 	}
     /**
-     * ÊÇ·ñÕâÒ»´ÎÎª°´ÏÂ
+     * æ˜¯å¦è¿™ä¸€æ¬¡ä¸ºæŒ‰ä¸‹
      */
     public synchronized static boolean isKeyDown(int key) {
 		if (key < 256){
@@ -75,7 +75,7 @@ public class KeyManager implements KeyListener{
 		return false;
 	}	
     /**
-     * ÊÇ·ñÉÏÒ»´Î°´ÏÂÎ´¶øÕâÒ»´ÎÎªÌ§Æğ
+     * æ˜¯å¦ä¸Šä¸€æ¬¡æŒ‰ä¸‹æœªè€Œè¿™ä¸€æ¬¡ä¸ºæŠ¬èµ·
      */
     public synchronized static boolean isKeyJustUp(int key) {
 		if (key < 256){
@@ -90,26 +90,26 @@ public class KeyManager implements KeyListener{
 	private static String received = "";
     private static boolean receiving = false;
     /**
-	 * ¿ªÊ¼½ÓÊÜ¼üÅÌÊäÈë×Ö·û
+	 * å¼€å§‹æ¥å—é”®ç›˜è¾“å…¥å­—ç¬¦
 	 */
 	public static void startReceive(){
 	   received = "";
 	   receiving = true;
 	}
     /**
-     * ½ÓÊÜ¼üÅÌÊäÈë×Ö·û
+     * æ¥å—é”®ç›˜è¾“å…¥å­—ç¬¦
      */
     public static void addText(char c){
        if ( receiving ) received += c;
     }
     /**
-     * ½áÊø¼üÅÌÊäÈë×Ö·û
+     * ç»“æŸé”®ç›˜è¾“å…¥å­—ç¬¦
      */
     public static void endReceive(){
        receiving = false;
     }
     /**
-     * È¡µÃ¼üÅÌÊäÈë×Ö·û,²¢Çå¿Õ»º³å
+     * å–å¾—é”®ç›˜è¾“å…¥å­—ç¬¦,å¹¶æ¸…ç©ºç¼“å†²
      */
     public static String getReceived(){
        String r = received;

@@ -1,5 +1,5 @@
 MAP
-  name ÑµÁ·1
+  name è®­ç»ƒ1
   size 640 480
   backgroundSize 640 480
   background image/bk18.jpg

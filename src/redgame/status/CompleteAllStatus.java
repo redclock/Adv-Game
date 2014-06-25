@@ -1,6 +1,6 @@
 package redgame.status;
 /*
- * CompleteAllStatus.java ×÷Õß£ºÒ¦´ºêÍ
+ * CompleteAllStatus.java ä½œè€…ï¼šå§šæ˜¥æ™–
  */
 import java.awt.*;
 import java.awt.event.*;
@@ -8,20 +8,20 @@ import java.awt.geom.*;
 import redgame.engine.*;
 import redgame.util.*;
 /**
- * CompleteAllStatusÀàÊÇÍ¨¹ØµÄÓÎÏ·×´Ì¬.
+ * CompleteAllStatusç±»æ˜¯é€šå…³çš„æ¸¸æˆçŠ¶æ€.
  * 
  * @see AbstractStatus
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 
 public class CompleteAllStatus extends AbstractStatus {
-    //"congratulations"Í¼Ïñ
+    //"congratulations"å›¾åƒ
     private Image m_con_img;
-    //Í¼Ïñ´óĞ¡
+    //å›¾åƒå¤§å°
     private int m_imgw, m_imgh;
     /**
-     * ´´½¨Ò»¸öCompleteAllStatus
-     * @param game ÓÎÏ·ÒıÓÃ
+     * åˆ›å»ºä¸€ä¸ªCompleteAllStatus
+     * @param game æ¸¸æˆå¼•ç”¨
      */
     public CompleteAllStatus(GameWorld game) {
         super(game);
@@ -31,12 +31,12 @@ public class CompleteAllStatus extends AbstractStatus {
         m_game.playSound("sound/passall.mid");
     }
     /**
-     * ¶ÔÓÚÇ°¸ö×´Ì¬:½ûÖ¹Æä¸üĞÂºÍÏÔÊ¾
+     * å¯¹äºå‰ä¸ªçŠ¶æ€:ç¦æ­¢å…¶æ›´æ–°å’Œæ˜¾ç¤º
      */
     public void updatePrior(long passedTime, Graphics g){
     }
     /**
-     * °´¼üÍË³ö
+     * æŒ‰é”®é€€å‡º
      */
     public int update(long passedTime){
         if ( KeyManager.isKeyJustDown(KeyEvent.VK_SPACE)
@@ -47,16 +47,16 @@ public class CompleteAllStatus extends AbstractStatus {
         return 0;
     }
     /**
-     * Ê²Ã´Ò²²»×ö
+     * ä»€ä¹ˆä¹Ÿä¸åš
      */
     public int move(long passedTime){
         return 0;
     }
     
     /**
-     * »­Í¼´úÂë
-     * @param passedTime ´ÓÉÏÒ»´Îµ÷ÓÃµ½ÏÖÔÚµÄÊ±¼ä
-     * @param g          ÓÃÀ´»­Í¼µÄÒıÓÃ 
+     * ç”»å›¾ä»£ç 
+     * @param passedTime ä»ä¸Šä¸€æ¬¡è°ƒç”¨åˆ°ç°åœ¨çš„æ—¶é—´
+     * @param g          ç”¨æ¥ç”»å›¾çš„å¼•ç”¨ 
      */
     
     public int draw(long passedTime, Graphics g){
@@ -82,12 +82,12 @@ public class CompleteAllStatus extends AbstractStatus {
                                  
         if (size == 100){
             
-            Font bigf = new Font("ËÎÌå", Font.BOLD, 32);
-            Rectangle2D rt = bigf.getStringBounds("ÄãÒÑ¾­³É¹¦Í¨¹Ø", ((Graphics2D)g).getFontRenderContext());
+            Font bigf = new Font("å®‹ä½“", Font.BOLD, 32);
+            Rectangle2D rt = bigf.getStringBounds("ä½ å·²ç»æˆåŠŸé€šå…³", ((Graphics2D)g).getFontRenderContext());
             g.setColor(Color.YELLOW);
             g.setFont(bigf);
-            //ÔÚÆÁÄ»ÖĞĞÄ»­
-            g.drawString("ÄãÒÑ¾­³É¹¦Í¨¹Ø", x+(int)( w - rt.getWidth())/2, y+250);
+            //åœ¨å±å¹•ä¸­å¿ƒç”»
+            g.drawString("ä½ å·²ç»æˆåŠŸé€šå…³", x+(int)( w - rt.getWidth())/2, y+250);
         }        
         g.setFont(f);
         return 0;

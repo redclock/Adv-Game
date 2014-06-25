@@ -17,11 +17,11 @@ public class GiveTask extends SimpleScript {
 
         if ( x == 0){
             switch(m_counter){
-                case 1: b.say("°¢ÒÌ, ÄúÕâÀïÓĞÊ²Ã´ºÃ³ÔµÄ?"); break;
-                case 2: a.say("Ô­À´ÊÇ"+b.getName()+"°¡"); break;
+                case 1: b.say("é˜¿å§¨, æ‚¨è¿™é‡Œæœ‰ä»€ä¹ˆå¥½åƒçš„?"); break;
+                case 2: a.say("åŸæ¥æ˜¯"+b.getName()+"å•Š"); break;
                 case 3: a.say("......");  
                         break;
-                case 4: a.say("Äã±ğÀ´·³ÎÒÁË...");  
+                case 4: a.say("ä½ åˆ«æ¥çƒ¦æˆ‘äº†...");  
                         break;
                 case 5: b.say("\te1"); break;
                 default: b.canControl = true; 
@@ -30,22 +30,22 @@ public class GiveTask extends SimpleScript {
             }             
         }else if ( x == 1){
             switch(m_counter){
-                case 1: a.say("ÎÒÕıÎªÎÒÅ®¶ùµÄÊÂ·¢³îÄØ¡£"); break;
-                case 2: b.say("Å¶£¿"); 
+                case 1: a.say("æˆ‘æ­£ä¸ºæˆ‘å¥³å„¿çš„äº‹å‘æ„å‘¢ã€‚"); break;
+                case 2: b.say("å“¦ï¼Ÿ"); 
                 		game.playSound("sound/voice/o.wav");
                 		break;
-                case 3: b.say("ÔõÃ´ÁË°¡?"); break;
-                case 4: a.say("ÎÒÅ®¶ù°¢³ÎËµ½ñÌìÒª´ÓÍâµØ»ØÀ´.\n¿Éµ½ÏÖÔÚ»¹Ã»ÓĞµ½."); break;
-                case 5: a.say("¶øÇÒ×î½ü´å×ÓÍâÃæÍ»È»À´ÁËĞí¶à¹ÖÎï."); break;
-                case 6: a.say("ÎÒÅÂ..."); break;
-                case 7: a.say("ÍòÒ»..."); break;
-                case 8: a.say("³öÊ²Ã´ÊÂ..."); break;
-                case 9: a.say("ÄÇ......"); break;
-                case 10: a.say("ÎØ~~~"); break;
+                case 3: b.say("æ€ä¹ˆäº†å•Š?"); break;
+                case 4: a.say("æˆ‘å¥³å„¿é˜¿æ¾„è¯´ä»Šå¤©è¦ä»å¤–åœ°å›æ¥.\nå¯åˆ°ç°åœ¨è¿˜æ²¡æœ‰åˆ°."); break;
+                case 5: a.say("è€Œä¸”æœ€è¿‘æ‘å­å¤–é¢çªç„¶æ¥äº†è®¸å¤šæ€ªç‰©."); break;
+                case 6: a.say("æˆ‘æ€•..."); break;
+                case 7: a.say("ä¸‡ä¸€..."); break;
+                case 8: a.say("å‡ºä»€ä¹ˆäº‹..."); break;
+                case 9: a.say("é‚£......"); break;
+                case 10: a.say("å‘œ~~~"); break;
                 case 11: b.say("\te6"); break;
-                case 12: b.say("°¢ÒÌÄú±ğ¿ŞÁË¡£ÎÒ³öÈ¥½Ó°¢³Î°É"); break;
-                case 13: a.say("°¡£¬Ì«ºÃÁË\n^_^"); break;
-                case 14: a.say("ÄãÕÒµ½ËıÒ»¶¨¾¡¿ì°ÑËı´ø»ØÀ´Ñ½¡£\te3"); break;
+                case 12: b.say("é˜¿å§¨æ‚¨åˆ«å“­äº†ã€‚æˆ‘å‡ºå»æ¥é˜¿æ¾„å§"); break;
+                case 13: a.say("å•Šï¼Œå¤ªå¥½äº†\n^_^"); break;
+                case 14: a.say("ä½ æ‰¾åˆ°å¥¹ä¸€å®šå°½å¿«æŠŠå¥¹å¸¦å›æ¥å‘€ã€‚\te3"); break;
                 case 15: b.say("......"); break;
                 default: b.canControl = true; 
                          setVar("meettask", x+1);
@@ -53,21 +53,21 @@ public class GiveTask extends SimpleScript {
             }
         }else if ( x == 2){
             switch(m_counter){
-                case 1: a.say("ÔõÃ´Ñù£¬¼ûµ½ÎÒÅ®¶ùÁËÂğ£¿"); break;
-                case 2: b.say("»¹Ã»ÓĞ......"); 
+                case 1: a.say("æ€ä¹ˆæ ·ï¼Œè§åˆ°æˆ‘å¥³å„¿äº†å—ï¼Ÿ"); break;
+                case 2: b.say("è¿˜æ²¡æœ‰......"); 
                         break;
                 default: b.canControl = true; 
                          stop();
             }            
-        }else if ( x ==10 ){    //ÒÑ¾­ÕÒ»ØÀ´ÁË
+        }else if ( x ==10 ){    //å·²ç»æ‰¾å›æ¥äº†
             switch(m_counter){
-                case 1: a.say("¶àĞ»Äã°ÑÎÒÅ®¶ù½Ó»ØÀ´¡£\te3"); 
+                case 1: a.say("å¤šè°¢ä½ æŠŠæˆ‘å¥³å„¿æ¥å›æ¥ã€‚\te3"); 
                         break;
-                case 2: b.say("¹ş¹ş£¬Ã»Ê²Ã´À²\n^,^");
+                case 2: b.say("å“ˆå“ˆï¼Œæ²¡ä»€ä¹ˆå•¦\n^,^");
                         break;
-                case 3: a.say("Ã»ÓĞÄãµÄ°ïÖúËı¿ÉÊÇ²»¸Ò»ØÀ´µÄ¡£\nºÇºÇ");
+                case 3: a.say("æ²¡æœ‰ä½ çš„å¸®åŠ©å¥¹å¯æ˜¯ä¸æ•¢å›æ¥çš„ã€‚\nå‘µå‘µ");
                         break;
-                case 4: b.say("ºÇºÇ...");
+                case 4: b.say("å‘µå‘µ...");
                         if (d != null){
                             d.open();    
                             game.playSound("sound/dooropen.wav");
@@ -77,7 +77,7 @@ public class GiveTask extends SimpleScript {
                         c.setBlocked(true);
                         c.setVisible(true);
                         c.setPosition(460, 65);
-                        c.say("ÎÒ²Å²»ÊÇ²»¸ÒÄØ£¡");
+                        c.say("æˆ‘æ‰ä¸æ˜¯ä¸æ•¢å‘¢ï¼");
                         game.playSound("sound/voice/wei.wav");
                         break;
                 case 6: 
@@ -85,11 +85,11 @@ public class GiveTask extends SimpleScript {
                         b.say("\te0");
                         break;
                 case 7: 
-                        c.say("ÎÒÊÇ²»»á¸ĞĞ»ÄãµÄ£¡\n\te2");
+                        c.say("æˆ‘æ˜¯ä¸ä¼šæ„Ÿè°¢ä½ çš„ï¼\n\te2");
                         break;
                 case 8: 
                         c.setFace(Actor.G_UP);
-                        a.say("°¢³Î, ÄãÔõÃ´ÄÜÕâÃ´Ëµ£¡");
+                        a.say("é˜¿æ¾„, ä½ æ€ä¹ˆèƒ½è¿™ä¹ˆè¯´ï¼");
                         break;
                 case 9: c.setVisible(false);
                         c.setBlocked(false);
@@ -98,19 +98,19 @@ public class GiveTask extends SimpleScript {
                             game.playSound("sound/dooropen.wav");
                         }
                         break;
-                case 10: b.say("ÎªÊ²Ã´·¢ÕâÃ´´óÆ¢ÆøÄØ£¿"); break;
+                case 10: b.say("ä¸ºä»€ä¹ˆå‘è¿™ä¹ˆå¤§è„¾æ°”å‘¢ï¼Ÿ"); break;
                 case 11:
-                      a.say("²»ºÃÒâË¼°¡¡£\nÊÇÎÒÅ®¶ù²»¶®ÀñÃ²¡£"); 
+                      a.say("ä¸å¥½æ„æ€å•Šã€‚\næ˜¯æˆ‘å¥³å„¿ä¸æ‡‚ç¤¼è²Œã€‚"); 
                       break; 
                 case 12:
                       b.setFace(Actor.G_LEFT);
-                      b.say("¹ş¹ş£¬Ã»¹ØÏµµÄ¡£"); 
+                      b.say("å“ˆå“ˆï¼Œæ²¡å…³ç³»çš„ã€‚"); 
                       break; 
                 case 13:
-                      a.say("¶ÔÁË£¬" + b.getName() +"£¬Äã³öÀ´ºÃ³¤Ê±¼äÁË¡£\nÄãÄÌÄÌ²»µ£ĞÄÂğ£¿"); 
+                      a.say("å¯¹äº†ï¼Œ" + b.getName() +"ï¼Œä½ å‡ºæ¥å¥½é•¿æ—¶é—´äº†ã€‚\nä½ å¥¶å¥¶ä¸æ‹…å¿ƒå—ï¼Ÿ"); 
                       break; 
                 case 14:
-                      b.say("ËµµÄÒ²ÊÇ¡£ÄÇÎÒÏÖÔÚ»Ø¼ÒÁË¡£"); 
+                      b.say("è¯´çš„ä¹Ÿæ˜¯ã€‚é‚£æˆ‘ç°åœ¨å›å®¶äº†ã€‚"); 
                       break; 
                
                 default: b.canControl = true; 
@@ -121,7 +121,7 @@ public class GiveTask extends SimpleScript {
         }else {
             switch(m_counter){
                 case 1:
-                      a.say("ÒÔºó³£À´Íæ¡«"); 
+                      a.say("ä»¥åå¸¸æ¥ç©ï½"); 
                       
                       break; 
                 default: b.canControl = true; 

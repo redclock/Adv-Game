@@ -1,17 +1,17 @@
 package redgame.obj;
 /*
- * Patrol.java ×÷Õß£ºÒ¦´ºêÍ
+ * Patrol.java ä½œè€…ï¼šå§šæ˜¥æ™–
  *
  */
 import java.awt.*;
 import redgame.engine.*;
 /**
- * PatrolÀàÊÇ¿ÉÒÔÑ²ÂßµÄµĞÈË
+ * Patrolç±»æ˜¯å¯ä»¥å·¡é€»çš„æ•Œäºº
  * 
- * @author Ò¦´ºêÍ
+ * @author å§šæ˜¥æ™–
  */
 public class Patrol extends Enemy {
-	//Ñ²ÂßµÄ·¶Î§
+	//å·¡é€»çš„èŒƒå›´
 	private int m_min, m_max;
 	private boolean m_follow = false;
     private boolean m_canSword = false;
@@ -19,15 +19,15 @@ public class Patrol extends Enemy {
     private boolean m_still = false;
     
     /**
-     * ¹¹ÔìPatrol
-     * @param game ÓÎÏ·ÀàµÄÒıÓÃ
-     * @param img ÎïÌåÍ¼Ïñ
-     * @param x ÎïÌåÎ»ÖÃºá×ø±ê
-     * @param y ÎïÌåÎ»ÖÃ×İ×ø±ê
-     * @param w Í¼ÏñÒ»¸ñµÄ¿í¶È
-     * @param h Í¼ÏñÒ»¸ñµÄ¸ß¶È
-     * @param pmin Ñ²Âß·¶Î§µÄ×îĞ¡Öµ 
-     * @param pmax Ñ²Âß·¶Î§µÄ×î´óÖµ 
+     * æ„é€ Patrol
+     * @param game æ¸¸æˆç±»çš„å¼•ç”¨
+     * @param img ç‰©ä½“å›¾åƒ
+     * @param x ç‰©ä½“ä½ç½®æ¨ªåæ ‡
+     * @param y ç‰©ä½“ä½ç½®çºµåæ ‡
+     * @param w å›¾åƒä¸€æ ¼çš„å®½åº¦
+     * @param h å›¾åƒä¸€æ ¼çš„é«˜åº¦
+     * @param pmin å·¡é€»èŒƒå›´çš„æœ€å°å€¼ 
+     * @param pmax å·¡é€»èŒƒå›´çš„æœ€å¤§å€¼ 
      * @see Actor
      */
      
@@ -39,62 +39,62 @@ public class Patrol extends Enemy {
 		m_max = pmax < pmin ? pmin:pmax;
 	}
 	/**
-	 * ÉèÖÃÊÇ·ñ¾²Ö¹²»¶¯
+	 * è®¾ç½®æ˜¯å¦é™æ­¢ä¸åŠ¨
 	 */
 	public void setStill(boolean still){
 	   m_still = still;
 	}
 	/**
-	 * È¡µÃÊÇ·ñ¾²Ö¹²»¶¯
+	 * å–å¾—æ˜¯å¦é™æ­¢ä¸åŠ¨
 	 */
     public boolean getStill(){
        return m_still;
     }
     /**
-	 * ÉèÖÃÊÇ·ñÄÜ¸ú×Ù
+	 * è®¾ç½®æ˜¯å¦èƒ½è·Ÿè¸ª
 	 */
 	public void setFollow(boolean follow){
 	   m_follow = follow;
 	}
     /**
-     * È¡µÃÊÇ·ñÄÜ¸ú×Ù
+     * å–å¾—æ˜¯å¦èƒ½è·Ÿè¸ª
      */
     public boolean getFollow(){
        return m_follow;
     }
     /**
-     * ÉèÖÃÊÇ·ñÄÜ»Ó½£
+     * è®¾ç½®æ˜¯å¦èƒ½æŒ¥å‰‘
      */
     public void setCanSword(boolean sword){
        m_canSword = sword;
     }
     /**
-     * È¡µÃÊÇ·ñÄÜ»Ó½£
+     * å–å¾—æ˜¯å¦èƒ½æŒ¥å‰‘
      */
     public boolean getCanSword(){
        return m_canSword;
     }
     /**
-     * ÉèÖÃÊÇ·ñÄÜÌøÔ¾
+     * è®¾ç½®æ˜¯å¦èƒ½è·³è·ƒ
      */
     public void setCanJump(boolean jump){
        m_canJump = jump;
     }
     /**
-     * È¡µÃÊÇ·ñÄÜÌøÔ¾
+     * å–å¾—æ˜¯å¦èƒ½è·³è·ƒ
      */
     public boolean getCanJump(){
        return m_canJump;
     }
     /**
-	 * ²»ÄÜÔÙÏòÇ°×ßÊ±, ¾Í»ØÍ·
+	 * ä¸èƒ½å†å‘å‰èµ°æ—¶, å°±å›å¤´
 	 */
 	public void cannotGo(){
 		m_face = 3 - m_face;
 		updateAnimation();
 	}
 	/**
-	 * ¸üĞÂ×´Ì¬
+	 * æ›´æ–°çŠ¶æ€
 	 */
 	public void update(long passedTime){
         if (m_dead) return;
