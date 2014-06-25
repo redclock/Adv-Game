@@ -10,17 +10,22 @@ Use keyboard only:
   * Menu:-----ESC
   * Move:-----Left and Right
   * Jump:-----Z 
-  * Climb:----Up and Down, if there is a ladder or a tree at your feet
-  * Talk:-----starts when the hero reaches an NPC, SPACE or ENTER to continue
+  * Climb:----Up and Down, if there is a ladder or a tree at your feet.
+  * Talk:-----Starts as the hero reaches the NPC. Press SPACE or ENTER to continue.
+  * Door:-----Up to open if the door is closed, otherwise enter the door. 
   * Sword:----Press 1 to equip. X to normal attack, costing 10% energy; C to strong attack, costing 100% energy.
   * ring:-----Press 2 to equip. Hold X and press Left and Right to aim direction. Release X to shoot. Press C to catch.
   * Bomb:-----Press 3 to equip. X to place in current place.
 
-##Require
-  JDK and JRE 1.5 or higher are required. Tested in Windows, Linux and Mac.
+##Requirement
+  JDK and JRE 1.5 or higher are required. Tested in Windows, Linux and Mac OS.
   
 ##Build
 	  ./build.sh
 
 ##Run
 	  ./run.sh
+In Windows you can also launch the game using bin/StartGame.exe.
+
+##Editor
+There is bin/MapEditor.exe to edit maps. Scripts are also written in Java. You can find all scripts in src/redgame/scripts.
