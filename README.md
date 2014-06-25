@@ -29,3 +29,6 @@ In Windows you can also launch the game using bin/StartGame.exe.
 
 ##Editor
 There is bin/MapEditor.exe to edit maps. Scripts are also written in Java. You can find all scripts in src/redgame/scripts.
+
+![Screen](http://github.com/redclock/Adv-Game/raw/master/doc/screens/shot1.jpg)
+![Screen](http://github.com/redclock/Adv-Game/raw/master/doc/screens/shot3.jpg)
